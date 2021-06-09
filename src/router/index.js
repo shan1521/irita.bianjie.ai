@@ -21,74 +21,9 @@ export function createRouter() {
         routes: [
             {
                 path: '/',
-                name:Home,
-                component: Home
-            },
-            {
-                path: '/home',
-                name:Home,
-                component: Home
-            },
-            {
-                path: '/products/irisnet',
-                name:Production,
-                component: Production
-            },
-            {
-                path: '/products/iritaexpect',
                 name:Expect,
                 component: Expect
-            },
-            {
-                path: '/products/iritahub',
-                name:ProductionBsnIritaHub,
-                component: ProductionBsnIritaHub
-            },
-            {
-                path: '/products/irita',
-                name:ProductionIrita,
-                component: ProductionIrita
-            },
-            {
-                path: '/application/digital-asset',
-                name:Applications,
-                component: Applications
-            },
-            {
-                path: '/application/finance',
-                name:ApplicationFinance,
-                component: ApplicationFinance
-            },
-            {
-                path: '/application/cooperation',
-                name:ApplicationCooperation,
-                component: ApplicationCooperation
-            },
-            {
-                path: '/application/multi-trust',
-                name:ApplicationTrust,
-                component: ApplicationTrust
-            },
-            {
-                path: '/partners',
-                name:Partners,
-                component: Partners
-            },
-            {
-                path: '/news',
-                name:News,
-                component: News
-            },
-            {
-                path: '/about',
-                name:About,
-                component: About
-            },
-            {
-                path: '/download',
-                name:Download,
-                component: Download
-            },
+            }
         ]
     })
 }
