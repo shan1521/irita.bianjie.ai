@@ -2,23 +2,19 @@
     <div class="expect_container_content change_expect_bg_color">
 		<div class="expect_content_wrap">
 			<div class="expect_logo_content">
-				<router-link :to="`/home`">
+				<a href="https://www.bianjie.ai/" target="_blank" rel="noreferrer noopener">
 					<img src="../assets/home/bianjie_logo.png" alt="">
-				</router-link>
+				</a>
 			</div>
 			<div class="expect_content_menu">
 				<ul class="expect_menu_list">
 					<li class="expect_menu_list_item active_color">
-						<router-link class="expect_menu_list_item_link" to="/products/iritaexpect">IRITA</router-link>
-						<span>IRITA</span>
-						<div class="active_block"></div>
+						<router-link class="expect_menu_list_item_link" to="/">关于 IRITA</router-link>
 					</li>
 				</ul>
                 <div class="print_content">
-                    <div class="about_me_content">关注我们
-                        <div class="qr_content">
-                            <img src="../assets/home/qr_bianjie.png" alt="">
-                        </div>
+                    <div class="about_me_content">技术文档
+                    
                     </div>
                 </div>
 				<div class="mobile_menu_content" @click="showMobileMenu()">
@@ -28,7 +24,7 @@
 		</div>
 		<div class="expect_mobile_content" v-if="flShowMobileMenu">
 			<ul class="expect_mobile_list_content">
-				<li class="expect_mobile_list_button" @click="changeRouter(`/products/iritaexpect`)"><router-link :to="`/products/iritaexpect`">IRITA</router-link></li>
+				<li class="expect_mobile_list_button" @click="changeRouter(`/products/iritaexpect`)"><router-link :to="`/`">关于IRITA</router-link></li>
 			</ul>
 		</div>
         <div class="expect_img_wrap">
@@ -38,24 +34,38 @@
                 </div>
                 <p class="comming_soon_desc">敬请期待...</p>
             </div>
-        </div>
-            <div class="qr_content">
-                <div class="qr_content_wrap">
-                    <h1>关注与联系</h1>
-                    <div class="qr_img_content">
-                        <img src="../assets/home/qr_bianjie.png" alt="">
-                    </div>
-                </div>
-            </div>
+			<div class="qr_content">
+				<div class="qr_content_wrap">
+					<h1>关注与联系</h1>
+					<div class="qr_img_content">
+						<img src="../assets/home/qr_bianjie.png" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<Footer></Footer>
 	</div>
 </template>
 
 <script>
+import Footer from "./Footer";
 export default {
     name:"Expect",
-    mounted(){
+	components: {Footer},
+	data(){
+    	return {
+			flShowMobileMenu:false
+		}
+	},
+	mounted(){
         this.$store.commit('flShowexpectAndFooter',true)
-    }
+    },
+	methods:{
+		showMobileMenu(){
+			this.flShowMobileMenu = !this.flShowMobileMenu
+		}
+	}
 }
 </script>
 
@@ -71,13 +81,14 @@ export default {
 }
 .expect_container_content{
 	width: 100%;
-    height: 0.8rem;
+    height: 0.81rem;
 	z-index: 999;
 	.expect_content_wrap{
 		max-width: 12rem;
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
+		position: relative;
 		.expect_logo_content{
 			padding: 0.25rem 0 0.22rem 0;
 			margin-right: 1.15rem;
@@ -100,11 +111,13 @@ export default {
                 .about_me_content{
                     margin-right: 0.4rem;
                     position: relative;
+					cursor: pointer;
                     .qr_content{
                         position: absolute;
                         top: 0.3rem;
                         right: -0.35rem;
                         display: none;
+						background: #fff;
                         img{
                             width: 1.3rem;
                             height: 1.3rem;
@@ -170,11 +183,12 @@ export default {
 	.expect_mobile_content{
 		display: none;
 		outline-color: transparent;
+		position: absolute;
+		
 	}
     .expect_img_wrap{
         flex: 1;
 		padding-top: 0.6rem;
-		padding-bottom: 2rem;
         margin: auto;
         background: #f5f5f5;
         .expect_comming_soon{
@@ -182,7 +196,8 @@ export default {
 			flex-direction: column;
 			align-items: center;
             margin: auto;
-        	width: 12rem;
+        	max-width: 12rem;
+			padding-bottom: 2rem;
             .comming_soon_wrap{
 				width: 3.14rem;
                 height: 2.1rem;
@@ -206,11 +221,15 @@ export default {
     .qr_content{
         margin-top: 0.2rem;
         width: 100%;
+		background: #fff;
+		margin-bottom: 0.79rem;
         .qr_content_wrap{
             max-width: 12rem;
             margin: auto;
             text-align: center;
+			background: #fff;
             h1{
+				padding-top: 0.8rem;
                 text-align: center;
                 margin-bottom: 0.2rem;
                 font-size: 0.18rem;
@@ -234,17 +253,6 @@ export default {
 		}
 	}
 }
-    @media screen and (max-width: 960px){
-       .expect_container_content{
-           .expect_content_wrap{
-               .expect_content_menu{
-                   .print_content{
-                       display: none;
-                   }
-               }
-           }
-       }
-    }
 	@media screen and (max-width: 768px) {
 		.expect_container_content{
 			background: #002C78;
@@ -255,6 +263,9 @@ export default {
 				padding: 0 0.2rem;
 				.expect_content_menu{
                     justify-content: flex-end;
+					.print_content{
+						display: none;
+					}
 					.expect_menu_list{
 						display: none;
 					}
@@ -272,11 +283,14 @@ export default {
 			}
 			.expect_mobile_content{
 				display: block;
+				width: 100%;
 				.expect_mobile_list_content{
 					cursor: pointer;
 					list-style: none;
 					box-sizing: border-box;
 					text-align: center;
+					background: #002C78;
+					width: 100%;
 					/*  .expect_mobile_list_button{
 						position: relative;
 						//隐藏溢出的径向渐变背景
@@ -307,8 +321,8 @@ export default {
 						transition: 0s;
 					}*/
 					li{
-						margin: 0.05rem 0;
 						color: #fff;
+						padding: 0.05rem 0;
 						a{
 							color: #fff;
 						}

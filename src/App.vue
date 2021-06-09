@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <Header v-if="$store.state.flShowHeaderAndFooter"></Header>
+<!--        <Header v-if="$store.state.flShowHeaderAndFooter"></Header>-->
         <router-view :key="key"/>
-        <Footer v-if="$store.state.flShowHeaderAndFooter"></Footer>
+<!--        <Footer v-if="$store.state.flShowHeaderAndFooter"></Footer>-->
     </div>
 </template>
 
