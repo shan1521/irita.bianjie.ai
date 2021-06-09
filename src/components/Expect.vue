@@ -20,7 +20,6 @@
                             <img src="../assets/home/qr_bianjie.png" alt="">
                         </div>
                     </div>
-                   <span @click="openPrint()">打印 <img style="width: 0.14rem" src="../assets/home/print_icon.png"></span>
                 </div>
 				<div class="mobile_menu_content" @click="showMobileMenu()">
 					<img src="../assets/home/mobile_menu.png" alt="">
@@ -54,11 +53,6 @@
 <script>
 export default {
     name:"Expect",
-    // data(){
-    //     return{
-    //         isActive:true
-    //     }
-    // },
     mounted(){
         this.$store.commit('flShowexpectAndFooter',true)
     }
@@ -179,14 +173,18 @@ export default {
 	}
     .expect_img_wrap{
         flex: 1;
+		padding-top: 0.6rem;
+		padding-bottom: 2rem;
         margin: auto;
-        width: 12rem;
-        // height: 2.9rem;
+        background: #f5f5f5;
         .expect_comming_soon{
-            width: 3.14rem;
-            margin: 0.6rem auto 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+            margin: auto;
+        	width: 12rem;
             .comming_soon_wrap{
-                width: 100%;
+				width: 3.14rem;
                 height: 2.1rem;
                 .comming_soon_img{
                     display: inline-block;
@@ -199,22 +197,24 @@ export default {
                 width: 1.12rem;
                 height: 0.2rem;
                 line-height: 0.2rem;
+				color: #003691;
+				word-spacing: 0.03rem;
                 font-size: 0.18rem;
             }
         }
     }
     .qr_content{
-        margin-top: 1rem;
+        margin-top: 0.2rem;
         width: 100%;
         .qr_content_wrap{
             max-width: 12rem;
-            margin: 0 auto;
+            margin: auto;
             text-align: center;
-            margin-bottom: 1rem;
             h1{
                 text-align: center;
                 margin-bottom: 0.2rem;
                 font-size: 0.18rem;
+				color: #0C253A;
             }
             .qr_img_content{
                 width: 1.38rem;
@@ -317,86 +317,4 @@ export default {
 			}
 		}
 	}
-    // @media print {
-	// 	.expect_container_content{
-	// 		background: #fff !important;
-	// 		.qr_content{
-	// 			margin-top:~`convertPxToCm('20px')` !important;
-	// 			.qr_content_wrap{
-	// 				margin-bottom: 0 !important;
-	// 			}
-	// 		}
-	// 	}
-	// }
-	// .expect_content_container{
-    //     position: fixed;
-    //     top: 0;
-    //     width: 100%;
-    //     height: 0.8rem;
-    //     z-index: 999;
-    //     background: #002C78;
-    //     .expect_content_wrap{
-    //         max-width: 10rem;
-    //         margin: 0 auto;
-    //         display: flex;
-    //         align-items: center;
-    //         height: 100%;
-    //         .expect_logo_content{
-    //             padding: 0.25rem 0 0.25rem 0;
-    //             margin-right: 1.15rem;
-    //             img{
-    //                 height: 0.3rem;
-    //             }
-    //         }
-    //         .expect_content_menu{
-    //             flex: 1;
-    //             display: flex;
-    //             justify-content: space-between;
-    //             margin-left: 0.2rem;
-    //             height: 0.08rem;
-    //             color: #fff;
-    //             text-align: center;
-    //             background: red;
-                
-    //             .expect_menu_list{
-    //                 position: relative;
-    //                 width: 0.64rem;
-    //                 height: 100%;
-    //                 a{
-    //                     display: inline-block;
-    //                     width: 0.41rem;
-    //                     height: 0.22rem;
-    //                     font-size: 0.16rem;
-    //                     color: #fff;
-    //                     &:hover{
-    //                         color: #0054E3;
-    //                     }
-    //                 }
-    //                 .active_block{
-    //                     position: absolute;
-    //                     bottom: 0;
-    //                     width: 0.64rem;
-	// 					height: 0.03rem;
-	// 					background: #fff;
-	// 				}
-    //             }
-    //         }
-    //     }
-		
-	// }
-	// @media screen and (max-width: 1200px){
-	// 	.expect_container_content{
-			
-	// 	}
-	// }
-	// @media screen  and (max-width: 768px){
-	// 	.expect_container_content{
-			
-	// 	}
-	// }
-	// @media screen and (max-width: 375px){
-	// 	.expect_container_content{
-			
-	// 	}
-	// }
 </style>

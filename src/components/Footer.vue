@@ -24,7 +24,7 @@
 		}
 	}
 	.home_copy_right_content_wrap{
-		background: #fafafa;
+		background: #fff;
 		border-top: 0.01rem solid #EDEDED;
 		.home_copy_right_content{
 			padding: 0.2rem 0.05rem;
