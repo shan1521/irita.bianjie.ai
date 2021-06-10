@@ -33,7 +33,7 @@
 					</li>
 				</ul>
                 <div class="print_content">
-                    <a href="https://irita.bianjie.ai/docs" rel="noreferrer noopener" target="_blank" @click.native="changHeaderBgColor()" class="irita_doc">技术文档
+                    <a href="https://irita.bianjie.ai/docs" rel="noreferrer noopener" target="_blank" class="irita_doc">技术文档
 
                     </a>
 <!--                    <span @click="openPrint()">打印 <img style="width: 0.14rem" src="../assets/home/print_icon.png"></span>-->
