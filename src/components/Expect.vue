@@ -1,27 +1,5 @@
 <template>
     <div class="expect_container_content change_expect_bg_color">
-		<div class="expect_content_wrap">
-			<div class="expect_logo_content">
-				<a href="https://www.bianjie.ai/" target="_blank" rel="noreferrer noopener">
-					<img src="../assets/home/bianjie_logo.png" alt="">
-				</a>
-			</div>
-			<div class="expect_content_menu">
-				<ul class="expect_menu_list">
-					<li class="expect_menu_list_item active_color">
-						<router-link class="expect_menu_list_item_link" to="/">关于 IRITA</router-link>
-					</li>
-				</ul>
-                <div class="print_content">
-                    <div class="about_me_content">技术文档
-                    
-                    </div>
-                </div>
-				<div class="mobile_menu_content" @click="showMobileMenu()">
-					<img src="../assets/home/mobile_menu.png" alt="">
-				</div>
-			</div>
-		</div>
 		<div class="expect_mobile_content" v-if="flShowMobileMenu">
 			<ul class="expect_mobile_list_content">
 				<li class="expect_mobile_list_button" @click="changeRouter(`/products/iritaexpect`)"><router-link :to="`/`">关于IRITA</router-link></li>
@@ -42,9 +20,7 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
-		<Footer></Footer>
 	</div>
 </template>
 
@@ -58,9 +34,6 @@ export default {
 			flShowMobileMenu:false
 		}
 	},
-	mounted(){
-        this.$store.commit('flShowexpectAndFooter',true)
-    },
 	methods:{
 		showMobileMenu(){
 			this.flShowMobileMenu = !this.flShowMobileMenu
@@ -76,13 +49,9 @@ export default {
             display: none;
         }
     }
-.change_expect_bg_color{
-	background: #002C78;
-}
 .expect_container_content{
 	width: 100%;
-    height: 0.81rem;
-	z-index: 999;
+	margin-top: 0.81rem;
 	.expect_content_wrap{
 		max-width: 12rem;
 		margin: 0 auto;
@@ -190,7 +159,7 @@ export default {
         flex: 1;
 		padding-top: 0.6rem;
         margin: auto;
-        background: #f5f5f5;
+        background: #fff;
         .expect_comming_soon{
 			display: flex;
 			flex-direction: column;
@@ -212,7 +181,7 @@ export default {
                 width: 1.12rem;
                 height: 0.2rem;
                 line-height: 0.2rem;
-				color: #003691;
+				color: rgba(65, 114, 215, 1);
 				word-spacing: 0.03rem;
                 font-size: 0.18rem;
             }
@@ -221,13 +190,12 @@ export default {
     .qr_content{
         margin-top: 0.2rem;
         width: 100%;
-		background: #fff;
-		margin-bottom: 0.79rem;
+		background: rgba(251, 253, 255, 1);
+		padding-bottom: 0.79rem;
         .qr_content_wrap{
             max-width: 12rem;
             margin: auto;
             text-align: center;
-			background: #fff;
             h1{
 				padding-top: 0.8rem;
                 text-align: center;
