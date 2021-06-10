@@ -21,9 +21,19 @@ export function createRouter() {
         routes: [
             {
                 path: '/',
+                redirect:'/home'
+            },
+            {
+                path: '/doc',
                 name:Expect,
                 component: Expect
+            },
+            {
+                path: '/home',
+                name:ProductionIrita,
+                component: ProductionIrita
             }
+
         ]
     })
 }

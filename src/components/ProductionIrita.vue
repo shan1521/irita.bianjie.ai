@@ -2,24 +2,26 @@
 	<div class="production_container">
 		<div class="production_header_content_wrap">
 			<div class="production_header_content">
-				<h2>支持下一代分布式商业的联盟链产品-IRITA</h2>
-				<h5>Cosmos 生态的首个企业级开源项目 · 创新支持基于 iService 的链上链下通联</h5>
+				<div class="production_header_img_wrap">
+					<h5>支持下一代分布式商业系统的联盟链产品-IRITA</h5>
+					<div class="title_img_content">
+						<img src="../assets/home/iritahome_banner.png" alt="">
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="production_text_content">
-			<div class="production_text_title"></div>
-			<p class="production_list_item">
-				IRITA 是边界智能以区块链跨链、隐私计算及大数据分析技术创新为核心，打造的支持下一代分布式商业系统的企业级联盟链产品。IRITA 具有保护隐私的数据加密共享、高效的共识协议、领先的跨链技术、实用性极强的链上链下系统交互能力、灵活的数字资产建模与交易支持以及大数据技术支撑的业务分析 6 大核心技术优势，可广泛应用于金融、医疗健康、供应链、车联网等多种商业场景，为实体经济提供基于区块链信任机器的价值赋能。</p>
+			<div class="production_text_title">产品简介</div>
+			<p class="production_list_item">IRITA 是边界智能以区块链跨链、隐私计算及大数据分析技术创新为核心，自主研发的支持下一代分布式商业系统的企业级联盟链产品。IRITA 具有保护隐私的数据加密共享、高效的共识协议、领先的跨链技术、实用性极强的链上链下系统交互能力、灵活的数字资产建模与可信交换支撑、以及大数据支持等 6 大核心技术优势，可广泛应用于金融、医疗健康、供应链、车联网等多种商业场景，为实体经济提供基于区块链信任机器的价值赋能。</p>
 			<p class="production_list_item">IRITA 支持中国国密标准，并有完善的 SDK 及运维工具支持，在性能、安全可靠性、认证及权限、可维护性、可扩展性和运维监控等多方面都满足企业级应用需求。</p>
-			
-			<p class="production_list_item">IRITA 具有模块化的架构，各个子产品具有不同的功能，可以根据不同业务场景高效打造不同行业应用：</p>
-			<p class="production_list_item_children"> • IRITA-Lite 属于开源版本；</p>
-			<p class="production_list_item_children"> • IRITA SCF 应用于供应链金融领域；</p>
-			<p class="production_list_item_children"> • IRITA HUB 跨链服务枢纽上线 BSN；</p>
-			<p class="production_list_item_children"> • IRITA BEAN 被复星集团旗下星康链使用；</p>
-			
-			<p class="production_list_item">IRITA BEAN 在 2018 年 9 月荣获中国健康医疗大数据产业创新大赛 TMT 数据组一等奖及天使之星组冠军。基于 IRITA-BEAN 的星康链及 IRITA-HUB 在 2019 年荣获由中国电子信息产业发展研究院赛迪研究院主导评选 2019 中国优秀区块链解决方案。</p>
-			
+		</div>
+		<div class="production_irita_img_content">
+			<div class="production_irita_img_wrap">
+				<div class="production_irita_img">
+					<h3 class="production_irita_title">系统架构</h3>
+					<img src="../assets/irita/IRITA_framework.png" alt="">
+				</div>
+			</div>
 		</div>
 		<div class="production_irita_core_content">
 			<div class="production_content_wrap">
@@ -36,14 +38,6 @@
 						</div>
 					</li>
 				</ul>
-			</div>
-		</div>
-		<div class="production_irita_img_content">
-			<div class="production_irita_img_wrap">
-				<div class="production_irita_img">
-					<h3 class="production_irita_title">系统架构</h3>
-					<img src="../assets/irita/irita.png" alt="">
-				</div>
 			</div>
 		</div>
 	</div>
@@ -147,32 +141,123 @@
 	}
 	.production_container{
 		width: 100%;
-		background: #fafafa;
+		background: #fff;
 		.production_header_content_wrap{
-			background: url("../assets/home/IRISnet.svg") no-repeat center center;
+			background: url("../assets/home/irita_banner_bg.png") no-repeat center center;
 			background-size: cover;
 			height: 4.6rem;
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			width: 100%;
 			.production_header_content{
-				text-align: center;
-				h2{
-					text-align: center;
-					font-size: 0.6rem;
-					color: #fff;
-				}
-				h5{
-					font-size: 0.22rem;
-					color: #fff;
-					line-height: 0.3rem;
-					margin-top: 0.2rem;
+				text-align: left;
+				display: flex;
+				justify-content: flex-start;
+				max-width: 12rem;
+				width: 100%;
+				margin: 0 auto;
+				.production_header_img_wrap{
+					display:flex;
+					position: relative;
+					justify-content: flex-start;
+					width: 100%;
+					h5{
+						width: 100%;
+						text-align: left;
+						font-size: 0.5rem;
+						color: #fff;
+						line-height: 0.7rem;
+						font-weight: 500;
+						max-width: 6.5rem;
+						@media(max-width: 1200px){
+							margin-left: 0.2rem;
+						}
+						@media(max-width: 1050px){
+							max-width: 5.4rem;
+							font-size: 0.4rem;
+							line-height: 0.6rem;
+						}
+						@media(max-width: 900px){
+							max-width: 5rem;
+							font-size: 0.36rem;
+							line-height: 0.5rem;
+						}
+						@media(max-width: 768px){
+							max-width: 5rem;
+							font-size: 0.36rem;
+						}
+						@media(max-width: 600px){
+							max-width: 4.68rem;
+							margin: 0 auto;
+							line-height: 0.5rem;
+						}
+						@media(max-width: 500px){
+							font-size: 0.3rem;
+							max-width: 3.9rem;
+							margin: 0 auto;
+							padding: 0;
+							line-height: 0.4rem;
+						}
+						@media(max-width: 440px){
+							font-size: 0.24rem;
+							max-width: 3.2rem;
+							margin: 0 auto;
+							padding: 0;
+							line-height: 0.32rem;
+							
+						}
+						@media(max-width: 321px){
+							font-size: 0.2rem;
+							max-width: 2.6rem;
+							margin: 0 auto;
+							padding: 0;
+						}
+					}
+					.title_img_content{
+						flex: 1;
+						position: absolute;
+						right: -0.8rem;
+						top:-1.55rem;
+						@media(max-width: 1200px){
+							top:-1.05rem;
+						}
+						@media(max-width: 1050px){
+							top:-0.45rem;
+						}
+						@media(max-width: 1050px){
+							top:-0.25rem;
+							right: -0.6rem;
+						}
+						@media(max-width: 768px){
+							top:0.2rem;
+							right: -0.6rem;
+						}
+						img{
+							max-width: 7.9rem;
+							width: 100%;
+							@media(max-width: 1200px){
+								max-width: 6.35rem;
+							}
+							@media(max-width: 1050px){
+								max-width: 5.35rem;
+							}
+							@media(max-width: 900px){
+								max-width: 4.8rem;
+							}
+							@media(max-width: 768px){
+								max-width: 4.8rem;
+							}
+							@media(max-width: 600px){
+								display: none;
+							}
+						}
+					}
 				}
 			}
 		}
 		.production_text_content{
 			max-width: 12rem;
-			margin: 0 auto 1rem auto;
+			margin: 0 auto 0.8rem auto;
 			.production_text_title{
 				font-size:0.18rem;
 				text-align: center;
@@ -214,7 +299,7 @@
 			.production_content_wrap{
 				max-width: 12rem;
 				margin: 0 auto;
-				padding-top: 1rem;
+				padding-top: 0.8rem;
 				padding-bottom: 1rem;
 				.production_title{
 					text-align: center;
@@ -279,13 +364,14 @@
 			}
 		}
 		.production_irita_img_content{
+			background: #fafafa;
 			.production_irita_img_wrap{
 				max-width: 12rem;
 				margin: 0 auto;
 				box-sizing: border-box;
 				padding: 0 0.2rem;
 				.production_irita_img{
-					padding: 1rem 0;
+					padding: 0.8rem 0;
 					.production_irita_title{
 						font-size: 0.18rem;
 						font-weight:600;
@@ -307,7 +393,6 @@
 				.production_header_content{
 					h5{
 						box-sizing: border-box;
-						padding:  0 0.2rem;
 					}
 				}
 			}

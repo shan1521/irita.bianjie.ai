@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-<!--        <Header v-if="$store.state.flShowHeaderAndFooter"></Header>-->
+        <Header v-if="$store.state.flShowHeaderAndFooter"></Header>
         <router-view :key="key"/>
-<!--        <Footer v-if="$store.state.flShowHeaderAndFooter"></Footer>-->
+        <Footer v-if="$store.state.flShowHeaderAndFooter"></Footer>
     </div>
 </template>
 
@@ -95,7 +95,8 @@
         width:100%;
         height:100%;
         overflow: hidden;
-        overflow-y: auto;
+		overflow-y: auto;
+		padding-left: calc(100vw - 100%);
         -webkit-tap-highlight-color:rgba(0,0,0,0);
     }
     #app{
@@ -104,7 +105,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        .swiper-pagination-bullet{
+		.swiper-pagination-bullet{
             width: 0.04rem !important;
             height: 0.04rem !important;
             margin: 0.01rem !important;
