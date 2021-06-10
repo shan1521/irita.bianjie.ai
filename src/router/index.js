@@ -24,7 +24,7 @@ export function createRouter() {
                 redirect:'/home'
             },
             {
-                path: '/doc',
+                path: '/docs',
                 name:Expect,
                 component: Expect
             },
@@ -32,6 +32,10 @@ export function createRouter() {
                 path: '/home',
                 name:ProductionIrita,
                 component: ProductionIrita
+            },
+            {
+                path: '*',
+                redirect:'/home'
             }
 
         ]

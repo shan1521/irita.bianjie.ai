@@ -33,7 +33,7 @@
 					</li>
 				</ul>
                 <div class="print_content">
-                    <router-link :to="'/doc'" @click.native="changHeaderBgColor()" class="irita_doc">技术文档
+                    <router-link :to="'/docs'" @click.native="changHeaderBgColor()" class="irita_doc">技术文档
 
                     </router-link>
 <!--                    <span @click="openPrint()">打印 <img style="width: 0.14rem" src="../assets/home/print_icon.png"></span>-->
@@ -47,7 +47,7 @@
 		<div class="header_mobile_content" v-if="flShowMobileMenu">
 			<ul class="header_mobile_list_content">
 				<li class="header_mobile_list_button" @click="changeRouter(`/home`)"><router-link :to="`/home`">关于IRITA</router-link></li>
-				<li class="header_mobile_list_button" @click="changeRouter(`/doc`)"><router-link :to="`/doc`">技术文档</router-link></li>
+				<li class="header_mobile_list_button" @click="changeRouter(`/docs`)"><router-link :to="`/doc`">技术文档</router-link></li>
 			</ul>
 		</div>
 	</div>
@@ -116,7 +116,7 @@
 				
 				this.flShowBoxShadow = true;
 			}else {
-				if(this.$route.path === '/doc'){
+				if(this.$route.path === '/docs'){
 					this.flShowBoxShadow = true;
 					return
 				}
@@ -146,7 +146,7 @@
 				this.navigationList.forEach( item => {
 					item.isActive = false
 				})
-				isActiveIndex ? this.navigationList[isActiveIndex].isActive = true : null
+				isActiveIndex  !== null ? this.navigationList[isActiveIndex].isActive = true : null
 			},
             openPrint(){
                 window.print()
@@ -193,7 +193,7 @@
 				if(this.scrollTop > 5){
 					this.flShowBoxShadow = true;
 				}else {
-					if(this.$route.path === '/doc'){
+					if(this.$route.path === '/docs'){
 						this.flShowBoxShadow = true;
 						return
 					}

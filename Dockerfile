@@ -1,7 +1,7 @@
 FROM keymetrics/pm2:latest-alpine
 
-ADD . /www.bianjie.ai
-WORKDIR /www.bianjie.ai
+ADD . /irita.bianjie.ai
+WORKDIR /irita.bianjie.ai
 RUN npm i && npm run build
 EXPOSE 3000
 ENV NODE_ENV="production"
