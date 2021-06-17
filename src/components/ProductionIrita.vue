@@ -14,6 +14,13 @@
 			<div class="production_text_title">产品简介</div>
 			<p class="production_list_item">IRITA 是边界智能以区块链跨链、隐私计算及大数据分析技术创新为核心，自主研发的支持下一代分布式商业系统的企业级联盟链产品。IRITA 具有保护隐私的数据加密共享、高效的共识协议、领先的跨链技术、实用性极强的链上链下系统交互能力、灵活的数字资产建模与可信交换支撑、以及大数据支持等 6 大核心技术优势，可广泛应用于金融、医疗健康、供应链、车联网等多种商业场景，为实体经济提供基于区块链信任机器的价值赋能。</p>
 			<p class="production_list_item">IRITA 支持中国国密标准，并有完善的 SDK 及运维工具支持，在性能、安全可靠性、认证及权限、可维护性、可扩展性和运维监控等多方面都满足企业级应用需求。</p>
+			
+			<p class="production_list_item">IRITA 具有模块化的架构，各个子产品具有不同的功能，可以根据不同业务场景高效打造不同行业应用：</p>
+			<p class="production_list_item_children"> • IRITA-Lite 属于开源版本</p>
+			<p class="production_list_item_children"> • IRITA BEAN 保护数据隐私的数据共享，可用于物联网、医疗健康等数据管理平台</p>
+			<p class="production_list_item_children"> • IRITA DA 数字资产确权及交换，可应用于供应链金融、碳中和等领域</p>
+			<p class="production_list_item_children"> • IRITA HUB 跨链服务枢纽，已上线BSN</p>
+			<p class="production_list_item_children"> • IRITA OPB 开放联盟链，已上线BSN</p>
 		</div>
 		<div class="production_irita_img_content">
 			<div class="production_irita_img_wrap">
