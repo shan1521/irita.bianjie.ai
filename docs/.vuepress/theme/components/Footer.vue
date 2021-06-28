@@ -5,7 +5,7 @@
 				<div class="content">
 					<div class="content_left">
 						<div class="left_img">
-							<img src="" alt="" class="img">
+							<img src="/irita_logo_white.png" alt="" class="img">
 						</div>
 						<p class="img_desc">支持下一代分布式商业系统的企业级联盟链产品</p>
 					</div>
@@ -19,7 +19,7 @@
 						<div class="focus">
 							<span class="focus_title">关注我们</span>
 							<span class="qr_code">
-								<img src="" alt="" class="qr_code_img">
+								<img src="/qrcode.png" alt="" class="qr_code_img">
 							</span>
 							<span class="desc">微信公众号 边界智能</span>
 						</div>
@@ -59,7 +59,7 @@ export default {
 
 <style lang="stylus" scoped>
 .footer_content_wrapper 
-  // margin-top 10rem
+  margin-top 10rem
   width 100%
   height 37.4rem
   .footer_content_top

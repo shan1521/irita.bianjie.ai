@@ -3,7 +3,7 @@
     <div class="navigation_content">
       <div class="navigation_content_left">
         <div class="navigation_img_content" @click="toHome()">
-          <!-- <img class="logo" src="../../public/logo.svg" alt="" /> -->
+          <img class="logo" src="/irita_logo.png" alt="" />
         </div>
       </div>
       <ul class="navigation_content_right">
@@ -54,6 +54,7 @@ export default {
 	width 100%
 	height $navbarHeight
 	background $whiteColor
+	border-bottom 0.1rem solid #E8EBF5
 	z-index 10
 	.navigation_content
 		display flex
@@ -62,14 +63,16 @@ export default {
 		margin 0 auto
 		max-width $contentWidth
 		height $navbarHeight
-		background pink
 		.navigation_content_left
+			display flex
+			align-items center
 			padding-left 0.8rem
 			height $navbarHeight
-			.navigation_img_content {
-				display flex
-				height 3.6rem 
-			}
+			.navigation_img_content
+				height 4rem
+				.logo
+					height 4rem
+					vertical-align middle
 		.navigation_content_right
 			display flex
 			justify-content space-between
@@ -81,8 +84,12 @@ export default {
 			font-size $fontSize16
 			.navigation_list_item 
 				position relative
-				padding 2.1rem 3rem
+				padding 2.05rem 3rem
 				line-height 100%
+				&:last-child 
+					padding-right 0
+					.line
+						transform translateX(-40%)
 				.line
 					position absolute
 					top 0

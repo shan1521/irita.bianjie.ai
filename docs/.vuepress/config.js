@@ -3,7 +3,7 @@ module.exports = {
     description: 'irita.binajie.ai',
     base:'/',
     head: [
-        [ 'link', {rel:'icon',href:''}],
+        [ 'link', {rel:'icon',href:'/favicon.png'}],
         [ 'meta', {name:'keywords',content:''}],
         [ 'meta', {name:'viewport',content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0'}]
     ],
