@@ -1,0 +1,23 @@
+{
+  "id": "2638212",
+  "name": "IRITA homepage",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "IRITA 官网项目",
+  "glyphs": [
+    {
+      "icon_id": "22528646",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e6db",
+      "unicode_decimal": 59099
+    },
+    {
+      "icon_id": "22528612",
+      "name": "doct",
+      "font_class": "doct",
+      "unicode": "e6da",
+      "unicode_decimal": 59098
+    }
+  ]
+}

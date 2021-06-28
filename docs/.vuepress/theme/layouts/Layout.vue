@@ -28,7 +28,7 @@
     </Sidebar> -->
     <div class="main_content_wrapper">
       <Home v-if="$page.frontmatter.home"></Home>
-
+      <NewHome></NewHome>
     </div>
 
     <!-- <Page
@@ -54,6 +54,7 @@ import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
 import Navigation from "@theme/components/Navigation.vue";
 import Footer from "@theme/components/Footer.vue";
+import NewHome from "@theme/components/NewHome.vue";
 
 export default {
   name: 'Layout',
@@ -64,7 +65,8 @@ export default {
     Sidebar,
     Navbar,
     Navigation,
-    Footer
+    Footer,
+    NewHome
   },
 
   data () {
@@ -166,5 +168,4 @@ export default {
     height 100%
     .main_content_wrapper
       flex 1
-      background green
 </style>
