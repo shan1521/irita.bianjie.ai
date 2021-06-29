@@ -14,7 +14,7 @@
 						<i class="iconfont icon-github"></i>
 						<span class="link_type">GitHub</span>
 					</span>
-				</div>	
+				</div>
 			</div>
 		</div>
 		<div class="home_irita_what_content">
@@ -42,7 +42,10 @@
 
 <script>
 export default {
-    name:'NewHome'
+    name:'NewHome',
+    mounted(){
+        console.log(this.$frontmatter)
+    }
 }
 </script>
 
