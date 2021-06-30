@@ -65,12 +65,12 @@
                             </div>
 
                         </div>
-                        <div class="developer_middle_top_right_bottom">
+                        <a class="developer_middle_top_right_bottom" href="https://github.com/bianjieai/irita" target="_blank">
                             <span class="developer_middle_top_right_know">
                                 了解更多
                             </span>
-                            <i class="developer_middle_top_right_iconfont"></i>
-                        </div>
+                            <img src="../assets/developer_arrow_right.png" class="developer_middle_top_right_iconfont" />
+                        </a>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@
                 </span>
                 <div class="developer_middle_bottom_content">
                     <div class="developer_middle_bottom_item">
-                        <i class="developer_middle_bottom_item_icon iconfont"></i>
+                        <img src="../assets/SDK_icon.png" class="developer_middle_bottom_item_icon" />
                         <span class="developer_middle_bottom_item_title">
                             SDKs
                         </span>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="developer_middle_bottom_item">
-                        <i class="developer_middle_bottom_item_icon iconfont"></i>
+                        <img src="../assets/jichusheshi_icon.png" class="developer_middle_bottom_item_icon" />
                         <span class="developer_middle_bottom_item_title">
                             完善的基础设施
                         </span>
@@ -112,7 +112,7 @@
                         </span>
                     </div>
                     <div class="developer_middle_bottom_item">
-                        <i class="developer_middle_bottom_item_icon iconfont"></i>
+                        <img src="../assets/developer_icon.png" class="developer_middle_bottom_item_icon" />
                         <span class="developer_middle_bottom_item_title">
                             强大的开发者社区
                         </span>
@@ -121,7 +121,7 @@
                         </span>
                     </div>
                     <div class="developer_middle_bottom_item">
-                        <i class="developer_middle_bottom_item_icon iconfont"></i>
+                        <img src="../assets/system_icon.png" class="developer_middle_bottom_item_icon" />
                         <span class="developer_middle_bottom_item_title">
                             繁荣的生态系统
                         </span>
@@ -139,60 +139,64 @@
                 <span class="developer_bottom_top_left">
                     开发者工具
                 </span>
-                <div class="developer_bottom_top_right">
+<!--                <div class="developer_bottom_top_right">
                     <span class="developer_bottom_top_right_title">
                         联系小助手
                     </span>
-                    <i class="developer_bottom_top_right_icon iconfont"></i>
-                </div>
+                    <i class="developer_bottom_top_right_icon"></i>
+                    <div class="developer_bottom_top_right_img_container">
+                        <img src="" alt="" class="developer_bottom_top_right_img">
+                    </div>
+                </div>-->
             </div>
             <div class="developer_bottom_bottom">
                 <div class="developer_bottom_bottom_left">
-                    <div class="developer_bottom_bottom_item">
-                        <i class="developer_bottom_bottom_item iconfont"></i>
+                    <a class="developer_bottom_bottom_item" href="https://github.com/bianjieai/irita" target="_blank" >
+                        <img class="developer_bottom_bottom_item_iconfont" src="../assets/github_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
                             GitHub 开源地址
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
-                    </div>
-                    <div class="developer_bottom_bottom_item">
-                        <i class="developer_bottom_bottom_item iconfont"></i>
+                    </a>
+                    <a class="developer_bottom_bottom_item" href="https://irita.bianjie.ai/docs/" target="_blank" >
+                        <img class="developer_bottom_bottom_item_iconfont" src="../assets/doc_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
                             开发者技术文档
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
-                    </div>
-                    <div class="developer_bottom_bottom_item">
-                        <i class="developer_bottom_bottom_item iconfont"></i>
+                    </a>
+                    <a class="developer_bottom_bottom_item _last_item">
+                        <img class="developer_bottom_bottom_item_iconfont" src="../assets/API_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
                             成熟的链上API接口
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
-                    </div>
+                    </a>
                 </div>
-                <img src="" class="developer_bottom_bottom_center" />
+                <img src="../assets/developer_bottom_bg.png"
+                     class="developer_bottom_bottom_center" />
                 <div class="developer_bottom_bottom_right">
-                    <div class="developer_bottom_bottom_item">
-                        <i class="developer_bottom_bottom_item iconfont"></i>
+                    <a class="developer_bottom_bottom_item" >
+                        <img class="developer_bottom_bottom_item_iconfont" src="../assets/iservice_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
                             iService服务套件
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
-                    </div>
-                    <div class="developer_bottom_bottom_item">
-                        <i class="developer_bottom_bottom_item iconfont"></i>
+                    </a>
+                    <a class="developer_bottom_bottom_item">
+                        <img class="developer_bottom_bottom_item_iconfont" src="../assets/IDE_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
                             智能合约IDE
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
-                    </div>
-                    <div class="developer_bottom_bottom_item">
-                        <i class="developer_bottom_bottom_item iconfont"></i>
+                    </a>
+                    <a class="developer_bottom_bottom_item _last_item">
+                        <img class="developer_bottom_bottom_item_iconfont" src="../assets/baseservice_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
                             链外基础服务设施
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -317,22 +321,27 @@ export default {
                                 font-size: 14px;
                                 font-family: PingFangSC-Medium, PingFang SC;
                                 font-weight: 500;
-                                color: #000000;
+                                color: rgba(0, 0, 0, .4);
                                 line-height: 28px;
                             }
                         }
                     }
                     .developer_middle_top_right_bottom{
+                        display:flex;
+                        align-items center;
+                        cursor:pointer;
                         .developer_middle_top_right_know{
                             font-size: 16px;
                             font-family: PingFangSC-Regular, PingFang SC;
                             font-weight: 400;
                             color: #7065FF;
                             line-height: 16px;
-                            cursor:pointer;
                         }
                         .developer_middle_top_right_iconfont{
                             cursor:pointer;
+                            width:16px;
+                            height:16px;
+                            margin-left:8px;
                         }
                     }
                 }
@@ -375,7 +384,9 @@ export default {
                     display:flex;
                     flex-direction column;
                     .developer_middle_bottom_item_icon{
-
+                        width:40px;
+                        height:40px;
+                        margin-bottom:16px;
                     }
                     .developer_middle_bottom_item_title{
                         font-size:20px;
@@ -389,6 +400,7 @@ export default {
                         color:#000000;
                         padding-bottom 24px;
                         border-bottom:1px solid #E8EBF5;
+                        opacity:.4;
                     }
                     ._no_border{
                         border:none;
@@ -410,7 +422,107 @@ export default {
         }
     }
     .developer_bottom{
+        display:flex;
+        flex-direction column;
+        justify-content center;
+        align-items center;
+        .developer_bottom_top{
+            display:flex;
+            justify-content space-between;
+            align-items center;
+            //margin-bottom 48px;
+            .developer_bottom_top_left{
+                font-size: 28px;
+                font-family: PingFangSC-Semibold, PingFang SC;
+                font-weight: 600;
+                color: #000000;
+            }
+            .developer_bottom_top_right{
+                display:flex;
+                justify-content center;
+                align-items center;
+                font-size: 14px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #7065FF;
+                position:relative;
+                .developer_bottom_top_right_title{
 
+                }
+                .developer_bottom_top_right_icon{
+
+                }
+                .developer_bottom_top_right_img_container{
+                    width: 120px;
+                    height: 120px;
+                    background: #FFFFFF;
+                    border: 1px solid #E8EBF5;
+                    position:absolute;
+                    bottom:-120px;
+                    right:0;
+                    display:none;
+                    z-index:10;
+
+                }
+                &:hover{
+                    .developer_bottom_top_right_img_container{
+                        display:flex;
+                    }
+                }
+            }
+        }
+        .developer_bottom_bottom{
+            display:flex;
+            .developer_bottom_bottom_left, .developer_bottom_bottom_right{
+                display:flex;
+                justify-content center;
+                flex-direction: column;
+            }
+
+            .developer_bottom_bottom_item{
+                width: 232px;
+                height: 48px;
+                border-radius: 24px;
+                border: 1px solid #E8EBF5;
+                display:flex;
+                align-items center;
+                margin-bottom:48px;
+                font-size: 16px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #000000;
+                overflow:hidden;
+                box-sizing border-box;
+                cursor:pointer;
+                transition :all .2s linear;
+                &:hover{
+                    color:#7065FF;
+                    border-color:#7065FF;
+                }
+                .developer_bottom_bottom_item_iconfont{
+                    height:48px;
+                    width:48px;
+                    margin-right:20px;
+                    position:relative;
+                    left:-1px;
+                }
+                .developer_bottom_bottom_item_title{
+
+                }
+                .developer_bottom_bottom_item_bg{
+
+                }
+
+            }
+            ._last_item{
+                margin-bottom:0;
+            }
+            .developer_bottom_bottom_center{
+                width:360px;
+                height:338px;
+            }
+
+        }
     }
 
     //pc
@@ -485,6 +597,52 @@ export default {
 
                         }
                     }
+                }
+            }
+        }
+        .developer_bottom{
+            height:524px;
+            .developer_bottom_top{
+                width:864px;
+                .developer_bottom_top_left{
+
+
+                }
+                .developer_bottom_top_right{
+
+                    .developer_bottom_top_right_title{
+
+                    }
+                    .developer_bottom_top_right_icon{
+
+                    }
+                }
+            }
+            .developer_bottom_bottom{
+                flex-direction row;
+                .developer_bottom_bottom_left{
+
+                    .developer_bottom_bottom_item{
+
+                        .developer_bottom_bottom_item_iconfont{
+
+                        }
+                        .developer_bottom_bottom_item_title{
+
+                        }
+                        .developer_bottom_bottom_item_bg{
+
+                        }
+
+                    }
+
+                }
+                .developer_bottom_bottom_center{
+                    margin:0 20px;
+
+                }
+                .developer_bottom_bottom_right{
+
                 }
             }
         }
