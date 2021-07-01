@@ -28,7 +28,7 @@
     </Sidebar> -->
     <div class="main_content_wrapper">
       <Home v-if="$page.frontmatter.home"></Home>
-      <NewHome></NewHome>
+      <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
     </div>
 
     <!-- <Page

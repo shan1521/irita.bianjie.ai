@@ -14,7 +14,7 @@
 						<div class="contact">
 							<span class="contact_title">联系我们</span>
 							<span class="email">contact@bianjie.ai</span>
-							<span class="official">www.bianjie.ai</span>
+							<a class="official" href="https://www.bianjie.ai" target="_blank" rel="noopener noreferrer">www.bianjie.ai</a>
 						</div>
 						<div class="focus">
 							<span class="focus_title">关注我们</span>
@@ -59,7 +59,7 @@ export default {
 
 <style lang="stylus" scoped>
 .footer_content_wrapper 
-  margin-top 10rem
+  margin-top 2rem
   width 100%
   height 37.4rem
   .footer_content_top
@@ -123,6 +123,8 @@ export default {
 							font-family PingFangSC-Medium, PingFang SC
 							font-weight $fontWeight500
 							color $whiteColorOpacity
+							&:hover
+								color $whiteColor
 					.focus
 						display flex
 						flex-direction column
