@@ -12,16 +12,11 @@ module.exports = {
         search: false,
         navbar: false,
         nav: [
-            {text:'关于 IRITA', link: '/'},
-            {text:'技术文档', link: 'https://irita.bianjie.ai/docs/'},
-            {text:'开放社区', link: '/opencommunity'},
-            // {text:'开放社区', link: '/opencommunity',items: [
-            //     {text:'技术博客', link:'/opencommunity/blog'},
-            //     {text:'文章资讯', link:'/opencommunity/articles'},
-            //     {text:'GitHub', link:'https://github.com/bianjieai/irita'},
-            // ]},
-            {text:'开发者',link:'/developer'},
-            {text:'关于边界',link:'https://www.bianjie.ai'}
+            {text:'关于 IRITA', link: '/', target: '_self'},
+            {text:'技术文档', link: 'https://irita.bianjie.ai/docs/', target: '_blank'},
+            {text:'开放社区', link: '/opencommunity/blog', target:'_self'},
+            {text:'开发者',link:'/developer', target:'_self'},
+            {text:'关于边界',link:'https://www.bianjie.ai', target: '_blank'}
         ]
     }
 }

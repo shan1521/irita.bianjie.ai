@@ -5,48 +5,12 @@
         @touchstart="onTouchStart"
         @touchend="onTouchEnd"
     >
-        <!-- <Navbar
-          v-if="shouldShowNavbar"
-          @toggle-sidebar="toggleSidebar"
-        /> -->
         <Navigation></Navigation>
-        <!-- <div
-          class="sidebar-mask"
-          @click="toggleSidebar(false)"
-        /> -->
-
-        <!-- <Sidebar
-          :items="sidebarItems"
-          @toggle-sidebar="toggleSidebar"
-        >
-          <template #top>
-            <slot name="sidebar-top" />
-          </template>
-          <template #bottom>
-            <slot name="sidebar-bottom" />
-          </template>
-        </Sidebar> -->
-        <div class="main_content_wrapper" v-if="$page.frontmatter.home">
-            <Home></Home>
-            <NewHome></NewHome>
-        </div>
         <div class="main_content_wrapper">
-            <Developer />
+            <Home v-if="$page.frontmatter.home"></Home>
+            <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
+            <Developer v-if="$page.frontmatter.isDeveloper"></Developer> />
         </div>
-
-
-
-        <!-- <Page
-          v-else
-          :sidebar-items="sidebarItems"
-        >
-          <template #top>
-            <slot name="page-top" />
-          </template>
-          <template #bottom>
-            <slot name="page-bottom" />
-          </template>
-        </Page> -->
         <Footer></Footer>
     </div>
 </template>
