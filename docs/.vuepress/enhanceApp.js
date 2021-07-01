@@ -1,7 +1,7 @@
-// import 'element-ui/lib/theme-chalk/index.css'
-// import 'overlayscrollbars/css/OverlayScrollbars.css'
 import Vuex from 'vuex'
 import store from './store'
+import Element from 'element-ui';
+import  './style/theme/index.css'
 import Vue from 'vue'
 // Vue.prototype.$bus = new Vue();
 export default async ({
@@ -17,9 +17,10 @@ export default async ({
 		if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
 		return originalPush.call(this, location).catch(err => {err})
 	}
-	
+
 	Vue.use(router)
 	Vue.use(Vuex)
+    Vue.use(Element);
 	Vue.mixin({ store: store });
 	if(!isServer){
 		router.beforeEach((from,to,next) => {
