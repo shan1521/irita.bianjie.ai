@@ -14,7 +14,7 @@ module.exports = {
         nav: [
             {text:'关于 IRITA', link: '/', target: '_self'},
             {text:'技术文档', link: 'https://irita.bianjie.ai/docs/', target: '_blank'},
-            {text:'开放社区', link: '/opencommunity/blog', target:'_self'},
+            {text:'开放社区', link: '/community', target:'_self'},
             {text:'开发者',link:'/developer', target:'_self'},
             {text:'关于边界',link:'https://www.bianjie.ai', target: '_blank'}
         ]
