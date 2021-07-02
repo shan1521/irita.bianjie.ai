@@ -9,7 +9,7 @@
                     </span>
                 </div>
                 <div class="community_top_right">
-                    <img src="../assets/developer_top_img.png" alt=""
+                    <img src="../assets/community_banner_image.png" alt=""
                          class="community_top_right_img">
                 </div>
 
@@ -110,7 +110,7 @@ export default {
     name : 'Community',
     data(){
         return {
-            activeTab : 1,
+            activeTab : 0,
             total:0,
             currentPage: 1,
         }
@@ -139,7 +139,6 @@ export default {
     },
     mounted(){
         this.setTotal()
-        console.log(this.$route);
     },
     methods : {
         handleTabClick(tab){
@@ -194,10 +193,12 @@ export default {
                 align-items flex-start;
 
                 .community_top_left_sub_title {
-                    font-size: 24px;
-                    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
-                    font-weight: 400;
+                    font-size: 48px;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
                     color: #000000;
+                    line-height: 48px;
+                    letter-spacing: 1px;
                     margin-bottom: 22px;
                 }
 
@@ -215,8 +216,8 @@ export default {
                 align-items flex-end;
 
                 .community_top_right_img {
-                    width: 432px;
-                    height: 294px;
+                    width: 570px;
+                    height: 328px;
                 }
             }
 
@@ -302,6 +303,9 @@ export default {
                             font-family: PingFangSC-Semibold, PingFang SC;
                             font-weight: 600;
                             color: #000000;
+                            overflow: hidden;
+                            text-overflow:ellipsis;
+                            white-space: nowrap;
                         }
 
                         .community_bottom_content_item_wrap {
@@ -367,6 +371,7 @@ export default {
                     display:flex;
                     align-items center;
                     cursor:pointer;
+                    width:100%;
                     &:hover{
                         .community_bottom_content_article_item_right_title{
                             color:#7065FF !important;
@@ -376,6 +381,8 @@ export default {
                         margin-right:24px;
                         display flex;
                         flex-direction column;
+                        width:36px;
+                        flex: 0 0 36px;
                         .community_bottom_content_article_item_left_top{
                             display flex;
                             flex-direction column;
@@ -419,14 +426,18 @@ export default {
                     .community_bottom_content_article_item_right{
                         display flex;
                         flex-direction column;
+                        flex:1;
                         .community_bottom_content_article_item_right_title{
-                            display flex;
-                            align-items center;
+                            width:100%;
+                            //display flex;
+                            //align-items center;
                             font-size: 20px;
                             font-family: PingFangSC-Semibold, PingFang SC;
                             font-weight: 600;
                             color: #000000;
+                            word-break break-all;
                             margin-bottom 12px;
+                            line-height:1.5;
                             .community_bottom_content_article_item_right_tag{
                                 width: 60px;
                                 height: 24px;
@@ -441,6 +452,10 @@ export default {
                                 line-height:20px;
                                 box-sizing border-box;
                                 margin-left:8px;
+                                display:inline-block;
+                                padding:0 5px;
+                                position:relative;
+                                top:-3px;
                             }
                         }
                         .community_bottom_content_article_item_right_content{

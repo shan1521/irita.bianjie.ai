@@ -13,8 +13,7 @@
             <Community v-if="$page.frontmatter.isCommunity"/>
             <div class="md_container" v-if="showMd">
                 <div class="md_wrap">
-                    <Content slot-key="blog"/>
-                    <Content slot-key="test"/>
+                    <Content v-for="item in blogAndArticleList" :slot-key="item.slot" />
                 </div>
 
             </div>
@@ -38,7 +37,12 @@ import Community from "../components/Community";
 
 export default {
     name : 'Layout',
-
+    data(){
+        return {
+            isSidebarOpen : false,
+            blogAndArticleList:[],
+        }
+    },
     components : {
         Home,
         Page,
@@ -50,16 +54,29 @@ export default {
         Developer,
         Community,
     },
-
-    data(){
-        return {
-            isSidebarOpen : false
+    watch:{
+        frontmatter(frontmatter){
+            if(frontmatter.isCommunity){
+                this.setBlogAndArticleList(frontmatter)
+            }
         }
     },
 
+    mounted(){
+        this.$router.afterEach(() => {
+            this.isSidebarOpen = false
+            window.scrollTo(0, 0)
+        })
+        if(this.$page.frontmatter.isCommunity){
+            this.setBlogAndArticleList(this.$page.frontmatter)
+        }
+    },
     computed : {
         showMd(){
             return Object.keys(this.$page.frontmatter).length === 0;
+        },
+        frontmatter(){
+           return this.$page.frontmatter
         },
         shouldShowNavbar(){
             const {themeConfig} = this.$site
@@ -108,20 +125,17 @@ export default {
             ]
         }
     },
-
-    mounted(){
-        this.$router.afterEach(() => {
-            this.isSidebarOpen = false
-            window.scrollTo(0, 0)
-        })
-    },
-
     methods : {
         toggleSidebar(to){
             this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
             this.$emit('toggle-sidebar', this.isSidebarOpen)
         },
-
+        setBlogAndArticleList(frontmatter){
+            let articles = JSON.parse(JSON.stringify(frontmatter.articles));
+            let blogs = JSON.parse(JSON.stringify(frontmatter.blogs));
+            this.blogAndArticleList = [...articles, ...blogs];
+            console.log('-=-=-', this.blogAndArticleList)
+        },
         // side swipe
         onTouchStart(e){
             this.touchStart = {

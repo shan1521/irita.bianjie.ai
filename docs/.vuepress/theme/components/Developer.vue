@@ -3,14 +3,11 @@
         <div class="developer_top">
             <div class="developer_top_wrap">
                 <div class="developer_top_left">
-                    <span class="developer_top_left_title">
-                        IRITA
+                    <span class="developer_top_left_content">
+                        欢迎来到 IRITA 开发者
                     </span>
                     <span class="developer_top_left_sub_title">
-                        支持下一代分布式商业系统的企业级联盟链产品
-                    </span>
-                    <span class="developer_top_left_content">
-                        因为有你, 所以精彩
+                        从这里 开启IRITA之旅
                     </span>
                     <i class="developer_top_left_border"></i>
                 </div>
@@ -232,14 +229,6 @@ export default {
                 display:flex;
                 flex-direction: column;
                 align-items flex-start;
-
-                .developer_top_left_title{
-                    font-size: 24px;
-                    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
-                    font-weight: 400;
-                    color: #000000;
-                    margin-bottom:16px;
-                }
                 .developer_top_left_sub_title{
                     font-size: 24px;
                     font-family: SourceHanSansCN-Regular, SourceHanSansCN;
@@ -252,7 +241,7 @@ export default {
                     font-family: SourceHanSansCN-Regular, SourceHanSansCN;
                     font-weight: 400;
                     color: #000000;
-                    margin-bottom:55px;
+                    margin-bottom:32px;
                 }
                 .developer_top_left_border{
                     width:64px;
