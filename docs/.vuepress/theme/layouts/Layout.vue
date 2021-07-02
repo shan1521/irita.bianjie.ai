@@ -6,6 +6,7 @@
         @touchend="onTouchEnd"
     >
         <Navigation></Navigation>
+        <div class="empty"></div>
         <div class="main_content_wrapper">
             <Home v-if="$page.frontmatter.home"></Home>
             <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
@@ -175,7 +176,7 @@ export default {
 .theme-container{
     display flex
     flex-direction column
-    padding-top $navbarHeight
+    //padding-top $navbarHeight
     width 100%
     height 100%
 
@@ -188,6 +189,11 @@ export default {
             }
 
         }
+    }
+    .empty{
+        width:0;
+        height:6.3rem;
+        flex:0 0 6.3rem;
     }
 }
 
