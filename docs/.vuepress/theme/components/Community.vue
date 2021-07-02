@@ -480,7 +480,7 @@ export default {
         }
 
         .community_bottom {
-            height: 963px;
+            //height: 963px;
 
             .community_bottom_wrap {
                 display: flex;
