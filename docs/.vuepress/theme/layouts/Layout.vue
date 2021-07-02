@@ -9,7 +9,16 @@
         <div class="main_content_wrapper">
             <Home v-if="$page.frontmatter.home"></Home>
             <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
-            <Developer v-if="$page.frontmatter.isDeveloper"></Developer> />
+            <Developer v-if="$page.frontmatter.isDeveloper"></Developer>
+            <Community v-if="$page.frontmatter.isCommunity"/>
+            <div class="md_container" v-if="showMd">
+                <div class="md_wrap">
+                    <Content slot-key="blog"/>
+                    <Content slot-key="test"/>
+                </div>
+
+            </div>
+
         </div>
         <Footer></Footer>
     </div>
@@ -25,6 +34,7 @@ import Navigation from "@theme/components/Navigation.vue";
 import Footer from "@theme/components/Footer.vue";
 import NewHome from "@theme/components/NewHome.vue";
 import Developer from "../components/Developer";
+import Community from "../components/Community";
 
 export default {
     name : 'Layout',
@@ -38,6 +48,7 @@ export default {
         Footer,
         NewHome,
         Developer,
+        Community,
     },
 
     data(){
@@ -47,6 +58,9 @@ export default {
     },
 
     computed : {
+        showMd(){
+            return Object.keys(this.$page.frontmatter).length === 0;
+        },
         shouldShowNavbar(){
             const {themeConfig} = this.$site
             const {frontmatter} = this.$page
@@ -131,13 +145,44 @@ export default {
 }
 </script>
 <style lang="stylus">
-.theme-container
+@import '../styles/adaptation.styl';
+.theme-container{
     display flex
     flex-direction column
     padding-top $navbarHeight
     width 100%
     height 100%
 
-    .main_content_wrapper
+    .main_content_wrapper{
         flex 1
+        .md_container{
+            //display:flex;
+            .md_wrap{
+                padding-top:60px;
+            }
+
+        }
+    }
+}
+
+
+
+@media screen and (min-width: $minPcWidth) {
+    .theme-container{
+        .main_content_wrapper{
+
+            display:flex;
+            justify-content center;
+            .md_container{
+                width:960px;
+                //display:flex;
+                .md_wrap{
+
+                }
+
+            }
+        }
+    }
+
+}
 </style>

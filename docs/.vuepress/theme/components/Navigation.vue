@@ -73,21 +73,11 @@ export default {
       this.$store.commit('currentIndex',0);
     },
     changeIndex(index) {
-      console.log(index)
       if (this.currentIndex !== index) {
         this.$store.commit('currentIndex',index);
       }
     }
-  },
-	// watch:{
-	// 	currentIndex: {
-	// 		handle(){
-        
-	// 		},
-	// 		immediate: true,
-	// 		deep: true
-	// 	}
-	// }
+  }
 };
 </script>
 
@@ -140,9 +130,7 @@ export default {
 
       .navigation_list_item {
         position: relative;
-        padding: 2.05rem 3rem;
         line-height: 100%;
-
         &:last-child {
           padding-right: 0;
 
@@ -154,6 +142,7 @@ export default {
         .line {
           position: absolute;
           top: 0;
+          left:0;
           left: 50%;
           transform: translateX(-50%);
           width: 11.2rem;
@@ -162,7 +151,8 @@ export default {
         }
 
         .navigation_item {
-          height: 2.2rem;
+          display: inline-block;
+          padding: 2.05rem 3rem;
           line-height: 2.2rem;
           font-family: PingFangSC-Medium, PingFang SC;
           font-weight: $fontWeight500;

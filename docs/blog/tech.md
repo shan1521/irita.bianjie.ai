@@ -1,0 +1,11 @@
+::: slot blog
+
+
+```
+    function (){
+        test()
+    }
+```
+:::
+
+

@@ -1,9 +1,8 @@
-// import 'element-ui/lib/theme-chalk/index.css'
-// import 'overlayscrollbars/css/OverlayScrollbars.css'
 import Vuex from 'vuex'
 import store from './store'
+import Element from 'element-ui';
+import  './style/theme/index.css'
 import Vue from 'vue'
-// Vue.prototype.$bus = new Vue();
 export default async ({
 	Vue,
 	options,
@@ -17,9 +16,10 @@ export default async ({
 		if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
 		return originalPush.call(this, location).catch(err => {err})
 	}
-	
+
 	Vue.use(router)
 	Vue.use(Vuex)
+    Vue.use(Element);
 	Vue.mixin({ store: store });
 	if(!isServer){
 		router.beforeEach((from,to,next) => {
@@ -28,15 +28,15 @@ export default async ({
 		})
 		await import("./public/iconfont/iconfont").then(module => {
 		})
+		await import('element-ui').then(module => {
+			Vue.use(module.default)
+		}).catch(e => {
+			console.log(e,'element-ui error ')
+		})
 		// await import('vue-awesome-swiper').then( module => {
 		// 	Vue.use(module.default)
 		// }).catch(e => {
 		// 	console.log(e,'vue-awesome-swiper error')
-		// })
-		// await import('element-ui').then(module => {
-		// 	Vue.use(module.default)
-		// }).catch(e => {
-		// 	console.log(e,'element-ui error ')
 		// })
 		// await import('vue-line-clamp').then(module => {
 		// 	Vue.use(module)

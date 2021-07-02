@@ -31,7 +31,7 @@
 		<div class="home_product_content">
 			<div class="product_content">
 				<p class="product_title">{{productContent.text}}</p>
-				<img src="/home/production_framework.png" alt="" class="product_img">
+				<img src="/home/chanpinjiagou_image.png" alt="" class="product_img">
 			</div>
 		</div>
 		<!-- IRITA 核心技术优势 -->
@@ -92,12 +92,12 @@
 							<div class="line"></div>
 							<p class="title">{{item.text}}</p>
 							<div class="more">
-								<a v-show="item.target === '_blank'" :href="item.link" class="more_content"
+								<a v-show="item.target === '_blank'" :href="item.link" :target="item.target" class="more_content"
 									>
 									<span class="more_text">了解更多</span>
 									<i class="iconfont icon-turnto"></i>
 								</a>
-								<router-link v-show="item.target === '_self'" @click.native="commitFn(item.routingLevel)" :to="item.link" class="more_content"
+								<router-link v-show="item.target === '_self'" @click.native="commitFn(item.routingLevel)" :to="item.link" replace class="more_content"
 								>
 									<span class="more_text">了解更多</span>
 									<i class="iconfont icon-turnto"></i>
@@ -177,9 +177,6 @@ export default {
 			this.$refs.openWrapper[index].style = this.differentOpenImg(this.openCommunity.list[index].blogImgName);
 		},
 		
-	},
-	mounted(){
-		sessionStorage.setItem('currentIndex',0);
 	}
 }
 </script>
@@ -187,6 +184,7 @@ export default {
 <style lang="stylus">
 @import url('../../public/iconfont/iconfont.css');
 .home_content_wrapper
+	width 100%
 	.home_top_content
 		width 100%
 		height 46.4rem
@@ -357,14 +355,13 @@ export default {
 						background $whiteColor
 						border 0.1rem solid $borderLineColor
 						border-radius 0.4rem
-						&:hover
-							padding 0
 						.advantage_item
 							margin 0 auto
 							width 28rem
 							min-height 30rem
 							background url('/core_card_bg.png') no-repeat center center
 							background-size cover
+							transition all .3s linear
 							&:hover
 								transform scale(1.05)
 							.advantage_img

@@ -7,7 +7,7 @@
 						<div class="left_img">
 							<img src="/irita_logo_white.png" alt="" class="img">
 						</div>
-						<p class="img_desc">支持下一代分布式商业系统的企业级联盟链产品</p>
+						<p class="img_desc">支持下一代分布式商业系统的企业级联盟链产品线</p>
 					</div>
 					<div class="content_right">
 						<div class="line"></div>
