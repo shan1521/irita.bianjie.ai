@@ -11,7 +11,7 @@
 						<i class="iconfont" :class="item.icon ? item.icon : ''"></i>
 						<span class="link_type">{{item.type}}</span>
 					</a>
-				</div>	
+				</div>
 			</div>
 		</div>
 		<!-- IRITA 介绍 -->
@@ -126,7 +126,7 @@ export default {
 		},
 		iritaDescription(){
 			return this.$frontmatter.iritaDescription;
-		}, 
+		},
 		// 产品架构
 		productContent(){
 			return this.$frontmatter.productContent;
@@ -171,10 +171,13 @@ export default {
 		leaveOpenFn(index){
 			this.$refs.openWrapper[index].style = this.differentOpenImg(this.openCommunity.list[index].blogImgName);
 		},
-		
+
 	},
 	mounted(){
-		sessionStorage.clear();
+	    /*if(window.sessionStorage){
+            sessionStorage.clear();
+        }*/
+
 	}
 }
 </script>
@@ -527,7 +530,7 @@ export default {
 							right 11.8rem
 							bottom 3.2rem
 						&:nth-of-type(4)
-							top 7.2rem 
+							top 7.2rem
 							right 19.5rem
 						&:nth-of-type(5)
 							left 3.5rem
