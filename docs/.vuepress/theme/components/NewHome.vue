@@ -17,7 +17,7 @@
 		<!-- IRITA 介绍 -->
 		<div class="home_irita_what_content">
 			<div class="irita_what_content">
-				<img src="/irita_image_1.png" alt="" class="irita_image_1">
+				<img src="/home/irita_image_1.png" alt="" class="irita_image_1">
 				<div class="irita_description">
 					<p class="title">{{iritaDescription.title}}</p>
 					<div class="characteristic">
@@ -31,7 +31,7 @@
 		<div class="home_product_content">
 			<div class="product_content">
 				<p class="product_title">{{productContent.text}}</p>
-				<img src="" alt="" class="product_img">
+				<img src="/home/production_framework.png" alt="" class="product_img">
 			</div>
 		</div>
 		<!-- IRITA 核心技术优势 -->
@@ -42,7 +42,7 @@
 					<ul class="advantage_list">
 						<li class="advantage_item_wrapper" v-for="(item,index) in advantageContent.advantageList" :key="index">
 							<div class="advantage_item" ref="advantageItem">
-								<img :src="item.img" alt="" class="advantage_img">
+								<img :src="differentAdvantageImg(item.img)" alt="" class="advantage_img">
 								<p class="advantage_title">{{item.advantageTitle}}</p>
 								<p class="description" v-for="(dItem,dIndex) in item.description" :key="dIndex">{{dItem.paragraph}}</p>
 							</div>
@@ -135,6 +135,11 @@ export default {
 		advantageContent(){
 			return this.$frontmatter.advantageContent;
 		},
+		differentAdvantageImg(){
+			return function(imgName){
+				return `/home/advantage/${imgName}`;
+			}
+		},
 		// 循环显示不同图片
 		differentLineImg(){
 			return function(imgName){
@@ -150,7 +155,7 @@ export default {
 		},
 		differentOpenImg(){
 			return function(imgName){
-				return `background:url(/${imgName}.png) no-repeat center center;background-size: cover;`;
+				return `background:url(/home/opencommunity/${imgName}.png) no-repeat center center;background-size: cover;`;
 			}
 		},
 	},
@@ -174,7 +179,7 @@ export default {
 		
 	},
 	mounted(){
-		sessionStorage.clear();
+		sessionStorage.setItem('currentIndex',0);
 	}
 }
 </script>
@@ -245,16 +250,17 @@ export default {
 		min-height 50.7rem
 		.irita_what_content
 			display flex
+			justify-content center
 			align-items center
 			margin 0 auto
 			padding 8rem 4.8rem 8rem 6.6rem
 			max-width $contentWidth
 			.irita_image_1
-				width 33.8rem
+				margin-right 10rem
+				max-width 33.8rem
 				height 34.7rem
 				vertical-align middle
 			.irita_description
-				margin-left 10rem
 				.title
 					height 2.8rem
 					line-height 2.8rem
@@ -263,20 +269,26 @@ export default {
 					font-weight $fontWeight600
 					color: $blackColor
 				.characteristic
+					display flex
+					flex-wrap wrap
 					margin-top 4.8rem
-					margin-bottom 3.6rem
-					// max-width 47.6rem
+					margin-bottom 2rem
+					max-width 63.2rem
+					min-height 2.4rem
 					.characteristic_item
 						box-sizing border-box
 						margin-right 8.8rem
+						margin-bottom 1.6rem
 						padding-left 0.8rem
-						height 2.4rem
+						min-height 2.4rem
 						line-height 2.4rem
 						font-size $fontSize20
 						font-family PingFangSC-Semibold, PingFang SC
 						font-weight $fontWeight600
 						color $blackColor
 						border-left 0.4rem solid $highlightDetailColor
+						&:nth-of-type(4n)
+							margin-right 0
 				.description_article
 					width 63.2rem
 					// min-height 19.6rem
@@ -290,8 +302,9 @@ export default {
 		height 87.8rem
 		background $bgColor
 		.product_content
+			box-sizing border-box
 			margin 0 auto
-			padding 8rem 6.3rem 8rem 5.9rem
+			padding 8rem 6.3rem 8rem 6.1rem
 			max-width $contentWidth
 			.product_title
 				margin-bottom 3.8rem
@@ -301,18 +314,18 @@ export default {
 				font-family PingFangSC-Semibold, PingFang SC
 				font-weigth $fontWeight600
 				color $blackColor
-				.product_img
-					display inline-block
-					weight 107.7rem
-					height 65.2rem
+			.product_img
+				display inline-block
+				// width 107.8rem
+				height 65.2rem
 	.home_advantage_content
 		width 100%
-		height 98rem
+		min-height 98rem
 		.advantage_content_wrapper
 			margin 0 auto
 			padding 8rem 0
 			max-width $contentWidth
-			height 82rem
+			min-height 82rem
 			.advantage_content
 				margin 0 auto
 				max-width 95.2rem
@@ -393,7 +406,7 @@ export default {
 							height 1.6rem
 	.home_productionline_content
 		width 100%
-		height 81.4rem
+		min-height 81.4rem
 		background url('/irita_bg.png') no-repeat center center
 		background-size cover
 		.productionline_content
@@ -401,7 +414,7 @@ export default {
 			margin 0 auto
 			padding 8rem 0.1rem 8rem 8.8rem
 			max-width $contentWidth
-			height 81.4rem
+			min-height 81.4rem
 			.text
 				height 2.8rem
 				line-height 2.8rem
@@ -424,7 +437,7 @@ export default {
 				.production_line
 					position relative
 					width 48rem
-					height 54.8rem
+					min-height 54.8rem
 					.line_item_wrapper
 						position absolute
 						width 48rem
@@ -534,13 +547,13 @@ export default {
 							bottom 1.5rem
 	.home_opencommunity_content
 		width 100%
-		height 55.5rem
+		min-height 55.5rem
 		.opencommunity_content
 			box-sizing border-box
 			margin 0 auto
 			padding 8rem 20.4rem
 			max-width $contentWidth
-			height 55.5rem
+			min-height 55.5rem
 			.title
 				margin-bottom 4.7rem
 				height 2.8rem
@@ -550,12 +563,14 @@ export default {
 				font-weight $fontWeight600
 				color $blackColor
 			.opencommunity_list
-				min-height 32rem
 				display flex
 				flex-wrap wrap
 				justify-content space-between
+				max-width 82.8rem
+				min-height 32rem
 				.open_item
 					box-sizing border-box
+					margin-bottom 1.6rem
 					padding 0.8rem
 					width 24rem
 					height 32rem
@@ -585,4 +600,21 @@ export default {
 								color $highlightDetailColor
 								.mote-text
 									margin-right 0.6rem
+@media (max-width: 1200px)
+	.home_content_wrapper
+		.home_irita_what_content
+			.irita_what_content
+				.irita_image_1
+					display none
+		.home_product_content
+			.product_content
+				.product_img
+					height 58rem
+		.home_productionline_content
+			.productionline_content
+				.production_line_content
+					.production_line_img
+						display none
+// @media (max-width: 768px) 
+
 </style>
