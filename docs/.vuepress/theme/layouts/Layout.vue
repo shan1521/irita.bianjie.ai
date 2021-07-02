@@ -59,6 +59,14 @@ export default {
             if(frontmatter.isCommunity){
                 this.setBlogAndArticleList(frontmatter)
             }
+        },
+        $route:{
+            handler(val,oldval){
+                console.log(val);//新路由信息
+                console.log(oldval);//老路由信息
+            },
+            // 深度观察监听
+            deep: true
         }
     },
 
@@ -69,6 +77,11 @@ export default {
         })
         if(this.$page.frontmatter.isCommunity){
             this.setBlogAndArticleList(this.$page.frontmatter)
+        }
+        window.onhashchange = function (e) {
+            console.log(e);
+            console.log(e.newURL);
+            console.log(e.oldURL);
         }
     },
     computed : {
