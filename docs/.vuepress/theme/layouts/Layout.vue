@@ -134,7 +134,6 @@ export default {
             let articles = JSON.parse(JSON.stringify(frontmatter.articles));
             let blogs = JSON.parse(JSON.stringify(frontmatter.blogs));
             this.blogAndArticleList = [...articles, ...blogs];
-            console.log('-=-=-', this.blogAndArticleList)
         },
         // side swipe
         onTouchStart(e){
