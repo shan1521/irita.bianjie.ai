@@ -173,6 +173,8 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
+    height:100%;
+    overflow-y auto;
     span{
         line-height:1;
     }
@@ -486,7 +488,7 @@ export default {
     @media screen and (min-width: $minPcWidth) {
         .community_top {
             height: 360px;
-
+            flex:0 0 360px;
             .community_top_wrap {
                 .community_top_left {
                     margin-right: 132px;
