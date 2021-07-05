@@ -5,7 +5,9 @@
         @touchstart="onTouchStart"
         @touchend="onTouchEnd"
     >
-        <Navigation></Navigation>
+        <ClientOnly>
+            <Navigation></Navigation>
+        </ClientOnly>
         <div class="empty"></div>
         <div class="main_content_wrapper">
             <Home v-if="$page.frontmatter.home"></Home>
@@ -61,15 +63,25 @@ export default {
         },
         $route:{
             handler(val,oldval){
+                nav.themeConfig.nav.forEach((item,index)=>{
+                    if(item.link === val.path) {
+                        this.$store.commit('currentIndex',index);
+                    }
+                })
                 console.log(val);//新路由信息
                 console.log(oldval);//老路由信息
             },
+            immediate: true,
             // 深度观察监听
             deep: true
         }
     },
 
     mounted(){
+        // console.log(nav)
+        if(localStorage.getItem('currentIndex')) {
+            this.$store.commit('currentIndex',JSON.parse(localStorage.getItem('currentIndex')))
+        }
         this.$router.afterEach(() => {
             this.isSidebarOpen = false
             window.scrollTo(0, 0)

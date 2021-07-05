@@ -73,8 +73,9 @@ export default {
       this.$store.commit('currentIndex',0);
     },
     changeIndex(index) {
-      if (this.currentIndex !== index) {
+      if (this.currentIndex !== index && index !== 1 && index !== 4) {
         this.$store.commit('currentIndex',index);
+        localStorage.setItem('currentIndex',JSON.stringify(index));
       }
     }
   }

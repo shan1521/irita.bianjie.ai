@@ -179,7 +179,8 @@ export default {
 		},
 	},
 	mounted(){
-		this.$store.commit("currentIndex",0);
+		this.$store.commit('currentIndex',0);
+		localStorage.setItem('currentIndex','0')
 	}
 }
 </script>
