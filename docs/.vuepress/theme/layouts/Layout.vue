@@ -16,9 +16,7 @@
                 <div class="md_wrap">
                     <Content v-for="item in blogAndArticleList" :slot-key="item.slot" />
                 </div>
-
             </div>
-
         </div>
         <Footer></Footer>
     </div>

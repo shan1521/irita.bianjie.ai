@@ -1,8 +1,9 @@
-import Vuex from 'vuex'
-import store from './store'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import store from './store';
 import Element from 'element-ui';
-import  './style/theme/index.css'
-import Vue from 'vue'
+import  './style/theme/index.css';
+Vue.prototype.$bus = new Vue();
 export default async ({
 	Vue,
 	options,

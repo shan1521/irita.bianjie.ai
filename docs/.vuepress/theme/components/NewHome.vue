@@ -87,8 +87,8 @@
 			<div class="opencommunity_content">
 				<p class="title">{{openCommunity.text}}</p>
 				<ul class="opencommunity_list">
-					<li class="open_item" v-for="(item,index) in openCommunity.list" :key="index">
-						<div class="item_wrapper" @mouseenter="hoverOpenFn(index)" @mouseleave="leaveOpenFn(index)" ref="openWrapper" :style="differentOpenImg(item.blogImgName)">
+					<li class="open_item" v-for="(item,index) in openCommunity.list" :key="index" @mouseenter="hoverOpenFn(index)" @mouseleave="leaveOpenFn(index)">
+						<div class="item_wrapper"  ref="openWrapper" :style="differentOpenImg(item.blogImgName)">
 							<div class="line"></div>
 							<p class="title">{{item.text}}</p>
 							<div class="more">
@@ -118,7 +118,7 @@ export default {
 		// 产品线定位高度
 		productionLineTop(){
 			return function(index){
-				return `top: ${(11.2 * index)}rem; left: 0;`;
+				return `top: ${(11.5 * index)}rem; left: 0;`;
 			}
 		},
 		homeContent(){
@@ -155,7 +155,7 @@ export default {
 		},
 		differentOpenImg(){
 			return function(imgName){
-				return `background:url(/home/opencommunity/${imgName}.png) no-repeat center center;background-size: cover;`;
+				return `background:url(/home/opencommunity/${imgName}.png) no-repeat center center;background-size: cover; transition: all .2s linear;`;
 			}
 		},
 	},
@@ -168,6 +168,7 @@ export default {
 		},
 		commitFn(value){
 			this.$store.commit('currentIndex',value);
+			this.$bus.$emit("handleTabClick", 1);
 		},
 		// 开放社区
 		hoverOpenFn(index){
@@ -176,7 +177,10 @@ export default {
 		leaveOpenFn(index){
 			this.$refs.openWrapper[index].style = this.differentOpenImg(this.openCommunity.list[index].blogImgName);
 		},
-		
+	},
+	mounted(){
+		this.$store.commit("currentIndex",0);
+		console.log(this.$bus);
 	}
 }
 </script>
@@ -448,12 +452,13 @@ export default {
 							background $whiteColor
 							border-radius 0.4rem
 							&:hover
+								padding 1.6rem 0 1.6rem 1.6rem
 								top -2.2rem
 								left -0.2rem
 								background $highlightDetailColor
 								box-shadow 0 0.2rem 0.7rem 0 #D2D0EF
-								transform scale(1.1)
-								transition all .3s linear
+								transform scale(1.05)
+								transition transform .3s linear
 								z-index 2
 								.item_title
 									.line
@@ -462,11 +467,13 @@ export default {
 										color $whiteColor
 										text-shadow 0 0.2rem 0.7rem #D2D0EF
 								.item_intro
+									margin-top 0.8rem
 									font-family PingFangSC-Semibold, PingFang SC
 									font-weight $fontWeight600
 									color $whiteColor
 								.item_description
 									display block
+									margin-top 0.8rem
 								.iconfont
 									display block
 							.item_title
@@ -573,8 +580,11 @@ export default {
 					border-radius 0.4rem
 					&:hover
 						transform scale(1.05)
+						transition all .2s linear
 					.item_wrapper
 						padding 1.6rem
+						&:hover
+							transition all .3s linear
 						.line
 							width 3.2rem
 							height 0.2rem
