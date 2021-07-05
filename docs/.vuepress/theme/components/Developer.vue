@@ -3,14 +3,11 @@
         <div class="developer_top">
             <div class="developer_top_wrap">
                 <div class="developer_top_left">
-                    <span class="developer_top_left_title">
-                        IRITA
+                    <span class="developer_top_left_content">
+                        欢迎来到 IRITA 开发者
                     </span>
                     <span class="developer_top_left_sub_title">
-                        支持下一代分布式商业系统的企业级联盟链产品
-                    </span>
-                    <span class="developer_top_left_content">
-                        因为有你, 所以精彩
+                        从这里 开启IRITA之旅
                     </span>
                     <i class="developer_top_left_border"></i>
                 </div>
@@ -219,7 +216,8 @@ export default {
     width: 100%;
     display:flex;
     flex-direction:column;
-
+    height:100%;
+    overflow-y auto;
     .developer_top{
         width:100%;
         background url('../assets/devoloper_top_bg.png') no-repeat center/100% 100%;
@@ -232,14 +230,6 @@ export default {
                 display:flex;
                 flex-direction: column;
                 align-items flex-start;
-
-                .developer_top_left_title{
-                    font-size: 24px;
-                    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
-                    font-weight: 400;
-                    color: #000000;
-                    margin-bottom:16px;
-                }
                 .developer_top_left_sub_title{
                     font-size: 24px;
                     font-family: SourceHanSansCN-Regular, SourceHanSansCN;
@@ -252,7 +242,7 @@ export default {
                     font-family: SourceHanSansCN-Regular, SourceHanSansCN;
                     font-weight: 400;
                     color: #000000;
-                    margin-bottom:55px;
+                    margin-bottom:32px;
                 }
                 .developer_top_left_border{
                     width:64px;
@@ -529,7 +519,7 @@ export default {
     @media screen and (min-width: $minPcWidth){
         .developer_top{
             height:360px;
-
+            flex:0 0 360px;
             .developer_top_wrap{
                 .developer_top_left{
                     margin-right:132px;
@@ -538,6 +528,7 @@ export default {
         }
         .developer_middle_top{
             height:618px;
+            flex:0 0 618px;
             .developer_middle_top_wrap{
                 .developer_middle_top_top{
                 }
@@ -576,6 +567,7 @@ export default {
         }
         .developer_middle_bottom{
             height:697px;
+            flex:0 0 697px;
             .developer_middle_bottom_wrap{
                 display:flex;
                 flex-direction:column;
@@ -602,6 +594,7 @@ export default {
         }
         .developer_bottom{
             height:524px;
+            flex:0 0 524px;
             .developer_bottom_top{
                 width:864px;
                 .developer_bottom_top_left{

@@ -1,6 +1,6 @@
-::: slot test
+::: slot article-008
 
-## this is article component
+## this is article-008
 
 ```typescript
  let a = test

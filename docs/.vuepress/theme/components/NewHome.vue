@@ -11,7 +11,7 @@
 						<i class="iconfont" :class="item.icon ? item.icon : ''"></i>
 						<span class="link_type">{{item.type}}</span>
 					</a>
-				</div>	
+				</div>
 			</div>
 		</div>
 		<!-- IRITA 介绍 -->
@@ -126,7 +126,7 @@ export default {
 		},
 		iritaDescription(){
 			return this.$frontmatter.iritaDescription;
-		}, 
+		},
 		// 产品架构
 		productContent(){
 			return this.$frontmatter.productContent;
@@ -447,16 +447,14 @@ export default {
 							min-height 10rem
 							background $whiteColor
 							border-radius 0.4rem
-							z-index 1
 							&:hover
 								top -2.2rem
 								left -0.2rem
-								padding 1.6rem 0 1.6rem 2.2rem
-								max-width 50.8rem
-								min-height 14.4rem
 								background $highlightDetailColor
 								box-shadow 0 0.2rem 0.7rem 0 #D2D0EF
-								z-index 3
+								transform scale(1.1)
+								transition all .3s linear
+								z-index 2
 								.item_title
 									.line
 										background $whiteColor
@@ -537,7 +535,7 @@ export default {
 							right 11.8rem
 							bottom 3.2rem
 						&:nth-of-type(4)
-							top 7.2rem 
+							top 7.2rem
 							right 19.5rem
 						&:nth-of-type(5)
 							left 3.5rem

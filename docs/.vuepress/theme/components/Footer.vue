@@ -58,10 +58,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.footer_content_wrapper 
+.footer_content_wrapper
   margin-top 2rem
   width 100%
   height 37.4rem
+  flex 0 0 37.4rem
   .footer_content_top
     width 100%
     height 31.4rem
@@ -80,7 +81,7 @@ export default {
 				.content_left
 					.left_img
 						height 6rem
-						.img 
+						.img
 							height 6rem
 					.img_desc
 						margin-top 2.4rem
@@ -153,7 +154,7 @@ export default {
 							font-family PingFangSC-Medium, PingFang SC
 							font-weight $fontWeight500
 							color $whiteColorOpacity
-  .footer_content_bottom 
+  .footer_content_bottom
     width 100%
     height 6rem
     background $footerBottomColor
@@ -172,8 +173,8 @@ export default {
 			a
 				color $whiteColorOpacity
 				cursor pointer
-@media (max-width: 680px) 
-	.footer_content_wrapper 
+@media (max-width: 680px)
+	.footer_content_wrapper
 		.footer_content_bottom
 			height 9rem
 			line-height 3rem

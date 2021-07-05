@@ -6,6 +6,7 @@
         @touchend="onTouchEnd"
     >
         <Navigation></Navigation>
+        <div class="empty"></div>
         <div class="main_content_wrapper">
             <Home v-if="$page.frontmatter.home"></Home>
             <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
@@ -13,8 +14,7 @@
             <Community v-if="$page.frontmatter.isCommunity"/>
             <div class="md_container" v-if="showMd">
                 <div class="md_wrap">
-                    <Content slot-key="blog"/>
-                    <Content slot-key="test"/>
+                    <Content v-for="item in blogAndArticleList" :slot-key="item.slot" />
                 </div>
 
             </div>
@@ -38,7 +38,12 @@ import Community from "../components/Community";
 
 export default {
     name : 'Layout',
-
+    data(){
+        return {
+            isSidebarOpen : false,
+            blogAndArticleList:[],
+        }
+    },
     components : {
         Home,
         Page,
@@ -50,16 +55,42 @@ export default {
         Developer,
         Community,
     },
-
-    data(){
-        return {
-            isSidebarOpen : false
+    watch:{
+        frontmatter(frontmatter){
+            if(frontmatter.isCommunity){
+                this.setBlogAndArticleList(frontmatter)
+            }
+        },
+        $route:{
+            handler(val,oldval){
+                console.log(val);//新路由信息
+                console.log(oldval);//老路由信息
+            },
+            // 深度观察监听
+            deep: true
         }
     },
 
+    mounted(){
+        this.$router.afterEach(() => {
+            this.isSidebarOpen = false
+            window.scrollTo(0, 0)
+        })
+        if(this.$page.frontmatter.isCommunity){
+            this.setBlogAndArticleList(this.$page.frontmatter)
+        }
+        window.onhashchange = function (e) {
+            console.log(e);
+            console.log(e.newURL);
+            console.log(e.oldURL);
+        }
+    },
     computed : {
         showMd(){
             return Object.keys(this.$page.frontmatter).length === 0;
+        },
+        frontmatter(){
+           return this.$page.frontmatter
         },
         shouldShowNavbar(){
             const {themeConfig} = this.$site
@@ -108,20 +139,16 @@ export default {
             ]
         }
     },
-
-    mounted(){
-        this.$router.afterEach(() => {
-            this.isSidebarOpen = false
-            window.scrollTo(0, 0)
-        })
-    },
-
     methods : {
         toggleSidebar(to){
             this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
             this.$emit('toggle-sidebar', this.isSidebarOpen)
         },
-
+        setBlogAndArticleList(frontmatter){
+            let articles = JSON.parse(JSON.stringify(frontmatter.articles));
+            let blogs = JSON.parse(JSON.stringify(frontmatter.blogs));
+            this.blogAndArticleList = [...articles, ...blogs];
+        },
         // side swipe
         onTouchStart(e){
             this.touchStart = {
@@ -149,7 +176,7 @@ export default {
 .theme-container{
     display flex
     flex-direction column
-    padding-top $navbarHeight
+    //padding-top $navbarHeight
     width 100%
     height 100%
 
@@ -162,6 +189,11 @@ export default {
             }
 
         }
+    }
+    .empty{
+        width:0;
+        height:6.3rem;
+        flex:0 0 6.3rem;
     }
 }
 
