@@ -35,11 +35,20 @@
         </li>
       </ul>
     </div>
+    <div class="mobile_navigation_container">
+      <div class="mobile_navigation_content">
+        <div class="mobile_navigation_logo" @click="toHome()">
+					<img src="/irita_logo.png" alt="">
+				</div>
+				<div class="mobile_menu_icon" @click="isShowMobileMenu()">
+					<span class="iconfont icon-menu"></span>
+				</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// import {mapState} from "../../store"
 export default {
   name: "Navigation",
   data() {
@@ -52,13 +61,17 @@ export default {
   },
   computed: {
 		currentIndex(){
-			return +this.$store.state.currentIndex;
+      return +this.$store.state.currentIndex;
 		},
     navigationList() {
       return this.navigation;
     },
   },
   methods: {
+    toHome(){
+      this.$router.push('/');
+      this.$store.commit('currentIndex',0);
+    },
     changeIndex(index) {
       if (this.currentIndex !== index) {
         this.$store.commit('currentIndex',index);
@@ -95,7 +108,9 @@ export default {
 
       .navigation_img_content {
         height: 4rem;
-
+        &:hover {
+          cursor: pointer;
+        }
         .logo {
           height: 4rem;
           vertical-align: middle;
@@ -115,9 +130,7 @@ export default {
 
       .navigation_list_item {
         position: relative;
-        padding: 2.05rem 3rem;
         line-height: 100%;
-
         &:last-child {
           padding-right: 0;
 
@@ -129,6 +142,7 @@ export default {
         .line {
           position: absolute;
           top: 0;
+          left:0;
           left: 50%;
           transform: translateX(-50%);
           width: 11.2rem;
@@ -137,7 +151,8 @@ export default {
         }
 
         .navigation_item {
-          height: 2.2rem;
+          display: inline-block;
+          padding: 2.05rem 3rem;
           line-height: 2.2rem;
           font-family: PingFangSC-Medium, PingFang SC;
           font-weight: $fontWeight500;
@@ -157,5 +172,33 @@ export default {
       }
     }
   }
+  .mobile_navigation_container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $navbarHeight;
+    background: $whiteColor;
+    border-bottom: 0.1rem solid $borderLineColor;
+    z-index: 10;
+    .mobile_navigation_content {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: sapce-between;
+      padding: 1.4rem 4.8rem;
+      height: $navbarHeight;
+
+    }
+  }
 }
+@media (max-width: 768px) 
+  .navigation_content_wrapper {
+    .navigation_content {
+      display: none;
+    }
+    .mobile_navigation_container {
+      display: block;
+    }
+  }
 </style>

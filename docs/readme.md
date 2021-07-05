@@ -154,7 +154,7 @@
         list: [
             {
                 text: 技术博客, 
-                link: /opencommunity/blog, 
+                link: /community, 
                 routingLevel: 2,
                 target: _self,
                 blogImgName: techblog,
@@ -162,7 +162,7 @@
             },
             {
                 text: 文章资讯, 
-                link: /opencommunity/articles, 
+                link: /community, 
                 routingLevel: 2,
                 target: _self,
                 blogImgName: news,

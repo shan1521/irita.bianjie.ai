@@ -3,14 +3,11 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 export default new Vuex.Store({
 	state: {
-		currentIndex: 1
+		currentIndex: 0
 	},
 	mutations: {
 		currentIndex(state,currentIndex){
 			state.currentIndex = currentIndex;
-			/*if(window.sessionStorage){
-                sessionStorage.setItem('currentIndex',currentIndex);
-            }*/
 		}
 	}
 })

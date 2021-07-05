@@ -203,9 +203,9 @@
 <script>
 export default {
     name : 'Developer',
-    mounted(){
-        console.log(this.$frontmatter)
-    }
+    // mounted(){
+    //     console.log(this.$frontmatter)
+    // }
 }
 </script>
 

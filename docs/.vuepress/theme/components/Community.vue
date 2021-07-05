@@ -8,11 +8,10 @@
                         在这里, 了解 IRITA
                     </span>
                 </div>
-                <div class="community_top_right">
-                    <img src="../assets/community_banner_image.png" alt=""
+                <!-- <div class="community_top_right">
+                    <img src="../assets/home_banner.png" alt=""
                          class="community_top_right_img">
-                </div>
-
+                </div> -->
             </div>
         </div>
         <div class="community_bottom">
@@ -181,13 +180,15 @@ export default {
 
     .community_top {
         width: 100%;
-        background url('../assets/devoloper_top_bg.png') no-repeat center / 100% 100%;
-        display: flex;
-        justify-content center;
+        background url('../assets/home_banner.png') no-repeat center / 100% 100%;
+        // display: flex;
+        // justify-content center;
 
         .community_top_wrap {
-            display: flex;
-            align-items center;
+            box-sizing: border-box;
+            padding: 10.7rem 0 17.3rem 8.1rem;
+            margin: 0 auto;
+            max-width: $contentWidth;
 
             .community_top_left {
                 display: flex;

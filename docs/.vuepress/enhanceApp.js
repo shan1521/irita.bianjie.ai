@@ -3,7 +3,6 @@ import store from './store'
 import Element from 'element-ui';
 import  './style/theme/index.css'
 import Vue from 'vue'
-// Vue.prototype.$bus = new Vue();
 export default async ({
 	Vue,
 	options,
@@ -29,15 +28,15 @@ export default async ({
 		})
 		await import("./public/iconfont/iconfont").then(module => {
 		})
+		await import('element-ui').then(module => {
+			Vue.use(module.default)
+		}).catch(e => {
+			console.log(e,'element-ui error ')
+		})
 		// await import('vue-awesome-swiper').then( module => {
 		// 	Vue.use(module.default)
 		// }).catch(e => {
 		// 	console.log(e,'vue-awesome-swiper error')
-		// })
-		// await import('element-ui').then(module => {
-		// 	Vue.use(module.default)
-		// }).catch(e => {
-		// 	console.log(e,'element-ui error ')
 		// })
 		// await import('vue-line-clamp').then(module => {
 		// 	Vue.use(module)
