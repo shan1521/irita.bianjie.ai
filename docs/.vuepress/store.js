@@ -11,11 +11,4 @@ export default new Vuex.Store({
 			state.currentIndex = currentIndex;
 		}
 	},
-	plugins: [
-		createPersistedState({
-			session: {
-				include: ['currentIndex']
-			}
-		})
-	],
 })
