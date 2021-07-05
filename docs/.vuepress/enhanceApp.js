@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import store from './store';
 import Element from 'element-ui';
 import  './style/theme/index.css';
+import 'vuex-persistedstate/dist/vuex-persistedstate.umd.js'
 Vue.prototype.$bus = new Vue();
 export default async ({
 	Vue,
@@ -31,6 +32,11 @@ export default async ({
 		})
 		await import('element-ui').then(module => {
 			Vue.use(module.default)
+		}).catch(e => {
+			console.log(e,'element-ui error ')
+		})
+		await import('vuex-persistedstate').then(module => {
+			// console.log(module)
 		}).catch(e => {
 			console.log(e,'element-ui error ')
 		})

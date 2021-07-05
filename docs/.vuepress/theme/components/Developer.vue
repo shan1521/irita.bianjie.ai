@@ -311,7 +311,7 @@ export default {
                                 font-size: 14px;
                                 font-family: PingFangSC-Medium, PingFang SC;
                                 font-weight: 500;
-                                color: rgba(0, 0, 0, .4);
+                                color: rgba(0, 0, 0, .65);
                                 line-height: 28px;
                             }
                         }

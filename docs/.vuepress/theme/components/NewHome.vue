@@ -36,7 +36,7 @@
 		</div>
 		<!-- IRITA 核心技术优势 -->
 		<div class="home_advantage_content">
-			<div class="advantage_content_wrapper">
+			<!-- <div class="advantage_content_wrapper"> -->
 				<div class="advantage_content">
 					<p class="advantage_title">{{advantageContent.text}}</p>
 					<ul class="advantage_list">
@@ -55,7 +55,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			<!-- </div> -->
 		</div>
 		<!-- IRITA 产品线 -->
 		<div class="home_productionline_content">
@@ -155,7 +155,7 @@ export default {
 		},
 		differentOpenImg(){
 			return function(imgName){
-				return `background:url(/home/opencommunity/${imgName}.png) no-repeat center center;background-size: cover; transition: all .2s linear;`;
+				return `background:url(/home/opencommunity/${imgName}.png) no-repeat center / cover; transition: all .2s linear;`;
 			}
 		},
 	},
@@ -180,7 +180,6 @@ export default {
 	},
 	mounted(){
 		this.$store.commit("currentIndex",0);
-		console.log(this.$bus);
 	}
 }
 </script>
@@ -192,8 +191,7 @@ export default {
 	.home_top_content
 		width 100%
 		height 46.4rem
-		background url('/home_banner.png') no-repeat center center
-		background-size cover
+		background url('/home_banner.png') no-repeat center / cover
 		.top_content
 			padding 10.7rem 0 17.3rem 8.1rem
 			margin 0 auto
@@ -314,7 +312,7 @@ export default {
 				line-height 2.8rem
 				font-size $fontSize28
 				font-family PingFangSC-Semibold, PingFang SC
-				font-weigth $fontWeight600
+				font-weight $fontWeight600
 				color $blackColor
 			.product_img
 				display inline-block
@@ -323,97 +321,93 @@ export default {
 	.home_advantage_content
 		width 100%
 		min-height 98rem
-		.advantage_content_wrapper
+		.advantage_content
+			box-sizing border-box
 			margin 0 auto
-			padding 8rem 0
+			padding 8rem 6.3rem 8rem 6.1rem
 			max-width $contentWidth
 			min-height 82rem
-			.advantage_content
-				margin 0 auto
-				max-width 95.2rem
-				min-height 82rem
-				.advantage_title
-					height 2.8rem
-					line-height 2.8rem
-					font-size $fontSize28
-					font-family PingFangSC-Semibold, PingFang SC
-					font-weigth $fontWeight600
-					color $blackColor
-				.advantage_list
+			.advantage_title
+				height 2.8rem
+				line-height 2.8rem
+				font-size $fontSize28
+				font-family PingFangSC-Semibold, PingFang SC
+				font-weight $fontWeight600
+				color $blackColor
+			.advantage_list
+				display flex
+				flex-wrap wrap
+				justify-content space-around
+				align-items center
+				margin 4.8rem auto
+				padding 2.4rem 4.8rem
+				// max-width 95.2rem
+				min-height 68rem
+				background $bgColor
+				.advantage_item_wrapper
+					box-sizing border-box
 					display flex
-					flex-wrap wrap
-					justify-content space-around
-					align-items center
-					margin 4.8rem auto
-					max-width 95.2rem
-					min-height 68rem
-					background $bgColor
-					.advantage_item_wrapper
-						box-sizing border-box
-						display flex
-						flex-direction column
-						justify-content center
-						padding 0.8rem
-						width 29.6rem
-						min-height 31.6rem
-						background $whiteColor
-						border 0.1rem solid $borderLineColor
-						border-radius 0.4rem
-						.advantage_item
-							margin 0 auto
-							width 28rem
-							min-height 30rem
-							background url('/core_card_bg.png') no-repeat center center
-							background-size cover
-							transition all .3s linear
-							&:hover
-								transform scale(1.05)
-							.advantage_img
-								padding-top 0.8rem
-								padding-left 1.6rem
-								height 8rem
-								vertical-align middle
-							.advantage_title
-								padding 1.6rem 0 1.6rem 1.6rem
-								height 2.4rem
-								line-height 2.4rem
-								font-size $fontSize16
-								font-family PingFangSC-Semibold, PingFang SC
-								font-weight $fontWeight600
-								color $blackColor
-							.description
-								padding 0 2.8rem 0 1.6rem
-								padding-right 2.8rem
-								width 23.6rem
-								line-height 2.8rem
-								font-size $fontSize14
-								font-family PingFangSC-Medium, PingFang SC
-								font-weight $fontWeight500
-								color $blackColorOpacity
-				.more
-					max-width 95.2rem
-					height 1.6rem
-					line-height 1.6rem
-					text-align center
-					.more_content
-						color $highlightDetailColor
-						.more_text
-							margin-right 0.8rem
+					flex-direction column
+					justify-content center
+					padding 0.8rem
+					width 29.6rem
+					min-height 31.6rem
+					background $whiteColor
+					border 0.1rem solid $borderLineColor
+					border-radius 0.4rem
+					.advantage_item
+						margin 0 auto
+						width 28rem
+						min-height 30rem
+						background url('/core_card_bg.png') no-repeat center / cover
+						transition all .3s linear
+						&:hover
+							transform scale(1.05)
+						.advantage_img
+							padding-top 0.8rem
+							padding-left 1.6rem
+							height 8rem
+							vertical-align middle
+						.advantage_title
+							padding 1.6rem 0 1.6rem 1.6rem
+							height 2.4rem
+							line-height 2.4rem
 							font-size $fontSize16
-							font-family PingFangSC-Regular, PingFang SC
-							font-weight $fontWeight400
-						.iconfont
-							width 1.6rem
-							height 1.6rem
+							font-family PingFangSC-Semibold, PingFang SC
+							font-weight $fontWeight600
+							color $blackColor
+						.description
+							padding 0 2.8rem 0 1.6rem
+							padding-right 2.8rem
+							width 23.6rem
+							line-height 2.8rem
+							font-size $fontSize14
+							font-family PingFangSC-Medium, PingFang SC
+							font-weight $fontWeight500
+							color $blackColorOpacity
+			.more
+				// max-width 95.2rem
+				height 1.6rem
+				line-height 1.6rem
+				text-align center
+				.more_content
+					color $highlightDetailColor
+					.more_text
+						margin-right 0.8rem
+						font-size $fontSize16
+						font-family PingFangSC-Regular, PingFang SC
+						font-weight $fontWeight400
+					.iconfont
+						width 1.6rem
+						height 1.6rem
 	.home_productionline_content
 		width 100%
 		min-height 81.4rem
-		background url('/irita_bg.png') no-repeat center center
-		background-size cover
+		background url('/irita_bg.png') no-repeat center / cover
 		.productionline_content
 			box-sizing border-box
 			margin 0 auto
-			padding 8rem 0.1rem 8rem 8.8rem
+			padding 8rem 0.1rem 8rem 6.1rem
 			max-width $contentWidth
 			min-height 81.4rem
 			.text
@@ -424,7 +418,7 @@ export default {
 				font-weight $fontWeight600
 				color $blackColor
 			.subtext
-				margin 1.6rem 0 4.8rem
+				margin 2.4rem 0 3.2rem
 				height 1.4rem
 				line-height 1.4rem
 				font-size $fontSize14
@@ -452,7 +446,6 @@ export default {
 							background $whiteColor
 							border-radius 0.4rem
 							&:hover
-								padding 1.6rem 0 1.6rem 1.6rem
 								top -2.2rem
 								left -0.2rem
 								background $highlightDetailColor
@@ -465,15 +458,13 @@ export default {
 										background $whiteColor
 									.line_title
 										color $whiteColor
-										text-shadow 0 0.2rem 0.7rem #D2D0EF
 								.item_intro
-									margin-top 0.8rem
+									display none
 									font-family PingFangSC-Semibold, PingFang SC
 									font-weight $fontWeight600
 									color $whiteColor
 								.item_description
 									display block
-									margin-top 0.8rem
 								.iconfont
 									display block
 							.item_title
@@ -514,7 +505,6 @@ export default {
 								font-family PingFangSC-Regular, PingFang SC
 								font-weight $fontWeight400
 								color $whiteColor
-								text-shadow 0 0.2rem 0.7rem #D2D0EF
 							.iconfont
 								display none
 								align-self flex-end
@@ -524,36 +514,35 @@ export default {
 								font-size $fontSize90
 								color $whiteColorOpacity2
         .production_line_img
-					position relative
-					width 60.7rem
-					height 51.6rem
-					background url('/irita_image_core.png') no-repeat center center
-					background-size cover
-					.irita_image
-						position absolute
-						height 15rem
-						&:nth-of-type(1)
-							top 12rem
-							left 2.5rem
-						&:nth-of-type(2)
-							top 17.1rem
-							right 7.1rem
-						&:nth-of-type(3)
-							right 11.8rem
-							bottom 3.2rem
-						&:nth-of-type(4)
-							top 7.2rem
-							right 19.5rem
-						&:nth-of-type(5)
-							left 3.5rem
-							bottom 1.5rem
+			position relative
+			width 60.7rem
+			height 51.6rem
+			background url('/irita_image_core.png') no-repeat center / cover
+			.irita_image
+				position absolute
+				height 15rem
+				&:nth-of-type(1)
+					top 12rem
+					left 2.5rem
+				&:nth-of-type(2)
+					top 17.1rem
+					right 7.1rem
+				&:nth-of-type(3)
+					right 11.8rem
+					bottom 3.2rem
+				&:nth-of-type(4)
+					top 7.2rem
+					right 19.5rem
+				&:nth-of-type(5)
+					left 3.5rem
+					bottom 1.5rem
 	.home_opencommunity_content
 		width 100%
 		min-height 55.5rem
 		.opencommunity_content
 			box-sizing border-box
 			margin 0 auto
-			padding 8rem 20.4rem
+			padding 8rem 6.3rem 8rem 6.1rem
 			max-width $contentWidth
 			min-height 55.5rem
 			.title
@@ -568,6 +557,7 @@ export default {
 				display flex
 				flex-wrap wrap
 				justify-content space-between
+				padding 0 10.4rem
 				max-width 82.8rem
 				min-height 32rem
 				.open_item

@@ -117,6 +117,9 @@ export default {
 							font-family PingFangSC-Medium, PingFang SC
 							font-weight $fontWeight500
 							color $whiteColorOpacity
+							&:hover
+								color $whiteColor
+								cursor pointer
 						.official
 							height 2.4rem
 							line-height 2.4rem

@@ -35,7 +35,7 @@
         </li>
       </ul>
     </div>
-    <div class="mobile_navigation_container">
+    <!-- <div class="mobile_navigation_container">
       <div class="mobile_navigation_content">
         <div class="mobile_navigation_logo" @click="toHome()">
 					<img src="/irita_logo.png" alt="">
@@ -44,7 +44,7 @@
 					<span class="iconfont icon-menu"></span>
 				</div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -135,7 +135,7 @@ export default {
           padding-right: 0;
 
           .line {
-            transform: translateX(-40%);
+            transform: translateX(-50%);
           }
         }
 
@@ -192,13 +192,13 @@ export default {
     }
   }
 }
-@media (max-width: 768px) 
-  .navigation_content_wrapper {
-    .navigation_content {
-      display: none;
-    }
-    .mobile_navigation_container {
-      display: block;
-    }
-  }
+// @media (max-width: 768px) 
+//   .navigation_content_wrapper {
+//     .navigation_content {
+//       display: none;
+//     }
+//     .mobile_navigation_container {
+//       display: block;
+//     }
+//   }
 </style>
