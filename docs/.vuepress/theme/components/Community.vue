@@ -23,7 +23,7 @@
                     </span>
                     <span class="community_bottom_tab" @click="handleTabClick(1)"
                           :class="activeTab === 1 ? 'active' : ''">
-                        文章咨询
+                        文章资讯
                     </span>
                 </div>
                 <div class="community_bottom_content_container" v-show="activeTab === 0" v-if="$frontmatter">
@@ -76,7 +76,7 @@
                         <div class="community_bottom_content_article_item_right">
                             <span class="community_bottom_content_article_item_right_title">
                                 {{ item.title }}
-                                <i class="community_bottom_content_article_item_right_tag" v-show="index === 0">
+                                <i class="community_bottom_content_article_item_right_tag" v-show="currentPage === 1 && index === 0">
                                     new
                                 </i>
                             </span>
@@ -137,7 +137,10 @@ export default {
         }
     },
     mounted(){
-        this.setTotal()
+        this.setTotal();
+        this.$bus.$on('handleTabClick',(tab)=>{
+            this.activeTab = tab;
+        });
     },
     methods : {
         handleTabClick(tab){
