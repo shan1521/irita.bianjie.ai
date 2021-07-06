@@ -170,7 +170,6 @@ export default {
           align-items: center;
           height: 2.2rem;
           line-height: 2.2rem;
-          font-family: PingFangSC-Semibold, PingFang SC;
           font-weight: $fontWeight600;
           color: $highlightDetailColor;
         }

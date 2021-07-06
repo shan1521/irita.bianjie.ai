@@ -232,14 +232,14 @@ export default {
                 align-items flex-start;
                 .developer_top_left_sub_title{
                     font-size: 24px;
-                    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+				    font-family: PingFangSC-Medium, PingFang SC;
                     font-weight: 400;
                     color: #000000;
                     margin-bottom:22px;
                 }
                 .developer_top_left_content{
                     font-size: 48px;
-                    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+                    font-family: PingFangSC-Medium, PingFang SC;
                     font-weight: 400;
                     color: #000000;
                     margin-bottom:32px;
