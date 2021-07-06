@@ -42,7 +42,7 @@
                 advantageTitle: 面向服务、支持多方协作 - iService,
                 description: [
                     {paragraph: 链上链下可信交互},
-                    {paragraph: 高效支持对于ERP等各类传统系统的有效集成}
+                    {paragraph: 高效支持对于 ERP 等各类传统系统的有效集成}
                 ]
             },
             {
@@ -59,7 +59,7 @@
                 advantageTitle: 数字资产建模与可信交换,
                 description: [
                     {paragraph: 支持对数字资产数据多元结构的灵活建模实现链上可信交换},
-                    {paragraph: 以NFT（非同质化通证）为基础，支持供应链、知识产权、医疗、存证等各领域的数字资产化}
+                    {paragraph: 以 NFT（非同质化通证）为基础，支持供应链、知识产权、医疗、存证等各领域的数字资产化}
                 ]
             },
             {

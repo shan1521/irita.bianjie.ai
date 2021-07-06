@@ -7,7 +7,7 @@
                         欢迎来到 IRITA 开发者
                     </span>
                     <span class="developer_top_left_sub_title">
-                        从这里 开启IRITA之旅
+                        从这里 开启 IRITA 之旅
                     </span>
                     <i class="developer_top_left_border"></i>
                 </div>
@@ -33,7 +33,7 @@
                                     跨链服务平台
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    基于IRITA跨链技术-IBC协议, 开发异构链服务平台
+                                    基于 IRITA 跨链技术-IBC 协议, 开发异构链服务平台
                                 </span>
                             </div>
                             <div class="developer_middle_top_right_top_item">
@@ -41,7 +41,7 @@
                                     数字资产管理平台
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    以NFT(非同质化通证)为基础, 采用分布式, 安全可信的方式对资产进行数字化
+                                    以 NFT（非同质化通证）为基础, 采用分布式, 安全可信的方式对资产进行数字化
                                 </span>
                             </div>
                             <div class="developer_middle_top_right_top_item">
@@ -49,7 +49,7 @@
                                     分布式应用
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    基于IRITA的智能合约开发各种分布式应用Dapp
+                                    基于 IRITA 的智能合约开发各种分布式应用 Dapp
                                 </span>
                             </div>
                             <div class="developer_middle_top_right_top_item">
@@ -57,7 +57,7 @@
                                     传统业务系统链改
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    基于iService模块, 实现链上链下可信交互, 高效支持各类传统业务系统的集成
+                                    基于 iService 模块, 实现链上链下可信交互, 高效支持各类传统业务系统的集成
                                 </span>
                             </div>
 
@@ -76,7 +76,7 @@
         <div class="developer_middle_bottom">
             <div class="developer_middle_bottom_wrap">
                 <span class="developer_middle_bottom_tittle">
-                    为什么选择IRITA
+                    为什么选择 IRITA
                 </span>
                 <div class="developer_middle_bottom_content">
                     <div class="developer_middle_bottom_item">
@@ -165,7 +165,7 @@
                     <a class="developer_bottom_bottom_item _last_item">
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/API_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            成熟的链上API接口
+                            成熟的链上 API 接口
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
@@ -176,14 +176,14 @@
                     <a class="developer_bottom_bottom_item" >
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/iservice_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            iService服务套件
+                            iService 服务套件
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
                     <a class="developer_bottom_bottom_item">
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/IDE_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            智能合约IDE
+                            智能合约 IDE
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>

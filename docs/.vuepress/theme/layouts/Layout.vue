@@ -8,7 +8,7 @@
         <ClientOnly>
             <Navigation></Navigation>
         </ClientOnly>
-        <div class="empty"></div>
+        <!-- <div class="empty"></div> -->
         <div class="main_content_wrapper">
             <Home v-if="$page.frontmatter.home"></Home>
             <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
@@ -193,6 +193,7 @@ export default {
 
     .main_content_wrapper{
         flex 1
+        margin-top: 6.4rem;
         .md_container{
             //display:flex;
             .md_wrap{
@@ -201,11 +202,11 @@ export default {
 
         }
     }
-    .empty{
-        width:0;
-        height:6.3rem;
-        flex:0 0 6.3rem;
-    }
+    // .empty{
+    //     width:0;
+    //     height:6.3rem;
+    //     flex:0 0 6.3rem;
+    // }
 }
 
 
