@@ -35,6 +35,7 @@ import Footer from "@theme/components/Footer.vue";
 import NewHome from "@theme/components/NewHome.vue";
 import Developer from "../components/Developer";
 import Community from "../components/Community";
+const nav = require('../../config.js');
 
 export default {
     name : 'Layout',
@@ -63,6 +64,7 @@ export default {
         },
         $route:{
             handler(val,oldval){
+                console.log(nav)
                 nav.themeConfig.nav.forEach((item,index)=>{
                     if(item.link === val.path) {
                         this.$store.commit('currentIndex',index);

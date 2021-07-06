@@ -17,7 +17,7 @@
           <a
 						v-show="item.target === '_blank'"
             class="navigation_item"
-            :class="currentIndex === index ? 'router_link_item' : ''"
+            :class="index === 4 ? 'router_link_item' : ''"
             :href="item.link"
             :target="item.target"
             rel="noopener noreferrer"
@@ -76,6 +76,9 @@ export default {
       if (this.currentIndex !== index && index !== 1 && index !== 4) {
         this.$store.commit('currentIndex',index);
         localStorage.setItem('currentIndex',JSON.stringify(index));
+      }
+      if(index === 4) {
+        
       }
     }
   }
@@ -159,6 +162,7 @@ export default {
           font-weight: $fontWeight500;
           color: $blackColor;
         }
+        
 
         .router_link_item {
           display: flex;

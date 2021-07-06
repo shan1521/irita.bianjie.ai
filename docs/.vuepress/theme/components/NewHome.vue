@@ -526,17 +526,17 @@ export default {
 					top 12rem
 					left 2.5rem
 				&:nth-of-type(2)
-					top 17.1rem
-					right 7.1rem
+					top 16.3rem
+					right 5rem
 				&:nth-of-type(3)
 					right 11.8rem
 					bottom 3.2rem
 				&:nth-of-type(4)
-					top 7.2rem
-					right 19.5rem
+					top 6.5rem
+					right 19rem
 				&:nth-of-type(5)
-					left 3.5rem
-					bottom 1.5rem
+					left 3.9rem
+					bottom 1.9rem
 	.home_opencommunity_content
 		width 100%
 		min-height 55.5rem

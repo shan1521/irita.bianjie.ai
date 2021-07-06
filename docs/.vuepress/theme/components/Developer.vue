@@ -151,14 +151,14 @@
                     <a class="developer_bottom_bottom_item" href="https://github.com/bianjieai/irita" target="_blank" >
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/github_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            GitHub 开源地址
+                            GitHub 开源地址 →
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
                     <a class="developer_bottom_bottom_item" href="https://irita.bianjie.ai/docs/" target="_blank" >
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/doc_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            开发者技术文档
+                            开发者技术文档 →
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
@@ -390,7 +390,7 @@ export default {
                         color:#000000;
                         padding-bottom 24px;
                         border-bottom:1px solid #E8EBF5;
-                        opacity:.4;
+                        opacity:.65;
                     }
                     ._no_border{
                         border:none;
