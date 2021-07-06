@@ -21,7 +21,7 @@
         <div class="developer_middle_top">
             <div class="developer_middle_top_wrap">
                 <span class="developer_middle_top_top">
-                    您能基于IRITA上开发什么?
+                    您能基于 IRITA 开发什么?
                 </span>
                 <div class="developer_middle_top_bottom">
                     <img src="../assets/developer_middle_top_img.png"
@@ -151,14 +151,14 @@
                     <a class="developer_bottom_bottom_item" href="https://github.com/bianjieai/irita" target="_blank" >
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/github_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            GitHub 开源地址
+                            GitHub 开源地址 →
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
                     <a class="developer_bottom_bottom_item" href="https://irita.bianjie.ai/docs/" target="_blank" >
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/doc_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            开发者技术文档
+                            开发者技术文档 →
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
@@ -311,7 +311,7 @@ export default {
                                 font-size: 14px;
                                 font-family: PingFangSC-Medium, PingFang SC;
                                 font-weight: 500;
-                                color: rgba(0, 0, 0, .4);
+                                color: rgba(0, 0, 0, .65);
                                 line-height: 28px;
                             }
                         }
@@ -387,10 +387,9 @@ export default {
                     .developer_middle_bottom_item_content{
                         font-size:14px;
                         font-weight:500;
-                        color:#000000;
+                        color:rgba(0,0,0,.65);
                         padding-bottom 24px;
                         border-bottom:1px solid #E8EBF5;
-                        opacity:.4;
                     }
                     ._no_border{
                         border:none;
@@ -596,7 +595,7 @@ export default {
             height:524px;
             flex:0 0 524px;
             .developer_bottom_top{
-                width:864px;
+                width:976px;
                 .developer_bottom_top_left{
 
 

@@ -17,7 +17,7 @@
           <a
 						v-show="item.target === '_blank'"
             class="navigation_item"
-            :class="currentIndex === index ? 'router_link_item' : ''"
+            :class="index === 4 ? 'router_link_item' : ''"
             :href="item.link"
             :target="item.target"
             rel="noopener noreferrer"
@@ -35,7 +35,7 @@
         </li>
       </ul>
     </div>
-    <div class="mobile_navigation_container">
+    <!-- <div class="mobile_navigation_container">
       <div class="mobile_navigation_content">
         <div class="mobile_navigation_logo" @click="toHome()">
 					<img src="/irita_logo.png" alt="">
@@ -44,7 +44,7 @@
 					<span class="iconfont icon-menu"></span>
 				</div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -73,8 +73,12 @@ export default {
       this.$store.commit('currentIndex',0);
     },
     changeIndex(index) {
-      if (this.currentIndex !== index) {
+      if (this.currentIndex !== index && index !== 1 && index !== 4) {
         this.$store.commit('currentIndex',index);
+        localStorage.setItem('currentIndex',JSON.stringify(index));
+      }
+      if(index === 4) {
+        
       }
     }
   }
@@ -135,7 +139,7 @@ export default {
           padding-right: 0;
 
           .line {
-            transform: translateX(-40%);
+            transform: translateX(-50%);
           }
         }
 
@@ -158,6 +162,7 @@ export default {
           font-weight: $fontWeight500;
           color: $blackColor;
         }
+        
 
         .router_link_item {
           display: flex;
@@ -192,13 +197,13 @@ export default {
     }
   }
 }
-@media (max-width: 768px) 
-  .navigation_content_wrapper {
-    .navigation_content {
-      display: none;
-    }
-    .mobile_navigation_container {
-      display: block;
-    }
-  }
+// @media (max-width: 768px) 
+//   .navigation_content_wrapper {
+//     .navigation_content {
+//       display: none;
+//     }
+//     .mobile_navigation_container {
+//       display: block;
+//     }
+//   }
 </style>

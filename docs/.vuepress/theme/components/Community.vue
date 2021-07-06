@@ -183,7 +183,7 @@ export default {
 
     .community_top {
         width: 100%;
-        background url('../assets/home_banner.png') no-repeat center / 100% 100%;
+        background url('../assets/home_banner.png') no-repeat center / cover;
         // display: flex;
         // justify-content center;
 
