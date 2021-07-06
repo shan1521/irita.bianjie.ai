@@ -8,7 +8,7 @@
         <ClientOnly>
             <Navigation></Navigation>
         </ClientOnly>
-        <div class="empty"></div>
+        <!-- <div class="empty"></div> -->
         <div class="main_content_wrapper">
             <Home v-if="$page.frontmatter.home"></Home>
             <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
@@ -64,14 +64,13 @@ export default {
         },
         $route:{
             handler(val,oldval){
-                console.log(nav)
                 nav.themeConfig.nav.forEach((item,index)=>{
                     if(item.link === val.path) {
                         this.$store.commit('currentIndex',index);
                     }
                 })
-                console.log(val);//新路由信息
-                console.log(oldval);//老路由信息
+                // console.log(val);//新路由信息
+                // console.log(oldval);//老路由信息
             },
             immediate: true,
             // 深度观察监听
@@ -194,6 +193,7 @@ export default {
 
     .main_content_wrapper{
         flex 1
+        margin-top: 6.4rem;
         .md_container{
             //display:flex;
             .md_wrap{
@@ -202,11 +202,11 @@ export default {
 
         }
     }
-    .empty{
-        width:0;
-        height:6.3rem;
-        flex:0 0 6.3rem;
-    }
+    // .empty{
+    //     width:0;
+    //     height:6.3rem;
+    //     flex:0 0 6.3rem;
+    // }
 }
 
 

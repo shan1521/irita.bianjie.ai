@@ -97,7 +97,7 @@
 									<span class="more_text">了解更多</span>
 									<i class="iconfont icon-turnto"></i>
 								</a>
-								<router-link v-show="item.target === '_self'" @click.native="commitFn(item.routingLevel)" :to="item.link" replace class="more_content"
+								<router-link v-show="item.target === '_self'" @click.native="commitFn(item.routingLevel,index)" :to="item.link" replace class="more_content"
 								>
 									<span class="more_text">了解更多</span>
 									<i class="iconfont icon-turnto"></i>
@@ -166,9 +166,10 @@ export default {
 		leaveFn(id){
 			this.$refs.productionLineImg[id].src = this.differentLineImg(this.productionLine.productionLineImg[id].lineImgName);
 		},
-		commitFn(value){
+		commitFn(value,index){
 			this.$store.commit('currentIndex',value);
-			this.$bus.$emit("handleTabClick", 1);
+			localStorage.setItem('currentIndex',value);
+			this.$bus.$emit("handleTabClick", index);
 		},
 		// 开放社区
 		hoverOpenFn(index){
@@ -180,7 +181,7 @@ export default {
 	},
 	mounted(){
 		this.$store.commit('currentIndex',0);
-		localStorage.setItem('currentIndex','0')
+		localStorage.setItem('currentIndex','0');
 	}
 }
 </script>
