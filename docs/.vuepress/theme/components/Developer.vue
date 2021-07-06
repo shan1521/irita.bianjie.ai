@@ -21,7 +21,7 @@
         <div class="developer_middle_top">
             <div class="developer_middle_top_wrap">
                 <span class="developer_middle_top_top">
-                    您能基于IRITA上开发什么?
+                    您能基于 IRITA 开发什么?
                 </span>
                 <div class="developer_middle_top_bottom">
                     <img src="../assets/developer_middle_top_img.png"
@@ -387,10 +387,9 @@ export default {
                     .developer_middle_bottom_item_content{
                         font-size:14px;
                         font-weight:500;
-                        color:#000000;
+                        color:rgba(0,0,0,.65);
                         padding-bottom 24px;
                         border-bottom:1px solid #E8EBF5;
-                        opacity:.65;
                     }
                     ._no_border{
                         border:none;
@@ -596,7 +595,7 @@ export default {
             height:524px;
             flex:0 0 524px;
             .developer_bottom_top{
-                width:864px;
+                width:976px;
                 .developer_bottom_top_left{
 
 
