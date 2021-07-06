@@ -64,14 +64,13 @@ export default {
         },
         $route:{
             handler(val,oldval){
-                console.log(nav)
                 nav.themeConfig.nav.forEach((item,index)=>{
                     if(item.link === val.path) {
                         this.$store.commit('currentIndex',index);
                     }
                 })
-                console.log(val);//新路由信息
-                console.log(oldval);//老路由信息
+                // console.log(val);//新路由信息
+                // console.log(oldval);//老路由信息
             },
             immediate: true,
             // 深度观察监听

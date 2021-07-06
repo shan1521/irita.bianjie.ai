@@ -81,7 +81,8 @@
                 img: dashuju.png,
                 advantageTitle: 大数据存储,
                 description: [
-                    {paragraph: 自带存储层支持云存储和分布式存储；数据仓库和链式数据结合支持链上数据高效全生命周期查询}
+                    {paragraph: 自带存储层支持云存储和分布式存储},
+                    {paragraph: 数据仓库和链式数据结合支持链上数据高效全生命周期查询},
                 ]
             },
         ]   
@@ -93,7 +94,7 @@
             {
                 id: 0,
                 lineName: IRITA CE,
-                lineIntro: IRITA 的开源版本,
+                lineIntro: 开源版本,
                 lineDescription: 供开发者学习、快速上手熟悉 IRITA 的体系架构、并部署行业验证应用系统等,
                 iconName: icon-ce
             },
@@ -108,21 +109,21 @@
                 id: 2,
                 lineName: IRITA OPB,
                 lineIntro: 基于智能合约的开放联盟链,
-                lineDescription: 支持智能合约应用开发的开放许可应用链，以应用服务平台形式支持分布式商业系统应用快速开发、部署及运营,
+                lineDescription: 支持智能合约应用开发的开放联盟链，以应用服务平台形式支持分布式商业系统应用快速开发、部署及运营,
                 iconName: icon-irita_opb
             },
             {
                 id: 3,
                 lineName: IRITA BEAN,
                 lineIntro: 保护数据隐私的数据共享平台,
-                lineDescription: 支持IBC跨链协议，实现对各种异构系统可信数据获取及计算服务调用，实现数据隐私保护及可信流转,
+                lineDescription: 专注于大数据隐私保护和边缘分析的产品，集成主流开源隐私计算框架，实现了大数据多层次授权共享、多方隐私保护查询、多方联盟学习等能力,
                 iconName: icon-irita_bean
             },
             {
                 id: 4,
                 lineName: IRITA DA,
                 lineIntro: 数字资产确权及交换平台,
-                lineDescription: 支持对传统业务系统（如ERP等）和其他区块链系统的互操作，多方“按需交互”与信息交叉验证,
+                lineDescription: 专注于支持 NFT 数字资产登记、确权及可信交换的产品；支持实物资产在链上的数字化建模和全生命周期管理,
                 iconName: icon-irita_da
             },
         ],
