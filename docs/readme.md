@@ -32,7 +32,7 @@
         ]
     },
     productContent: {
-        text: 产品架构
+        text: IRITA 整体架构
     },
     advantageContent: {
         text: IRITA 核心技术优势,
