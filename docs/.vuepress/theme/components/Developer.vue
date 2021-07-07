@@ -4,10 +4,10 @@
             <div class="developer_top_wrap">
                 <div class="developer_top_left">
                     <span class="developer_top_left_content">
-                        欢迎来到 IRITA 开发者
+                        {{previewContent.title}}
                     </span>
                     <span class="developer_top_left_sub_title">
-                        从这里 开启IRITA之旅
+                        {{previewContent.subTitle}}
                     </span>
                     <i class="developer_top_left_border"></i>
                 </div>
@@ -21,7 +21,7 @@
         <div class="developer_middle_top">
             <div class="developer_middle_top_wrap">
                 <span class="developer_middle_top_top">
-                    您能基于IRITA上开发什么?
+                    您能基于 IRITA 开发什么?
                 </span>
                 <div class="developer_middle_top_bottom">
                     <img src="../assets/developer_middle_top_img.png"
@@ -33,7 +33,7 @@
                                     跨链服务平台
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    基于IRITA跨链技术-IBC协议, 开发异构链服务平台
+                                    基于 IRITA 跨链技术-IBC 协议, 开发异构链服务平台
                                 </span>
                             </div>
                             <div class="developer_middle_top_right_top_item">
@@ -41,7 +41,7 @@
                                     数字资产管理平台
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    以NFT(非同质化通证)为基础, 采用分布式, 安全可信的方式对资产进行数字化
+                                    以 NFT（非同质化通证）为基础, 采用分布式, 安全可信的方式对资产进行数字化
                                 </span>
                             </div>
                             <div class="developer_middle_top_right_top_item">
@@ -49,7 +49,7 @@
                                     分布式应用
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    基于IRITA的智能合约开发各种分布式应用Dapp
+                                    基于 IRITA 的智能合约开发各种分布式应用 Dapp
                                 </span>
                             </div>
                             <div class="developer_middle_top_right_top_item">
@@ -57,7 +57,7 @@
                                     传统业务系统链改
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    基于iService模块, 实现链上链下可信交互, 高效支持各类传统业务系统的集成
+                                    基于 iService 模块, 实现链上链下可信交互, 高效支持各类传统业务系统的集成
                                 </span>
                             </div>
 
@@ -76,7 +76,7 @@
         <div class="developer_middle_bottom">
             <div class="developer_middle_bottom_wrap">
                 <span class="developer_middle_bottom_tittle">
-                    为什么选择IRITA
+                    为什么选择 IRITA
                 </span>
                 <div class="developer_middle_bottom_content">
                     <div class="developer_middle_bottom_item">
@@ -151,21 +151,21 @@
                     <a class="developer_bottom_bottom_item" href="https://github.com/bianjieai/irita" target="_blank" >
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/github_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            GitHub 开源地址
+                            GitHub 开源地址 →
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
                     <a class="developer_bottom_bottom_item" href="https://irita.bianjie.ai/docs/" target="_blank" >
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/doc_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            开发者技术文档
+                            开发者技术文档 →
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
                     <a class="developer_bottom_bottom_item _last_item">
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/API_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            成熟的链上API接口
+                            成熟的链上 API 接口
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
@@ -176,14 +176,14 @@
                     <a class="developer_bottom_bottom_item" >
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/iservice_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            iService服务套件
+                            iService 服务套件
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
                     <a class="developer_bottom_bottom_item">
                         <img class="developer_bottom_bottom_item_iconfont" src="../assets/IDE_icon.png"/>
                         <span class="developer_bottom_bottom_item_title">
-                            智能合约IDE
+                            智能合约 IDE
                         </span>
                         <i class="developer_bottom_bottom_item_bg"></i>
                     </a>
@@ -203,9 +203,11 @@
 <script>
 export default {
     name : 'Developer',
-    // mounted(){
-    //     console.log(this.$frontmatter)
-    // }
+    computed:{
+        previewContent(){
+            return this.$frontmatter.previewContent;
+        }
+    }
 }
 </script>
 
@@ -232,14 +234,14 @@ export default {
                 align-items flex-start;
                 .developer_top_left_sub_title{
                     font-size: 24px;
-                    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+				    font-family: PingFangSC-Medium, PingFang SC;
                     font-weight: 400;
                     color: #000000;
                     margin-bottom:22px;
                 }
                 .developer_top_left_content{
                     font-size: 48px;
-                    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+                    font-family: PingFangSC-Medium, PingFang SC;
                     font-weight: 400;
                     color: #000000;
                     margin-bottom:32px;
@@ -311,7 +313,7 @@ export default {
                                 font-size: 14px;
                                 font-family: PingFangSC-Medium, PingFang SC;
                                 font-weight: 500;
-                                color: rgba(0, 0, 0, .4);
+                                color: rgba(0, 0, 0, .65);
                                 line-height: 28px;
                             }
                         }
@@ -387,10 +389,9 @@ export default {
                     .developer_middle_bottom_item_content{
                         font-size:14px;
                         font-weight:500;
-                        color:#000000;
+                        color:rgba(0,0,0,.65);
                         padding-bottom 24px;
                         border-bottom:1px solid #E8EBF5;
-                        opacity:.4;
                     }
                     ._no_border{
                         border:none;
@@ -596,7 +597,7 @@ export default {
             height:524px;
             flex:0 0 524px;
             .developer_bottom_top{
-                width:864px;
+                width:976px;
                 .developer_bottom_top_left{
 
 
