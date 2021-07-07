@@ -68,12 +68,12 @@
         },
         {
             src: /img/blog/blog_save.png,
-            title: 如何快速部署,
+            title: 边界智能开源联盟链产品线 IRITA,
             owner: 边界智能,
-            time: 2021/03/24,
+            time: 2021/03/06,
             icon: /img/blog/bianjie_icon.png,
             router: /blog/blog-001,
-            slot: blog-001,
+            slot: 边界智能开源联盟链产品线 IRITA,
         },
         
     ],
