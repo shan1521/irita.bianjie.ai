@@ -37,7 +37,7 @@ IRITA 可以灵活使用在多种行业，尤其是金融创新行业，比如�
 
 ##  <font color= #7EC9FC >IRITA 整体架构</font>
 
-
+![irita 架构图](~img/blog/blog-001-2.webp)
 
 ##   <font color= #7EC9FC >技术应用案例 – IRITA 支持复杂的分布式商业应用</font>
 ### **供应链金融、碳中和 – IRITA DA**
