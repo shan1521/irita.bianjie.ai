@@ -17,7 +17,6 @@
   "dependencies": {
     "async-validator": "1.11.5",
     "element-ui": "^2.15.3",
-    "vuex": "^3.6.2",
-    "vuex-persistedstate": "^4.0.0-beta.3"
+    "vuex": "^3.6.2"
   }
 }
