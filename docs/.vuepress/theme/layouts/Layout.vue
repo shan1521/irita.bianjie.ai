@@ -5,8 +5,10 @@
         @touchstart="onTouchStart"
         @touchend="onTouchEnd"
     >
-        <Navigation></Navigation>
-        <div class="empty"></div>
+        <ClientOnly>
+            <Navigation></Navigation>
+        </ClientOnly>
+        <!-- <div class="empty"></div> -->
         <div class="main_content_wrapper">
             <Home v-if="$page.frontmatter.home"></Home>
             <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
@@ -33,6 +35,7 @@ import Footer from "@theme/components/Footer.vue";
 import NewHome from "@theme/components/NewHome.vue";
 import Developer from "../components/Developer";
 import Community from "../components/Community";
+const nav = require('../../config.js');
 
 export default {
     name : 'Layout',
@@ -61,15 +64,25 @@ export default {
         },
         $route:{
             handler(val,oldval){
-                console.log(val);//新路由信息
-                console.log(oldval);//老路由信息
+                nav.themeConfig.nav.forEach((item,index)=>{
+                    if(item.link === val.path) {
+                        this.$store.commit('currentIndex',index);
+                    }
+                })
+                // console.log(val);//新路由信息
+                // console.log(oldval);//老路由信息
             },
+            immediate: true,
             // 深度观察监听
             deep: true
         }
     },
 
     mounted(){
+        // console.log(nav)
+        if(localStorage.getItem('currentIndex')) {
+            this.$store.commit('currentIndex',JSON.parse(localStorage.getItem('currentIndex')))
+        }
         this.$router.afterEach(() => {
             this.isSidebarOpen = false
             window.scrollTo(0, 0)
@@ -180,6 +193,7 @@ export default {
 
     .main_content_wrapper{
         flex 1
+        margin-top: 6.4rem;
         .md_container{
             //display:flex;
             .md_wrap{
@@ -188,11 +202,11 @@ export default {
 
         }
     }
-    .empty{
-        width:0;
-        height:6.3rem;
-        flex:0 0 6.3rem;
-    }
+    // .empty{
+    //     width:0;
+    //     height:6.3rem;
+    //     flex:0 0 6.3rem;
+    // }
 }
 
 
