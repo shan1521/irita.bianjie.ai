@@ -72,7 +72,7 @@
             owner: 边界智能,
             time: 2021/03/06,
             icon: /img/blog/bianjie_icon.png,
-            router: /blog/blog-001,
+            router: /blog/边界智能开源联盟链产品线 IRITA,
             slot: 边界智能开源联盟链产品线 IRITA,
         },
         
