@@ -4,10 +4,10 @@
             <div class="developer_top_wrap">
                 <div class="developer_top_left">
                     <span class="developer_top_left_content">
-                        欢迎来到 IRITA 开发者
+                        {{previewContent.title}}
                     </span>
                     <span class="developer_top_left_sub_title">
-                        从这里 开启 IRITA 之旅
+                        {{previewContent.subTitle}}
                     </span>
                     <i class="developer_top_left_border"></i>
                 </div>
@@ -203,9 +203,11 @@
 <script>
 export default {
     name : 'Developer',
-    // mounted(){
-    //     console.log(this.$frontmatter)
-    // }
+    computed:{
+        previewContent(){
+            return this.$frontmatter.previewContent;
+        }
+    }
 }
 </script>
 
