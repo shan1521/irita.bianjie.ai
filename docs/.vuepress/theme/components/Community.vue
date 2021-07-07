@@ -316,6 +316,7 @@ export default {
 
                         .community_bottom_content_item_wrap {
                             display: flex;
+                            flex-wrap: wrap;
                             justify-content space-between;
                             align-items center;
 
