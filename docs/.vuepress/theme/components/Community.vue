@@ -136,12 +136,7 @@ export default {
 
         }
     },
-    mounted(){
-        this.setTotal();
-        this.$bus.$on('handleTabClick',(tab)=>{
-            this.activeTab = tab;
-        });
-    },
+    
     methods : {
         handleTabClick(tab){
             this.activeTab = tab;
@@ -154,6 +149,7 @@ export default {
             }
         },
         handleArticleClick(article){
+            this.article = article;
             this.$router.push({
                 path: article.router,
                 query: {
@@ -164,6 +160,15 @@ export default {
         handlePageClick(page){
             this.currentPage = page;
         }
+    },
+    mounted(){
+        this.setTotal();
+        this.$bus.$on('handleTabClick',(tab)=>{
+            this.activeTab = tab;
+        });
+    },
+    beforeDestroy(){
+        this.$bus.$emit('showArticle',this.article);
     }
 }
 </script>
@@ -264,9 +269,8 @@ export default {
 
             .community_bottom_content_container {
                 width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content space-between;
+                display: grid;
+                grid-template-columns repeat(3, 1fr)
 
                 .community_bottom_content_item {
                     height: 336px;

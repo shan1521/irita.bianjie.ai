@@ -98,6 +98,9 @@ export default {
 
   .navigation_content {
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -124,6 +127,9 @@ export default {
 
     .navigation_content_right {
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
       justify-content: space-between;
       margin: 0;
       padding: 0;

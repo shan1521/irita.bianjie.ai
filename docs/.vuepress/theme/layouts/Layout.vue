@@ -16,7 +16,9 @@
             <Community v-if="$page.frontmatter.isCommunity"/>
             <div class="md_container" v-if="showMd">
                 <div class="md_wrap">
-                    <Content v-for="item in blogAndArticleList" :slot-key="item.slot" />
+                    <Markdown></Markdown>
+                    <Content v-for="item in blogAndArticleList" :slot-key="item.slot" >
+                    </Content>
                 </div>
             </div>
         </div>
@@ -35,6 +37,7 @@ import Footer from "@theme/components/Footer.vue";
 import NewHome from "@theme/components/NewHome.vue";
 import Developer from "../components/Developer";
 import Community from "../components/Community";
+import Markdown from "../components/Markdown"
 const nav = require('../../config.js');
 
 export default {
@@ -55,6 +58,7 @@ export default {
         NewHome,
         Developer,
         Community,
+        Markdown
     },
     watch:{
         frontmatter(frontmatter){
@@ -186,27 +190,32 @@ export default {
 @import '../styles/adaptation.styl';
 .theme-container{
     display flex
-    flex-direction column
+    flex-direction: column;
     //padding-top $navbarHeight
     width 100%
     height 100%
 
     .main_content_wrapper{
-        flex 1
+        // flex 1
+        // -webkit-box-flex: 1;
+        // -moz-box-flex: 1;
+        // -webkit-flex: 1;
+        // -ms-flex: none; 
         margin-top: 6.4rem;
         .md_container{
+            font-size: 15px;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: rgba(0,0,0,0.75);
+            line-height: 30px;
             //display:flex;
             .md_wrap{
                 padding-top:60px;
+                padding-bottom:80px;
             }
 
         }
     }
-    // .empty{
-    //     width:0;
-    //     height:6.3rem;
-    //     flex:0 0 6.3rem;
-    // }
 }
 
 
