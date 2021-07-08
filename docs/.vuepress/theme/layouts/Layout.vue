@@ -207,11 +207,14 @@ export default {
             font-family: PingFangSC-Medium, PingFang SC;
             font-weight: 500;
             color: rgba(0,0,0,0.75);
-            line-height: 30px;
+            line-height: 36px;
             //display:flex;
             .md_wrap{
                 padding-top:60px;
                 padding-bottom:80px;
+                h2, h3{
+                    border-bottom: none;
+                }
             }
 
         }
