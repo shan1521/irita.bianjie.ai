@@ -1,16 +1,16 @@
 ---
 {
     layout: Layout,
-    isCommunity: true,
+    isMarkdown: true,
     blogs: [
         {
-            src: https://irita.bianjie.ai/dist/iritahome_banner.png?6e06ddf5d16caa4745a65b41debe69c6,
-            title: "IRITA HUB 的跨链实践与应用",
+            src: /img/blog/blog_001_1.webp,
+            title: "边界智能开源联盟链产品线 IRITA",
             owner: 边界智能,
             time: 2021/03/06,
             icon: /img/blog/bianjie_icon.png,
-            router: /blog/IRITAHUB的跨链实践与应用,
-            slot: IRITAHUB的跨链实践与应用,
+            router: /markdown,
+            slot: 边界智能开源联盟链产品线,
         },
         {
             src: /img/blog/blog_001_1.webp,
@@ -65,17 +65,7 @@
             icon: /img/blog/bianjie_icon.png,
             router: /blog/blog-004,
             slot: blog-004,
-        },
-        {
-            src: /img/blog/blog_save.png,
-            title: 如何快速部署,
-            owner: 边界智能,
-            time: 2021/03/24,
-            icon: /img/blog/bianjie_icon.png,
-            router: /blog/blog-003,
-            slot: blog-003,
         }
-        
     ],
     articles:[
         {
@@ -150,8 +140,6 @@
             router: /article/article-008,
             slot: article-008
         },
-        
-        
     ]
 }
 ---

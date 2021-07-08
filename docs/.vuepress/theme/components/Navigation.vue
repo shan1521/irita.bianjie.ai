@@ -35,16 +35,16 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="mobile_navigation_container">
-      <div class="mobile_navigation_content">
+    <div class="mobile_navigation_container">
+      <!-- <div class="mobile_navigation_content">
         <div class="mobile_navigation_logo" @click="toHome()">
 					<img src="/irita_logo.png" alt="">
 				</div>
 				<div class="mobile_menu_icon" @click="isShowMobileMenu()">
 					<span class="iconfont icon-menu"></span>
 				</div>
-      </div>
-    </div> -->
+      </div> -->
+    </div>
   </div>
 </template>
 
@@ -77,9 +77,6 @@ export default {
         this.$store.commit('currentIndex',index);
         localStorage.setItem('currentIndex',JSON.stringify(index));
       }
-      if(index === 4) {
-        
-      }
     }
   }
 };
@@ -98,8 +95,12 @@ export default {
 
   .navigation_content {
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
     margin: 0 auto;
     max-width: $contentWidth;
     height: $navbarHeight;
@@ -124,6 +125,9 @@ export default {
 
     .navigation_content_right {
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
       justify-content: space-between;
       margin: 0;
       padding: 0;
@@ -131,7 +135,9 @@ export default {
       height: $navbarHeight;
       list-style: none;
       font-size: $fontSize16;
-
+      @media (max-width 768px){
+        display none
+      }
       .navigation_list_item {
         position: relative;
         line-height: 100%;
@@ -196,13 +202,4 @@ export default {
     }
   }
 }
-// @media (max-width: 768px) 
-//   .navigation_content_wrapper {
-//     .navigation_content {
-//       display: none;
-//     }
-//     .mobile_navigation_container {
-//       display: block;
-//     }
-//   }
 </style>
