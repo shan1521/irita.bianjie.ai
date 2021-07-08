@@ -8,7 +8,7 @@
           {{ article.owner }}
         </span>
       </div>
-      <span class="article_about_time">
+      <span v-if="time" class="article_about_time">
         {{ time }}
       </span>
     </div>
@@ -25,7 +25,7 @@ export default {
   },
   computed:{
 	  time(){
-		  return this.article.time.split('/').join('-');
+		  return this.article.time && this.article.time.split('/').join('-')
 	  }
   },
   created() {
