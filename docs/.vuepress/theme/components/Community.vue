@@ -30,7 +30,7 @@
                     <div class="community_bottom_content_item"
                          @click="handleArticleClick(item)"
                          v-for="item in blogList">
-                        <img :src="$withBase(item.src)" class="community_bottom_content_item_img">
+                        <img :src="item.src" class="community_bottom_content_item_img">
 
                         <div class="community_bottom_content_item_time_container">
                             <span class="community_bottom_content_item_title">
