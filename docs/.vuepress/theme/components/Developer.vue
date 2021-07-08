@@ -291,9 +291,8 @@ export default {
                     flex-direction:column;
                     .developer_middle_top_right_top{
                         width:100%;
-                        display:flex;
-                        flex-wrap wrap;
-                        justify-content space-between;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
                         .developer_middle_top_right_top_item{
                             width:216px;
                             margin-bottom:60px;
@@ -362,9 +361,8 @@ export default {
                 margin-bottom:48px;
             }
             .developer_middle_bottom_content{
-                display:flex;
-                flex-wrap:wrap;
-                justify-content space-between;
+                display: grid;
+                grid-template-columns repeat(2, 1fr)
                 .developer_middle_bottom_item{
                     width:480px;
                     height:224px;

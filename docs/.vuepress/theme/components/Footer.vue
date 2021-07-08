@@ -84,6 +84,9 @@ export default {
 
     .content {
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
       justify-content: space-between;
       margin: 0 auto;
       width: 100%;
@@ -111,6 +114,9 @@ export default {
 
       .content_right {
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
         justify-content: space-between;
 
         .line {
@@ -122,6 +128,9 @@ export default {
         .contact {
           display: flex;
           flex-direction: column;
+          -webkit-box-orient: vertical;
+          -ms-flex-direction: column;
+          -webkit-flex-direction: column;
           margin: 0 8rem;
 
           .contact_title {
@@ -215,6 +224,9 @@ export default {
 
   .bottom_content {
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
