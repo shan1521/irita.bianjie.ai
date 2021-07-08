@@ -34,6 +34,9 @@
           >
         </li>
       </ul>
+		<div class="mobile_navigation_content">
+		
+		</div>
     </div>
     <!-- <div class="mobile_navigation_container">
       <div class="mobile_navigation_content">
@@ -137,7 +140,9 @@ export default {
       height: $navbarHeight;
       list-style: none;
       font-size: $fontSize16;
-
+		@media (max-width 768px){
+			display none
+		}
       .navigation_list_item {
         position: relative;
         line-height: 100%;
