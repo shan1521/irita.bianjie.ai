@@ -180,11 +180,11 @@ export default {
 		leaveFn(id) {
 			this.$refs.productionLineImg[id].src = this.differentLineImg(this.productionLine.productionLineImg[id].lineImgName);
 		},
-		commitFn(value, index) {
-			this.$store.commit('currentIndex', value);
-			localStorage.setItem('currentIndex', value);
-			localStorage.setItem('communityTab', index);
-			this.$bus.$emit("handleTabClick", index);
+		commitFn(value,index){
+			this.$store.commit('currentIndex',value);
+			localStorage.setItem('currentIndex',value);
+			this.$store.commit('activeTab',index);
+			localStorage.setItem('activeTab',JSON.stringify(index));
 		},
 		// 开放社区
 		hoverOpenFn(index) {

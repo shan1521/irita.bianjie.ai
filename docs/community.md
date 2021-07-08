@@ -4,13 +4,13 @@
     isCommunity: true,
     blogs: [
         {
-            src: /img/blog/blog_001_1.webp,
-            title: "边界智能开源联盟链产品线 IRITA",
+            src: https://irita.bianjie.ai/dist/iritahome_banner.png?6e06ddf5d16caa4745a65b41debe69c6,
+            title: "IRITA HUB 的跨链实践与应用",
             owner: 边界智能,
             time: 2021/03/06,
             icon: /img/blog/bianjie_icon.png,
-            router: /blog/边界智能开源联盟链产品线,
-            slot: 边界智能开源联盟链产品线,
+            router: /blog/IRITAHUB的跨链实践与应用,
+            slot: IRITAHUB的跨链实践与应用,
         },
         {
             src: /img/blog/blog_001_1.webp,
