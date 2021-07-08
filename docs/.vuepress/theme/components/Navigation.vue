@@ -102,8 +102,7 @@ export default {
     align-items: center;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 36.8rem 0 36.7rem;
-    // max-width: $contentWidth;
+    max-width: $contentWidth;
     height: $navbarHeight;
 
     .navigation_content_left {
