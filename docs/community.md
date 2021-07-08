@@ -74,8 +74,24 @@
             icon: /img/blog/bianjie_icon.png,
             router: /blog/blog-003,
             slot: blog-003,
+        {
+            src: /img/blog/blog_save.png,
+            title: 如何快速部署,
+            owner: 边界智能,
+            time: 2021/03/24,
+            icon: /img/blog/bianjie_icon.png,
+            router: /blog/blog-002,
+            slot: blog-002,
+        },
+        {
+            src: /img/blog/blog_save.png,
+            title: 边界智能开源联盟链产品线 IRITA,
+            owner: 边界智能,
+            time: 2021/03/06,
+            icon: /img/blog/bianjie_icon.png,
+            router: /blog/边界智能开源联盟链产品线 IRITA,
+            slot: 边界智能开源联盟链产品线 IRITA,
         }
-        
     ],
     articles:[
         {
