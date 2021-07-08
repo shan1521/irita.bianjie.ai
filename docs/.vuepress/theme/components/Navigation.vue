@@ -77,9 +77,6 @@ export default {
         this.$store.commit('currentIndex',index);
         localStorage.setItem('currentIndex',JSON.stringify(index));
       }
-      if(index === 4) {
-        
-      }
     }
   }
 };
