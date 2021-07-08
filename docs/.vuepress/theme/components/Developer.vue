@@ -75,9 +75,11 @@
         </div>
         <div class="developer_middle_bottom">
             <div class="developer_middle_bottom_wrap">
-                <span class="developer_middle_bottom_tittle">
+				<div class="developer_title_content">
+					 <span class="developer_middle_bottom_tittle">
                     为什么选择 IRITA
                 </span>
+				</div>
                 <div class="developer_middle_bottom_content">
                     <div class="developer_middle_bottom_item">
                         <img src="../assets/SDK_icon.png" class="developer_middle_bottom_item_icon" />
@@ -225,9 +227,24 @@ export default {
         background url('../assets/devoloper_top_bg.png') no-repeat center/100% 100%;
         display:flex;
         justify-content center;
+		@media (max-width 768px){
+			background url('../assets/blog_bg_768.png') no-repeat center center
+			background-size cover
+			justify-content flex-start
+		}
         .developer_top_wrap{
             display:flex;
             align-items center;
+			@media (max-width:1000px){
+				margin 0 2rem
+			}
+			@media (max-width 768px){
+				padding 7.2rem 4.8rem 5.2rem 4.8rem
+				margin 0
+			}
+			@media (max-width 375px){
+				padding 8.6rem 1.6rem
+			}
             .developer_top_left{
                 display:flex;
                 flex-direction: column;
@@ -238,6 +255,10 @@ export default {
                     font-weight: 400;
                     color: #000000;
                     margin-bottom:22px;
+					@media (max-width 375px){
+						font-size:1.6rem
+						line-height 1.6rem
+					}
                 }
                 .developer_top_left_content{
                     font-size: 48px;
@@ -245,6 +266,11 @@ export default {
                     font-weight: 400;
                     color: #000000;
                     margin-bottom:32px;
+					@media (max-width 375px){
+						font-size: 2.8rem;
+						line-height 2.8rem;
+						margin-bottom 2.4rem;
+					}
                 }
                 .developer_top_left_border{
                     width:64px;
@@ -259,6 +285,9 @@ export default {
                 .developer_top_right_img{
                     width:432px;
                     height:294px;
+					@media (max-width 768px){
+						display none
+					}
                 }
             }
 
@@ -268,15 +297,29 @@ export default {
         display:flex;
         justify-content center;
         align-items center;
+		@media (max-width 960px){
+			width 100%
+			margin 0 4.8rem
+		}
+		@media (max-width 560px){
+			width 100%
+			justify-content flex-start
+			margin 0 4.8rem
+		}
+		@media (max-width 375px){
+			margin 0 1.6rem
+		}
         .developer_middle_top_wrap{
             display:flex;
             flex-direction:column;
+			padding-top: 4.8rem;
             .developer_middle_top_top{
                 font-size: 28px;
                 font-family: PingFangSC-Semibold, PingFang SC;
                 font-weight: 600;
                 color: #000000;
                 margin-bottom:47px;
+				width 100%;
             }
             .developer_middle_top_bottom{
                 display:flex;
@@ -284,15 +327,25 @@ export default {
                 .developer_middle_top_left{
                     width:420px;
                     height:404px;
+					@media (max-width 960px){
+						display none
+					}
                 }
                 .developer_middle_top_right{
                     width:492px;
                     display:flex;
                     flex-direction:column;
+					@media (max-width 560px){
+						width 100% !important;
+						justify-content flex-start
+					}
                     .developer_middle_top_right_top{
                         width:100%;
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
+						@media (max-width 560px){
+							grid-template-columns: repeat(1, 1fr);
+						}
                         .developer_middle_top_right_top_item{
                             width:216px;
                             margin-bottom:60px;
@@ -321,6 +374,9 @@ export default {
                         display:flex;
                         align-items center;
                         cursor:pointer;
+						margin 0 auto;
+						padding 3.6rem 4.8rem;
+					
                         .developer_middle_top_right_know{
                             font-size: 16px;
                             font-family: PingFangSC-Regular, PingFang SC;
@@ -345,34 +401,52 @@ export default {
     }
     .developer_middle_bottom{
         width:100%;
-        background url('../assets/devoloper_middle_bottom_bg.png') no-repeat center/100% 100%;
+        background url('../assets/devoloper_middle_bottom_bg.png') no-repeat center/ cover;
         display:flex;
         justify-content center;
+		@media (max-width 560px){
+			justify-content flex-start;
+			padding 0 4.8rem;
+			box-sizing border-box;
+		}
         .developer_middle_bottom_wrap{
             display:flex;
             flex-direction column;
             align-items center;
-            .developer_middle_bottom_tittle{
-                font-size: 28px;
-                font-family: PingFangSC-Semibold, PingFang SC;
-                font-weight: 600;
-                color: #000000;
-                line-height: 28px;
-                margin-bottom:48px;
-            }
+			.developer_title_content{
+				text-align left
+				width 100%
+				margin 8rem 0  4.8rem 0
+				.developer_middle_bottom_tittle{
+					font-size: 28px;
+					font-family: PingFangSC-Semibold, PingFang SC;
+					font-weight: 600;
+					color: #000000;
+					line-height: 28px;
+					margin-bottom:48px;
+				}
+			}
+           
             .developer_middle_bottom_content{
                 display: grid;
-                grid-template-columns repeat(2, 1fr)
+                grid-template-columns repeat(2, 1fr);
+				grid-column-gap 1.6rem;
+				grid-row-gap 1.6rem;
+				padding-bottom 8rem;
+				@media (max-width 930px){
+					grid-template-columns repeat(1, 1fr);
+				}
                 .developer_middle_bottom_item{
-                    width:480px;
                     height:224px;
-                    margin-bottom:16px;
                     background: #FFFFFF;
                     border-radius: 4px;
                     padding:33px 24px;
                     box-sizing border-box;
                     display:flex;
                     flex-direction column;
+					@media (max-width 560px){
+						height auto
+					}
                     .developer_middle_bottom_item_icon{
                         width:40px;
                         height:40px;
@@ -396,7 +470,9 @@ export default {
                     }
                     .developer_middle_bottom_item_sdk_container{
                         .developer_middle_bottom_item_sdk_item{
-                            height:32px;
+							line-height 1.6rem;
+							margin-bottom 0.08rem;
+							display:inline-block;
                             border-radius:4px;
                             border:1px solid #7065FF;
                             padding:8px 18px;
@@ -404,7 +480,18 @@ export default {
                             font-size:14px;
                             font-weight:400;
                             margin-right:16px;
+							
                         }
+						@media (max-width 528px){
+							.developer_middle_bottom_item_sdk_item:last-child{
+								margin-top 0.8rem
+							}
+						}
+						@media (max-width 367px){
+							.developer_middle_bottom_item_sdk_item:first-child{
+								margin-bottom 0.8rem
+							}
+						}
                     }
                 }
             }
@@ -415,17 +502,29 @@ export default {
         flex-direction column;
         justify-content center;
         align-items center;
+		padding 8.6rem 0  10rem 0;
         .developer_bottom_top{
-            display:flex;
-            justify-content space-between;
-            align-items center;
+			width 100%;
+			max-width 87rem;
+			display flex
+			justify-content flex-start
+			text-align left;
+			@media (max-width 922px){
+				max-width  44.1rem;
+			}
+			@media (max-width 560px){
+				max-width none;
+				padding-left 9.5rem;
+			}
             //margin-bottom 48px;
             .developer_bottom_top_left{
+				display:inline-bloc;
                 font-size: 28px;
                 font-family: PingFangSC-Semibold, PingFang SC;
                 font-weight: 600;
                 color: #000000;
-            }
+				
+			}
             .developer_bottom_top_right{
                 display:flex;
                 justify-content center;
@@ -462,12 +561,37 @@ export default {
         }
         .developer_bottom_bottom{
             display:flex;
+			justify-content center;
+			width:100%;
+			margin-top 4.8rem
+		
+			@media (max-width 920px){
+				box-sizing border-box
+				padding 0 17%
+				justify-content space-between
+			}
+			@media (max-width 768px){
+				flex-direction column
+				padding 0 10%
+			}
+			@media (max-width 560px){
+				flex-direction column
+				padding 0 4.8rem
+			}
             .developer_bottom_bottom_left, .developer_bottom_bottom_right{
                 display:flex;
                 justify-content center;
                 flex-direction: column;
+				
             }
-
+			.developer_bottom_bottom_right{
+				@media (max-width 768px){
+					margin-top 2rem
+				}
+				@media (max-width 560px){
+					margin-top 1.6em
+				}
+			}
             .developer_bottom_bottom_item{
                 width: 232px;
                 height: 48px;
@@ -488,6 +612,9 @@ export default {
                     color:#7065FF;
                     border-color:#7065FF;
                 }
+				@media (max-width 768px){
+					margin-bottom 2.4rem
+				}
                 .developer_bottom_bottom_item_iconfont{
                     height:48px;
                     width:48px;
@@ -509,136 +636,15 @@ export default {
             .developer_bottom_bottom_center{
                 width:360px;
                 height:338px;
+				margin 0 2.5rem;
+				@media (max-width 920px){
+					display none;
+				}
             }
 
         }
     }
 
-    //pc
-    @media screen and (min-width: $minPcWidth){
-        .developer_top{
-            height:360px;
-            flex:0 0 360px;
-            .developer_top_wrap{
-                .developer_top_left{
-                    margin-right:132px;
-                }
-            }
-        }
-        .developer_middle_top{
-            height:618px;
-            flex:0 0 618px;
-            .developer_middle_top_wrap{
-                .developer_middle_top_top{
-                }
-                .developer_middle_top_bottom{
-
-                    .developer_middle_top_left{
-                        margin-right:100px;
-                    }
-                    .developer_middle_top_right{
-
-                        .developer_middle_top_right_top{
-
-                            .developer_middle_top_right_top_item{
-
-                                .developer_middle_top_right_top_title{
-
-                                }
-                                .developer_middle_top_right_top_content{
-
-                                }
-                            }
-                        }
-                        .developer_middle_top_right_bottom{
-                            .developer_middle_top_right_know{
-
-                            }
-                            .developer_middle_top_right_iconfont{
-
-                            }
-                        }
-                    }
-                }
-
-
-            }
-        }
-        .developer_middle_bottom{
-            height:697px;
-            flex:0 0 697px;
-            .developer_middle_bottom_wrap{
-                display:flex;
-                flex-direction:column;
-                justify-content center;
-                .developer_middle_bottom_tittle{
-                    width:976px;
-                }
-                .developer_middle_bottom_content{
-                    width:976px;
-                    .developer_middle_bottom_item{
-
-                        .developer_middle_bottom_item_icon{
-
-                        }
-                        .developer_middle_bottom_item_title{
-
-                        }
-                        .developer_middle_bottom_item_content{
-
-                        }
-                    }
-                }
-            }
-        }
-        .developer_bottom{
-            height:524px;
-            flex:0 0 524px;
-            .developer_bottom_top{
-                width:976px;
-                .developer_bottom_top_left{
-
-
-                }
-                .developer_bottom_top_right{
-
-                    .developer_bottom_top_right_title{
-
-                    }
-                    .developer_bottom_top_right_icon{
-
-                    }
-                }
-            }
-            .developer_bottom_bottom{
-                flex-direction row;
-                .developer_bottom_bottom_left{
-
-                    .developer_bottom_bottom_item{
-
-                        .developer_bottom_bottom_item_iconfont{
-
-                        }
-                        .developer_bottom_bottom_item_title{
-
-                        }
-                        .developer_bottom_bottom_item_bg{
-
-                        }
-
-                    }
-
-                }
-                .developer_bottom_bottom_center{
-                    margin:0 20px;
-
-                }
-                .developer_bottom_bottom_right{
-
-                }
-            }
-        }
-    }
     //pad
     @media screen and (max-width: $maxPadWidth) and (min-width: $minPadWidth){
 
