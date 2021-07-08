@@ -169,6 +169,7 @@ export default {
 		commitFn(value,index){
 			this.$store.commit('currentIndex',value);
 			localStorage.setItem('currentIndex',value);
+			localStorage.setItem('communityTab',index);
 			this.$bus.$emit("handleTabClick", index);
 		},
 		// 开放社区
