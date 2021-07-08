@@ -3,7 +3,7 @@ function resolve (dir) {
     return path.join(__dirname, dir)
 }
 module.exports = {
-    title: 'IRITA-企业级联盟链产品',
+    title: 'IRITA-企业级联盟链产品线',
     description: 'IRITA 是边界智能以区块链跨链、隐私计算及大数据分析技术创新为核心，自主研发的支持下一代分布式商业系统的企业级联盟链产品线。IRITA 面向服务，针对开发者提供丰富的链应用开发服务套件，能更好的满足中小企业以更具成本效益的方式快速开发和部署 DApp 及其他链上应用的需求。',
     base:'/',
     head: [

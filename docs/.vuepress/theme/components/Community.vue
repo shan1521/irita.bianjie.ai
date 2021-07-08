@@ -30,7 +30,7 @@
                     <div class="community_bottom_content_item"
                          @click="handleArticleClick(item)"
                          v-for="item in blogList">
-                        <img :src="$withBase(item.src)" class="community_bottom_content_item_img">
+                        <img :src="item.src" class="community_bottom_content_item_img">
 
                         <div class="community_bottom_content_item_time_container">
                             <span class="community_bottom_content_item_title">
@@ -109,7 +109,6 @@ export default {
     name : 'Community',
     data(){
         return {
-            activeTab : 0,
             total:0,
             currentPage: 1,
         }
@@ -118,9 +117,12 @@ export default {
         activeTab(){
             this.setTotal();
             this.currentPage = 1;
-        }
+        },
     },
     computed:{
+        activeTab(){
+            return +this.$store.state.activeTab;
+        },
         blogList(){
             if(this.$frontmatter && this.$frontmatter.blogs && this.$frontmatter.blogs.length > 0 && this.activeTab === 0){
                 let blogs = JSON.parse(JSON.stringify(this.$frontmatter.blogs))
@@ -136,15 +138,13 @@ export default {
 
         }
     },
-    mounted(){
-        this.setTotal();
-        this.$bus.$on('handleTabClick',(tab)=>{
-            this.activeTab = tab;
-        });
-    },
+    
     methods : {
         handleTabClick(tab){
-            this.activeTab = tab;
+            if (this.activeTab !== tab) {
+                this.$store.commit('activeTab',tab);
+                localStorage.setItem('activeTab',JSON.stringify(tab));
+            }
         },
         setTotal(){
             if(this.activeTab === 0 && this.$frontmatter.blogs.length >= 0){
@@ -154,6 +154,7 @@ export default {
             }
         },
         handleArticleClick(article){
+            this.article = article;
             this.$router.push({
                 path: article.router,
                 query: {
@@ -164,6 +165,12 @@ export default {
         handlePageClick(page){
             this.currentPage = page;
         }
+    },
+    mounted(){
+        this.setTotal();
+    },
+    beforeDestroy(){
+        this.$bus.$emit('showArticle',this.article);
     }
 }
 </script>
@@ -264,9 +271,8 @@ export default {
 
             .community_bottom_content_container {
                 width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content space-between;
+                display: grid;
+                grid-template-columns repeat(3, 1fr)
 
                 .community_bottom_content_item {
                     height: 336px;
