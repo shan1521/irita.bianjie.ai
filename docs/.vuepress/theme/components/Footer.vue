@@ -74,6 +74,9 @@ export default {
     width: 100%;
     height: 31.4rem;
     background: $footerTopColor;
+	  @media (max-width 768px){
+		  height auto
+	  }
   }
 
   .top_content {
@@ -81,7 +84,10 @@ export default {
     padding: 6rem 2.4rem;
     max-width: $footerTopContentWidth;
     height: 19.4rem;
-
+	@media (max-width 768px){
+		padding 3.6rem 0
+		height auto
+	}
     .content {
       display: flex;
       -webkit-box-pack: justify;
@@ -91,24 +97,37 @@ export default {
       margin: 0 auto;
       width: 100%;
       height: 100%;
-
+		@media (max-width 768px){
+			flex-direction column
+			align-items center
+		}
       .content_left {
         .left_img {
           height: 6rem;
-
+			@media (max-width 768px){
+				display flex
+				justify-content center
+			}
           .img {
             height: 6rem;
+			 
           }
         }
 
         .img_desc {
           margin-top: 2.4rem;
-          height: 2.4rem;
           line-height: 2.4rem;
           font-size: $fontSize16;
           font-family: PingFangSC-Medium, PingFang SC;
           font-weight: $fontWeight500;
           color: $whiteColorOpacity1;
+			box-sizing: border-box;
+			padding-right: 1.6rem;
+			@media (max-width 768px){
+				padding-right 0
+				max-width 22rem
+				text-align center
+			}
         }
       }
 
@@ -118,11 +137,20 @@ export default {
         -ms-flex-pack: justify;
         -webkit-justify-content: space-between;
         justify-content: space-between;
-
+		@media (max-width 768px){
+			flex-direction column
+			align-items center
+			justify-content center
+			margin-top 3.6rem
+			text-align center
+		}
         .line {
           width: 0.1rem;
           height: 19.5rem;
           background: #515071;
+			@media (max-width 768px){
+				display none
+			}
         }
 
         .contact {
@@ -174,7 +202,9 @@ export default {
         .focus {
           display: flex;
           flex-direction: column;
-
+			@media (max-width 768px){
+				margin-top 4.4rem
+			}
           .focus_title {
             height: 2.4rem;
             line-height: 2.4rem;
