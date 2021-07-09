@@ -1,5 +1,8 @@
-::: slot 边界智能开源联盟链产品线 IRITA
-# 边界智能开源联盟链产品线 IRITA
+::: slot IRITA
+
+
+<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA-01.png" ></div>
+
 
 ## <font color= #7EC9FC >IRITA – 支持下一代分布式商业系统的企业级联盟链产品</font>
 IRITA 是边界智能以区块链跨链、隐私计算及大数据分析技术创新为核心，自主研发的支持下一代分布式商业系统的企业级联盟链产品。
@@ -37,7 +40,9 @@ IRITA 可以灵活使用在多种行业，尤其是金融创新行业，比如�
 
 ##  <font color= #7EC9FC >IRITA 整体架构</font>
 
-![irita 架构图](~img/blog/blog-001-2.webp)
+
+<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA.png" ></div>
+
 
 ##   <font color= #7EC9FC >技术应用案例 – IRITA 支持复杂的分布式商业应用</font>
 ### **供应链金融、碳中和 – IRITA DA**
@@ -65,7 +70,15 @@ IRITA 可以灵活使用在多种行业，尤其是金融创新行业，比如�
 我们诚挚欢迎对此感兴趣的企业和开发者加入 IRITA 社区中来，为中国自主研发的底层联盟链项目添砖加瓦，携手实现区块链技术在实体经济中的大规模应用落地，共建区块链 3.0 时代。
  
 开源地址：
-https://github.com/bianjieai/irita
+ [https://github.com/bianjieai/irita](https://github.com/bianjieai/irita/)
+
+
+
+
+:::
+
+
+
 
 
 
