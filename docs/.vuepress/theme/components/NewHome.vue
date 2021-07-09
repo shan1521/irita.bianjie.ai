@@ -441,8 +441,11 @@ export default {
 			color $blackColor
 		
 		.advantage_list
+			display: -ms-grid;
 			display grid
 			grid-template-columns repeat(3, 3fr)
+			// -ms-grid-columns: 3fr auto 1fr;
+			// -ms-grid-column: 3;
 			justify-items center
 			grid-row-gap 2.4rem
 			margin 4.8rem auto
@@ -456,7 +459,7 @@ export default {
 			@media (max-width 1100px) {
 				grid-template-columns repeat(2, 3fr)
 			}
-			@media (max-width 768px) {
+			@media (max-width 767px) {
 				grid-template-columns repeat(1, 3fr)
 			}
 			@media (max-width 460px) {
@@ -589,7 +592,6 @@ export default {
 			display flex
 			justify-content space-between
 			height 56rem
-			overflow hidden
 			.production_line
 				position relative
 				width 48rem

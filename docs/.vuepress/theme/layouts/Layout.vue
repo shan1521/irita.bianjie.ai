@@ -16,8 +16,8 @@
             <Community v-if="$page.frontmatter.isCommunity"/>
             <div class="md_container" v-if="showMd">
                 <div class="md_wrap">
-                    <Markdown></Markdown>
-                    <Content v-for="item in blogAndArticleList" :slot-key="item.slot" >
+                    <Markdown  :articleDetails='articleDetails'></Markdown>
+                    <Content :slot-key="articleDetails.slot">
                     </Content>
                 </div>
             </div>
@@ -83,6 +83,7 @@ export default {
     },
 
     mounted(){
+		
         // console.log(nav)
         if(localStorage.getItem('currentIndex')) {
             this.$store.commit('currentIndex',JSON.parse(localStorage.getItem('currentIndex')))
@@ -101,6 +102,9 @@ export default {
         }
     },
     computed : {
+		articleDetails(){
+			return JSON.parse(sessionStorage.getItem('article'));
+		},
         showMd(){
             return Object.keys(this.$page.frontmatter).length === 0;
         },
@@ -207,11 +211,24 @@ export default {
             font-family: PingFangSC-Medium, PingFang SC;
             font-weight: 500;
             color: rgba(0,0,0,0.75);
-            line-height: 30px;
+            line-height: 36px;
             //display:flex;
             .md_wrap{
                 padding-top:60px;
                 padding-bottom:80px;
+				@media (max-width 1200px){
+					padding 0 4.8rem
+				}
+                @media (max-width: 768px){
+                    padding-left: 24px;
+                    padding-right: 24px;
+                }
+                h2, h3{
+                    border-bottom: none;
+                }
+                img {
+                    width: 100%;
+                }
             }
 
         }

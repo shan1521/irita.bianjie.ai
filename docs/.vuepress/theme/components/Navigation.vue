@@ -15,7 +15,7 @@
         >
           <div :class="currentIndex === index ? 'line' : ''"></div>
           <a
-						v-show="item.target === '_blank'"
+            v-show="item.target === '_blank'"
             class="navigation_item"
             :class="index === 4 ? 'router_link_item' : ''"
             :href="item.link"
@@ -24,7 +24,7 @@
             >{{ item.text }}</a
           >
           <router-link
-						v-show="item.target !== '_blank'"
+            v-show="item.target !== '_blank'"
             class="navigation_item"
             :class="currentIndex === index ? 'router_link_item' : ''"
             :to="item.link"
@@ -36,14 +36,43 @@
       </ul>
     </div>
     <div class="mobile_navigation_container">
-      <!-- <div class="mobile_navigation_content">
-        <div class="mobile_navigation_logo" @click="toHome()">
-					<img src="/irita_logo.png" alt="">
-				</div>
-				<div class="mobile_menu_icon" @click="isShowMobileMenu()">
-					<span class="iconfont icon-menu"></span>
-				</div>
-      </div> -->
+      <div class="mobile_navigation_content">
+        <div class="mobile_navigation_logo" @click="toHome">
+          <img class="irita_logo" src="/irita_logo.png" alt="" />
+        </div>
+        <div class="mobile_menu_icon" @click="isShowMobileMenu">
+          <span class="iconfont icon-menu"></span>
+        </div>
+      </div>
+			<ul class="mobile_navigation_content_right" v-show="flShowMobileMenu">
+        <li
+          class="mobile_navigation_list_item"
+          v-for="(item, index) in navigationList"
+          :key="index"
+          @click="changeIndex(index)"
+        >
+          <div :class="currentIndex === index ? 'mobile_line' : ''"></div>
+          <a
+            v-show="item.target === '_blank'"
+            class="mobile_navigation_item"
+            :class="index === 4 ? 'mobile_router_link_item' : ''"
+            :href="item.link"
+            :target="item.target"
+            rel="noopener noreferrer"
+            >{{ item.text }}</a
+          >
+          <router-link
+            v-show="item.target !== '_blank'"
+            class="mobile_navigation_item"
+            :class="currentIndex === index ? 'mobile_router_link_item' : ''"
+            :to="item.link"
+						@click.native="closeMobileMenu"
+            :target="item.target"
+            rel="noopener noreferrer"
+            >{{ item.text }}</router-link
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -53,32 +82,39 @@ export default {
   name: "Navigation",
   data() {
     return {
-      navigation: []
+      navigation: [],
+			flShowMobileMenu: false,
     };
   },
   created() {
     this.navigation = this.$site.themeConfig.nav;
   },
   computed: {
-		currentIndex(){
+    currentIndex() {
       return +this.$store.state.currentIndex;
-		},
+    },
     navigationList() {
       return this.navigation;
     },
   },
   methods: {
-    toHome(){
-      this.$router.push('/');
-      this.$store.commit('currentIndex',0);
+    toHome() {
+      this.$router.push("/");
+      this.$store.commit("currentIndex", 0);
     },
     changeIndex(index) {
       if (this.currentIndex !== index && index !== 1 && index !== 4) {
-        this.$store.commit('currentIndex',index);
-        localStorage.setItem('currentIndex',JSON.stringify(index));
+        this.$store.commit("currentIndex", index);
+        localStorage.setItem("currentIndex", JSON.stringify(index));
       }
-    }
-  }
+    },
+		isShowMobileMenu(){
+			this.flShowMobileMenu = !this.flShowMobileMenu
+		},
+		closeMobileMenu(){
+			this.flShowMobileMenu = false
+		},
+  },
 };
 </script>
 
@@ -113,9 +149,11 @@ export default {
 
       .navigation_img_content {
         height: 4rem;
+
         &:hover {
           cursor: pointer;
         }
+
         .logo {
           height: 4rem;
           vertical-align: middle;
@@ -135,12 +173,15 @@ export default {
       height: $navbarHeight;
       list-style: none;
       font-size: $fontSize16;
-      @media (max-width 768px){
-        display none
+
+      @media (max-width: 768px) {
+        display: none;
       }
+
       .navigation_list_item {
         position: relative;
         line-height: 100%;
+
         &:last-child {
           padding-right: 0;
 
@@ -152,7 +193,7 @@ export default {
         .line {
           position: absolute;
           top: 0;
-          left:0;
+          left: 0;
           left: 50%;
           transform: translateX(-50%);
           width: 11.2rem;
@@ -168,7 +209,6 @@ export default {
           font-weight: $fontWeight500;
           color: $blackColor;
         }
-        
 
         .router_link_item {
           display: flex;
@@ -182,6 +222,7 @@ export default {
       }
     }
   }
+
   .mobile_navigation_container {
     display: none;
     position: fixed;
@@ -192,14 +233,67 @@ export default {
     background: $whiteColor;
     border-bottom: 0.1rem solid $borderLineColor;
     z-index: 10;
+		@media (max-width: 768px) {
+			display: block;
+		}
     .mobile_navigation_content {
       box-sizing: border-box;
       display: flex;
-      justify-content: sapce-between;
-      padding: 1.4rem 4.8rem;
+      justify-content: space-between;
+			align-items: center;
+			margin: 0 auto;
+      max-width: 67.2rem;
       height: $navbarHeight;
-
+			@media (max-width: 320px) {
+				max-width: 288rem;
+			}
+			.mobile_navigation_logo {
+				padding-left: 0.8rem;
+				width: 11.1rem;
+				height: 3.6rem;
+				.irita_logo {
+					width: 11.1rem;
+					height: 3.6rem;
+				}
+			}
+			.mobile_menu_icon {
+				padding-right: 0.8rem;
+				width: 2.8rem;
+				height: 2.4rem;
+				.iconfont {
+					width: 2.8rem;
+					height: 2.4rem;
+					color: $highlightDetailColor;
+				}
+			}
     }
+		.mobile_navigation_content_right {
+			margin: 0;
+			background: $whiteColor;
+			.mobile_navigation_list_item {
+				position: relative;
+				width: 100%;
+				border-top: 0.1rem solid #E8EBF5;
+				.mobile_line {
+					position: absolute;
+					left: 0;
+					width: 0.4rem;
+					height: 100%;
+					background: $highlightDetailColor;
+				}
+				.mobile_navigation_item {
+					box-sizing: border-box;
+					display: inline-block;
+					padding: 1.2rem 0 1.2rem 4.8rem;
+					width: 100%;
+					color: $blackColorOpacity1;
+				}
+				.mobile_router_link_item {
+					color: $highlightDetailColor;
+					background: rgba(112,101,255, 0.04);
+				}
+			}
+		}
   }
 }
 </style>
