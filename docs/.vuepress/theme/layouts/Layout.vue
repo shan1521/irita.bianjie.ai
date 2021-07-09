@@ -212,8 +212,15 @@ export default {
             .md_wrap{
                 padding-top:60px;
                 padding-bottom:80px;
+                @media (max-width: 768px){
+                    padding-left: 24px;
+                    padding-right: 24px;
+                }
                 h2, h3{
                     border-bottom: none;
+                }
+                img {
+                    width: 100%;
                 }
             }
 

@@ -441,8 +441,11 @@ export default {
 			color $blackColor
 		
 		.advantage_list
+			display: -ms-grid;
 			display grid
 			grid-template-columns repeat(3, 3fr)
+			// -ms-grid-columns: 3fr auto 1fr;
+			// -ms-grid-column: 3;
 			justify-items center
 			grid-row-gap 2.4rem
 			margin 4.8rem auto

@@ -3,7 +3,9 @@
     <h1 class="article_title" v-if="article.title">{{ article.title }}</h1>
     <div class="article_about">
       <div class="article_about_owner_container">
-        <img v-if="article.icon" :src="$withBase(article.icon)" class="article_about_icon">
+		<div v-if="article.icon" class="article_about_icon_wrap">
+		<img :src="$withBase(article.icon)" class="article_about_icon">
+		</div>
         <span v-if="article.owner" class="article_about_owner">
           {{ article.owner }}
         </span>
@@ -44,8 +46,7 @@ export default {
 	margin-bottom: 26px;
 	border-bottom: 1px solid #E8EBF5;
 	.article_title {
-		height: 24px;
-		line-height: 24px;
+		line-height: 26px;
 		font-size: 24px;
 		font-family: PingFangSC-Semibold, PingFang SC;
 		font-weight: 600;
@@ -55,17 +56,20 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		margin-top: 20px;
-		margin-bottom: 15px
-		height: 16px;
+		margin-bottom: 15px;
 		line-height: 16px;
 		.article_about_owner_container {
 			display: flex;
 			align-items: center;
-			.article_about_icon {
-				display: inline-block;
+			.article_about_icon_wrap {
 				margin-right: 8px;
 				width: 16px;
 				height: 16px;
+				.article_about_icon {
+					display: inline-block;
+					width: 16px;
+					height: 16px;
+				}
 			}
 			.article_about_owner {
 				height: 16px;
