@@ -59,79 +59,41 @@
     ],
     articles:[
         {
-            month: Mar,
-            date: 27,
+            month: May,
+            date: 08,
             year: 2021,
-            title: "边界智能成为中国中小企业协会产业区块链专委会常务理事",
-            content: 边界智能成为中国, 
+            title: "「智慧政务+区块链」都江堰市行政审批局智慧政务在 BSN 文昌链上线了",
+            content: “政务服务底层区块链平台”应用项目是由都江堰区块链场景实验室的核心技术企业共同研发，边界智能承担了平台中“区块链电子证照系统”的搭建，该系统基于 BSN 首批开放联盟链“文昌链”开发，也是 BSN 开放联盟链“文昌链”部署的首个政务应用。, 
             router: /article/article-001,
             slot: article-001
         },
         {
-            month: Mar,
-            date: 27,
-            year: 2021,
-            title: 边界智能成为中国中小企业协会产业区块链专委会常务理事,
-            content: 边界智能成为中国, 
+            month: Oct,
+            date: 31,
+            year: 2020,
+            title: IRITA HUB 跨链服务枢纽成功上线 BSN 平台,
+            content: 区块链服务网络（BSN）与边界智能联合宣布：2020 年 10 月 31 日，IRITA 跨链服务加入 BSN 跨链服务枢纽（ICH）并正式上线。IRITA Hub 是边界智能自主研发的 IRITA 联盟链产品线中专注跨链服务的产品，既可以支持 BSN 环境中 Hyperledger Fabric、FISCO BCOS 等联盟链之间的跨链交互，在 BSN 国际版中支持联盟链与以太坊、IRISnet 等公有链的跨链交互，同时也支持访问 Chainlink 等预言机的链下可信数据，为打造 BSN 成为「全球性区块链互联网」提供重要的技术基础。, 
             router: /article/article-002,
             slot: article-002
         },
         {
-            month: Mar,
-            date: 27,
-            year: 2021,
-            title: 边界智能成为中国中小企业协会产业区块链专委会常务理事,
-            content: 边界智能成为中国, 
+            month: Mon,
+            date: 28,
+            year: 2020,
+            title: IRITA 未来可成为 BSN 与 Cosmos/IRISnet 生态连接的桥梁,
+            content: 2020 年初边界智能团队就开始和红枣科技进行合作， 并根据 BSN 规范对 IRITA 进行了适配，现在 IRITA 对国密及智能合约都能按 BSN 规范进行支持。, 
             router: /article/article-003,
             slot: article-003
         },
         {
             month: Mar,
-            date: 27,
-            year: 2021,
-            title: 边界智能成为中国中小企业协会产业区块链专委会常务理事,
-            content: 边界智能成为中国, 
+            date: 06,
+            year: 2020,
+            title: 边界智能开源联盟链产品线 IRITA ,
+            content: IRITA 是边界智能以区块链跨链、隐私计算及大数据分析技术创新为核心，自主研发的支持下一代分布式商业系统的企业级联盟链产品。, 
             router: /article/article-004,
             slot: article-004
-        },
-        {
-            month: Mar,
-            date: 27,
-            year: 2021,
-            title: 边界智能成为中国中小企业协会产业区块链专委会常务理事,
-            content: 边界智能成为中国, 
-            router: /article/article-005,
-            slot: article-005
-        },
-        {
-            month: Mar,
-            date: 27,
-            year: 2021,
-            title: 边界智能成为中国中小企业协会产业区块链专委会常务理事,
-            content: 边界智能成为中国, 
-            router: /article/article-006,
-            slot: article-006
-        },
-        {
-            month: Mar,
-            date: 27,
-            year: 2021,
-            title: 边界智能成为中国中小企业协会产业区块链专委会常务理事sfdfsdfs,
-            content: 边界智能成为中国, 
-            router: /article/article-007,
-            slot: article-007
-        },
-        {
-            month: Mar,
-            date: 27,
-            year: 2021,
-            title: 1231313213,
-            content: 边界智能成为中国, 
-            router: /article/article-008,
-            slot: article-008
-        },
-        
-        
+        }  
     ]
 }
 ---
