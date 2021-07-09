@@ -154,7 +154,7 @@ export default {
             }
         },
         handleArticleClick(article){
-            this.article = article;
+			sessionStorage.setItem('article',JSON.stringify(article));
             this.$router.push({
                 path: article.router,
                 query: {
@@ -169,9 +169,6 @@ export default {
     mounted(){
         this.setTotal();
     },
-    beforeDestroy(){
-        this.$bus.$emit('showArticle',this.article);
-    }
 }
 </script>
 

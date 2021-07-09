@@ -1,13 +1,13 @@
 <template>
-  <div class="article_content_wrapper" v-if="article">
-    <h1 class="article_title" v-if="article.title">{{ article.title }}</h1>
+  <div class="article_content_wrapper" v-if="articleDetails">
+    <h1 class="article_title" v-if="articleDetails.title">{{ articleDetails.title }}</h1>
     <div class="article_about">
       <div class="article_about_owner_container">
-		<div v-if="article.icon" class="article_about_icon_wrap">
-		<img :src="$withBase(article.icon)" class="article_about_icon">
+		<div v-if="articleDetails.icon" class="article_about_icon_wrap">
+		<img :src="$withBase(articleDetails.icon)" class="article_about_icon">
 		</div>
-        <span v-if="article.owner" class="article_about_owner">
-          {{ article.owner }}
+        <span v-if="articleDetails.owner" class="article_about_owner">
+          {{ articleDetails.owner }}
         </span>
       </div>
       <span v-if="time" class="article_about_time">
@@ -25,18 +25,11 @@ export default {
       article: {},
     };
   },
+  props: ['articleDetails'],
   computed:{
 	  time(){
-		  return this.article.time && this.article.time.split('/').join('-')
+		  return this.articleDetails.time && this.articleDetails.time.split('/').join('-')
 	  }
-  },
-  created() {
-    this.$bus.$on("showArticle", (article) => {
-      this.article = article;
-    });
-  },
-  beforeDestroy() {
-    this.$bus.$off("showArticle", this.article);
   },
 };
 </script>
