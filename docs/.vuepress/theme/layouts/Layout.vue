@@ -9,19 +9,20 @@
             <Navigation></Navigation>
         </ClientOnly>
         <!-- <div class="empty"></div> -->
-        <div class="main_content_wrapper">
-            <Home v-if="$page.frontmatter.home"></Home>
-            <NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
-            <Developer v-if="$page.frontmatter.isDeveloper"></Developer>
-            <Community v-if="$page.frontmatter.isCommunity"/>
-            <div class="md_container" v-if="showMd">
-                <div class="md_wrap">
-                    <Markdown  :articleDetails='articleDetails'></Markdown>
-                    <Content :slot-key="articleDetails.slot">
-                    </Content>
-                </div>
-            </div>
-        </div>
+		<ClientOnly>
+			<div class="main_content_wrapper">
+				<Home v-if="$page.frontmatter.home"></Home>
+				<NewHome v-if="$page.frontmatter.isNewHome"></NewHome>
+				<Developer v-if="$page.frontmatter.isDeveloper"></Developer>
+					<Community v-if="$page.frontmatter.isCommunity"/>
+					<div class="md_container" v-if="showMd">
+						<div class="md_wrap">
+							<Markdown  :articleDetails='$store.state.articleData'></Markdown>
+							<Content :slot-key="$store.state.articleData ? $store.state.articleData.slot :''"></Content>
+						</div>
+					</div>
+			</div>
+		</ClientOnly>
         <Footer></Footer>
     </div>
 </template>
@@ -46,6 +47,9 @@ export default {
         return {
             isSidebarOpen : false,
             blogAndArticleList:[],
+			articleDetails: null,
+			articleName:null,
+			articleData:null,
         }
     },
     components : {
@@ -66,6 +70,9 @@ export default {
                 this.setBlogAndArticleList(frontmatter)
             }
         },
+		'$store.state.articleData'(){
+		
+		},
         $route:{
             handler(val,oldval){
                 nav.themeConfig.nav.forEach((item,index)=>{
@@ -81,13 +88,16 @@ export default {
             deep: true
         }
     },
-
+	
     mounted(){
 		
         // console.log(nav)
         if(localStorage.getItem('currentIndex')) {
             this.$store.commit('currentIndex',JSON.parse(localStorage.getItem('currentIndex')))
         }
+        if(JSON.parse(sessionStorage.getItem('article'))){
+			this.$store.commit('articleData',JSON.parse(sessionStorage.getItem('article')))
+		}
         this.$router.afterEach(() => {
             this.isSidebarOpen = false
             window.scrollTo(0, 0)
@@ -102,9 +112,10 @@ export default {
         }
     },
     computed : {
-		articleDetails(){
-			return JSON.parse(sessionStorage.getItem('article'));
-		},
+    
+		/*articleDetails(){
+			return  JSON.parse(sessionStorage.getItem('article'));
+		},*/
         showMd(){
             return Object.keys(this.$page.frontmatter).length === 0;
         },
