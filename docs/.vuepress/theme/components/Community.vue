@@ -190,16 +190,22 @@ export default {
 
     .community_top {
         width: 100%;
-        background url('../assets/home_banner.png') no-repeat center / cover;
+        background url('../assets/blog_bg.png') no-repeat center / cover;
         // display: flex;
         // justify-content center;
+		@media (max-width 768px){
+			background url('../assets/blog_bg_768.png') no-repeat center center
+			background-size cover
+		}
 
         .community_top_wrap {
             box-sizing: border-box;
             padding: 10.7rem 0 17.3rem 8.1rem;
             margin: 0 auto;
             max-width: $contentWidth;
-
+			@media (max-width: 768px){
+				padding 8rem 2.4rem 11.6rem 2.4rem
+			}
             .community_top_left {
                 display: flex;
                 flex-direction: column;
@@ -213,6 +219,9 @@ export default {
                     line-height: 48px;
                     letter-spacing: 1px;
                     margin-bottom: 22px;
+					@media (max-width 768px){
+						font-size 2.8rem
+					}
                 }
 
                 .community_top_left_border {
@@ -229,7 +238,6 @@ export default {
                 align-items flex-end;
 
                 .community_top_right_img {
-                    width: 570px;
                     height: 328px;
                 }
             }
@@ -242,6 +250,12 @@ export default {
         justify-content center;
         align-items flex-start;
         padding-top:48px;
+		@media (max-width:768px){
+		 margin 0 2.4rem
+		}
+		@media (max-width:375px){
+			margin 0 1.6rem
+		}
         .community_bottom_wrap {
             display: flex;
             flex-direction: column;
@@ -273,15 +287,21 @@ export default {
                 width: 100%;
                 display: grid;
                 grid-template-columns repeat(3, 1fr)
-
+				grid-row-gap: 2.4rem
+				grid-column-gap: 2.4rem
+				@media (max-width 1050px){
+					grid-template-columns repeat(2, 1fr)
+				}
+				@media (max-width 700px){
+					grid-template-columns repeat(1, 1fr)
+				}
                 .community_bottom_content_item {
                     height: 336px;
-                    width: 320px;
+                    max-width: 320px;
                     background: #FFFFFF;
                     border-radius: 4px;
                     border: 1px solid #E8EBF5;
                     box-sizing border-box;
-                    margin-bottom: 24px;
                     display: flex;
                     flex-direction column;
                     cursor: pointer;
@@ -311,6 +331,7 @@ export default {
                         justify-content space-between;
 
                         .community_bottom_content_item_title {
+							width: 100%
                             font-size: 18px;
                             font-family: PingFangSC-Semibold, PingFang SC;
                             font-weight: 600;

@@ -459,7 +459,7 @@ export default {
 			@media (max-width 1100px) {
 				grid-template-columns repeat(2, 3fr)
 			}
-			@media (max-width 768px) {
+			@media (max-width 767px) {
 				grid-template-columns repeat(1, 3fr)
 			}
 			@media (max-width 460px) {
