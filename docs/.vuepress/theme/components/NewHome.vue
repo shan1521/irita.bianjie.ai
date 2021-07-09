@@ -592,7 +592,6 @@ export default {
 			display flex
 			justify-content space-between
 			height 56rem
-			overflow hidden
 			.production_line
 				position relative
 				width 48rem
