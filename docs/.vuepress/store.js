@@ -4,7 +4,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 	state: {
 		currentIndex: 0,
-		activeTab: 0
+		activeTab: 0,
+		articleData:null,
 	},
 	mutations: {
 		currentIndex(state,currentIndex){
@@ -12,6 +13,9 @@ export default new Vuex.Store({
 		},
 		activeTab(state,activeTab){
 			state.activeTab = activeTab;
+		},
+		articleData(state,articleData){
+			state.articleData = articleData;
 		}
 	}
 })

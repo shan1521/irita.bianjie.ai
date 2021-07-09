@@ -154,6 +154,7 @@ export default {
             }
         },
         handleArticleClick(article){
+        	this.$store.commit('articleData',article)
 			sessionStorage.setItem('article',JSON.stringify(article));
             this.$router.push({
                 path: article.router,
