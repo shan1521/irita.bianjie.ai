@@ -39,8 +39,7 @@ IRITA 可以灵活使用在多种行业，尤其是金融创新行业，比如�
 6）大数据存储：IRITA 自带存储层，支持云存储和分布式存储，通过数据仓库和链式数据结合支持链上数据高效全生命周期查询。
 
 ##  <font color= #7EC9FC >IRITA 整体架构</font>
-
-
+</br>
 <div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA.png" ></div>
 
 

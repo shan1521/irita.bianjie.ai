@@ -11,7 +11,6 @@
 
 ##  <center> <font color=#00BFFF>跨链通信协议 IBC</font> </center>
 #### <center> 异构跨链互联互通
-</br>
 
 谈及 IBC，胡智威解释道，IBC 全称为 Inter-Blockchain Communication，即跨链通信协议，由全球前沿的跨链项目 Cosmos 提出。正是由于采用了 IBC 协议，Cosmos 从跨链领域众多项目中脱颖而出。<font color=#00BFFF>**IBC 采用了自下而上的、类似于 TCP/IP 协议的设计，独立安全，简洁灵活。**</font>
  
