@@ -211,6 +211,7 @@ export default {
 		background url('/home_banner.png') no-repeat center center
 		background-size cover
 		@media (max-width 768px){
+			height 54.4rem
 			background url('/home_bg_768.png') no-repeat bottom -10rem  right 0
 			background-size cover
 		}
@@ -227,6 +228,7 @@ export default {
 			background-size cover
 		}
 		@media (max-width 600px){
+			min-height 27.2rem
 			background rgba(231, 240, 255, 1)
 		}
 		.top_content
@@ -238,6 +240,9 @@ export default {
 			}
 			@media (max-width 460px){
 				padding 4.8rem 2.4rem
+			}
+			@media (max-width 320px) {
+				text-align center
 			}
 			.top_content_title
 				height 6.4rem
@@ -263,7 +268,9 @@ export default {
 				box-sizing border-box
 				height 3.2rem
 				line-height 3.2rem
-				
+				@media (max-width 320px) {
+					justify-content center
+				}
 				.link
 					display flex
 					align-items center
@@ -697,7 +704,7 @@ export default {
 							align-self flex-end
 							position absolute
 							right 0
-							bottom -25%
+							bottom 0
 							font-size $fontSize90
 							color $whiteColorOpacity2
 

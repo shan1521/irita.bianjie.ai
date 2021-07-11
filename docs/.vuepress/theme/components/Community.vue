@@ -188,6 +188,7 @@ export default {
 
     .community_top {
         width: 100%;
+        height: 36rem;
         background url('../assets/blog_bg.png') no-repeat center / cover;
         // display: flex;
         // justify-content center;
@@ -248,8 +249,11 @@ export default {
         justify-content center;
         align-items flex-start;
         padding-top:48px;
+        @media (max-width:1200px){
+		    margin 0 2.4rem
+		}
 		@media (max-width:768px){
-		 margin 0 2.4rem
+		    margin 0 2.4rem
 		}
 		@media (max-width:375px){
 			margin 0 1.6rem
@@ -397,7 +401,7 @@ export default {
                 display: flex;
                 flex-direction: column;
                 .community_bottom_content_article_item{
-                    height:131px;
+                    min-height:131px;
                     border-bottom:1px solid #E8EBF5;
                     box-sizing border-box;
                     display:flex;
@@ -496,7 +500,12 @@ export default {
                             font-weight: 500;
                             color: #000000;
                             line-height: 24px;
-                            opacity .4;
+                            opacity: .4;
+                            display: -webkit-box; 
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            text-overflow: ellipsis;
+                            overflow: hidden; 
                         }
 
                     }

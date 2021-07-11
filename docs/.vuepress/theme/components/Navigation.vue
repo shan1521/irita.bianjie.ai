@@ -64,7 +64,6 @@
           <router-link
             v-show="item.target !== '_blank'"
             class="mobile_navigation_item"
-            :class="currentIndex === index ? 'mobile_router_link_item' : ''"
             :to="item.link"
 						@click.native="closeMobileMenu"
             :target="item.target"

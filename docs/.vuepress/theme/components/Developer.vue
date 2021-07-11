@@ -41,7 +41,7 @@
                                     数字资产管理平台
                                 </span>
                                 <span class="developer_middle_top_right_top_content">
-                                    以 NFT（非同质化通证）为基础, 采用分布式, 安全可信的方式对资产进行数字化
+                                    以 NFT 为基础, 采用分布式, 安全可信的方式对资产进行数字化
                                 </span>
                             </div>
                             <div class="developer_middle_top_right_top_item">
@@ -224,6 +224,7 @@ export default {
     overflow-y auto;
     .developer_top{
         width:100%;
+        height:36rem;
         background url('../assets/devoloper_top_bg.png') no-repeat center/100% 100%;
         display:flex;
         justify-content center;
