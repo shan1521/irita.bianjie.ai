@@ -69,6 +69,9 @@ export default {
   width: 100%;
   height: 37.4rem;
   flex: 0 0 37.4rem;
+  @media (max-width 768px){
+    margin-top: 0;  
+  }
 
   .footer_content_top {
     width: 100%;

@@ -76,7 +76,7 @@
         <div class="developer_middle_bottom">
             <div class="developer_middle_bottom_wrap">
 				<div class="developer_title_content">
-					 <span class="developer_middle_bottom_tittle">
+					 <span class="developer_middle_bottom_title">
                     为什么选择 IRITA
                 </span>
 				</div>
@@ -224,6 +224,7 @@ export default {
     overflow-y auto;
     .developer_top{
         width:100%;
+        height:36rem;
         background url('../assets/devoloper_top_bg.png') no-repeat center/100% 100%;
         display:flex;
         justify-content center;
@@ -233,14 +234,14 @@ export default {
 			justify-content flex-start
 		}
         .developer_top_wrap{
+            box-sizing border-box
             display:flex;
             align-items center;
 			@media (max-width:1000px){
-				margin 0 2rem
+				padding 0 2rem
 			}
 			@media (max-width 768px){
 				padding 7.2rem 4.8rem 5.2rem 4.8rem
-				margin 0
 			}
 			@media (max-width 375px){
 				padding 8.6rem 1.6rem
@@ -294,20 +295,21 @@ export default {
         }
     }
     .developer_middle_top{
+        box-sizing: border-box;
         display:flex;
         justify-content center;
         align-items center;
 		@media (max-width 960px){
 			width 100%
-			margin 0 4.8rem
+			padding 0 4.8rem
 		}
 		@media (max-width 560px){
 			width 100%
 			justify-content flex-start
-			margin 0 4.8rem
+			padding 0 4.8rem
 		}
 		@media (max-width 375px){
-			margin 0 1.6rem
+			padding 0 1.6rem
 		}
         .developer_middle_top_wrap{
             display:flex;
@@ -320,6 +322,13 @@ export default {
                 color: #000000;
                 margin-bottom:47px;
 				width 100%;
+                @media (max-width: 768px){
+                    margin-bottom:36px;
+                    font-size: 24px;
+                }
+                @media (max-width: 375px){
+                    font-size: 20px;
+                }
             }
             .developer_middle_top_bottom{
                 display:flex;
@@ -371,11 +380,12 @@ export default {
                         }
                     }
                     .developer_middle_top_right_bottom{
+                        box-sizing: border-box;
                         display:flex;
                         align-items center;
                         cursor:pointer;
 						margin 0 auto;
-						padding 3.6rem 4.8rem;
+						padding 0 4.8rem 4.8rem;
 					
                         .developer_middle_top_right_know{
                             font-size: 16px;
@@ -393,11 +403,7 @@ export default {
                     }
                 }
             }
-
-
         }
-
-
     }
     .developer_middle_bottom{
         width:100%;
@@ -414,18 +420,24 @@ export default {
             flex-direction column;
             align-items center;
 			.developer_title_content{
-				text-align left
+				margin 8rem 0 4.8rem 0
 				width 100%
-				margin 8rem 0  4.8rem 0
-				.developer_middle_bottom_tittle{
+				.developer_middle_bottom_title{
 					font-size: 28px;
 					font-family: PingFangSC-Semibold, PingFang SC;
 					font-weight: 600;
 					color: #000000;
 					line-height: 28px;
-					margin-bottom:48px;
 				}
 			}
+            @media (max-width: 930px) {
+                .developer_title_content {
+                    margin 4.8rem 0 2.8rem  
+                    .developer_middle_bottom_title {
+                        font-size: 24px;   
+                    }  
+                }
+            }
            
             .developer_middle_bottom_content{
                 display: grid;
@@ -435,6 +447,7 @@ export default {
 				padding-bottom 8rem;
 				@media (max-width 930px){
 					grid-template-columns repeat(1, 1fr);
+				    padding-bottom 4.8rem;
 				}
                 .developer_middle_bottom_item{
                     height:224px;
@@ -470,6 +483,7 @@ export default {
                     }
                     .developer_middle_bottom_item_sdk_container{
                         .developer_middle_bottom_item_sdk_item{
+                            box-sizing: border-box;
 							line-height 1.6rem;
 							margin-bottom 0.08rem;
 							display:inline-block;
@@ -498,11 +512,15 @@ export default {
         }
     }
     .developer_bottom{
+        box-sizing: border-box;
         display:flex;
         flex-direction column;
         justify-content center;
         align-items center;
-		padding 8.6rem 0  10rem 0;
+		padding 8rem 0 8rem 0;
+        @media (max-width: 930px) {
+            padding 4.8rem 0    
+        }
         .developer_bottom_top{
 			width 100%;
 			max-width 87rem;
@@ -516,14 +534,15 @@ export default {
 				max-width none;
 				padding-left 9.5rem;
 			}
-            //margin-bottom 48px;
             .developer_bottom_top_left{
 				display:inline-bloc;
                 font-size: 28px;
                 font-family: PingFangSC-Semibold, PingFang SC;
                 font-weight: 600;
                 color: #000000;
-				
+                @media (max-width: 930px) {
+                    font-size: 24px;    
+                }
 			}
             .developer_bottom_top_right{
                 display:flex;
@@ -550,7 +569,6 @@ export default {
                     right:0;
                     display:none;
                     z-index:10;
-
                 }
                 &:hover{
                     .developer_bottom_top_right_img_container{
@@ -571,7 +589,6 @@ export default {
 				justify-content space-between
 			}
 			@media (max-width 768px){
-				flex-direction column
 				padding 0 10%
 			}
 			@media (max-width 560px){
@@ -580,13 +597,13 @@ export default {
 			}
             .developer_bottom_bottom_left, .developer_bottom_bottom_right{
                 display:flex;
-                justify-content center;
                 flex-direction: column;
-				
+                justify-content center;
+                align-items: center;
             }
 			.developer_bottom_bottom_right{
 				@media (max-width 768px){
-					margin-top 2rem
+					// margin-top 2rem
 				}
 				@media (max-width 560px){
 					margin-top 1.6em
@@ -641,7 +658,6 @@ export default {
 					display none;
 				}
             }
-
         }
     }
 
@@ -653,7 +669,6 @@ export default {
     @media screen and (max-width: $maxMobileWidth) and (min-width: $minMobileWidth){
 
     }
-
 }
 
 </style>
