@@ -1,7 +1,7 @@
 ::: slot article-004
 
 
-<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA-01.png" ></div>
+<div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA-01.png" ></div>
 
 
 ## <font color= #7EC9FC >IRITA – 支持下一代分布式商业系统的企业级联盟链产品</font>
@@ -41,7 +41,7 @@ IRITA 可以灵活使用在多种行业，尤其是金融创新行业，比如�
 ##  <font color= #7EC9FC >IRITA 整体架构</font>
 
 
-<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA.png" ></div>
+<div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA.png" ></div>
 
 
 ##   <font color= #7EC9FC >技术应用案例 – IRITA 支持复杂的分布式商业应用</font>
