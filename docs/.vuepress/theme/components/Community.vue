@@ -8,10 +8,6 @@
                         在这里, 了解 IRITA
                     </span>
                 </div>
-                <!-- <div class="community_top_right">
-                    <img src="../assets/home_banner.png" alt=""
-                         class="community_top_right_img">
-                </div> -->
             </div>
         </div>
         <div class="community_bottom">
@@ -188,6 +184,7 @@ export default {
 
     .community_top {
         width: 100%;
+        height: 36rem;
         background url('../assets/blog_bg.png') no-repeat center / cover;
         // display: flex;
         // justify-content center;
@@ -202,7 +199,7 @@ export default {
             margin: 0 auto;
             max-width: $contentWidth;
 			@media (max-width: 768px){
-				padding 8rem 2.4rem 11.6rem 2.4rem
+				padding 8rem 2.4rem 11.2rem 4.8rem
 			}
             .community_top_left {
                 display: flex;
@@ -217,8 +214,8 @@ export default {
                     line-height: 48px;
                     letter-spacing: 1px;
                     margin-bottom: 22px;
-					@media (max-width 768px){
-						font-size 2.8rem
+					@media (max-width 487px){
+						font-size 28px
 					}
                 }
 
@@ -229,17 +226,6 @@ export default {
                     margin-bottom: 32px;
                 }
             }
-
-            .community_top_right {
-                height: 100%;
-                display: flex;
-                align-items flex-end;
-
-                .community_top_right_img {
-                    height: 328px;
-                }
-            }
-
         }
     }
 
@@ -248,15 +234,28 @@ export default {
         justify-content center;
         align-items flex-start;
         padding-top:48px;
+        @media (max-width:1200px){
+		    margin 0 2.4rem
+		}
 		@media (max-width:768px){
-		 margin 0 2.4rem
+		    margin 0 2.4rem
 		}
 		@media (max-width:375px){
 			margin 0 1.6rem
 		}
         .community_bottom_wrap {
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
+            @media (max-width: 1200px) {
+                padding: 0 4.8rem;
+            }
+            @media (max-width: 768px) {
+                padding: 0 3.6rem;
+            }
+            @media (max-width: 375px) {
+                padding: 0 2.4rem;
+            }
             .community_bottom_tab_container {
                 border-bottom: 2px solid #E8EBF5;
                 display: flex;
@@ -337,6 +336,9 @@ export default {
                             overflow: hidden;
                             text-overflow:ellipsis;
                             white-space: nowrap;
+                            @media (max-width: 375px) {
+                                font-size: 16px;    
+                            }
                         }
 
                         .community_bottom_content_item_wrap {
@@ -393,11 +395,12 @@ export default {
             }
 
             .community_bottom_content_article_container {
+                box-sizing: border-box;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 .community_bottom_content_article_item{
-                    height:131px;
+                    min-height:131px;
                     border-bottom:1px solid #E8EBF5;
                     box-sizing border-box;
                     display:flex;
@@ -470,6 +473,9 @@ export default {
                             word-break break-all;
                             margin-bottom 12px;
                             line-height:1.5;
+                            @media (max-width: 497px) {
+                                font-size: 16px;
+                            }
                             .community_bottom_content_article_item_right_tag{
                                 width: 60px;
                                 height: 24px;
@@ -488,6 +494,10 @@ export default {
                                 padding:0 5px;
                                 position:relative;
                                 top:-3px;
+                                @media (max-width: 497px) {
+                                    width: 50px;
+                                    font-size: 14px;
+                                }
                             }
                         }
                         .community_bottom_content_article_item_right_content{
@@ -496,7 +506,12 @@ export default {
                             font-weight: 500;
                             color: #000000;
                             line-height: 24px;
-                            opacity .4;
+                            opacity: .4;
+                            display: -webkit-box; 
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            text-overflow: ellipsis;
+                            overflow: hidden; 
                         }
 
                     }
@@ -507,6 +522,13 @@ export default {
                 display:flex;
                 justify-content center;
                 margin-top:48px;
+                margin-bottom: 8rem;
+                @media (max-width: 768px) {
+                    margin-bottom: 4.8rem;    
+                }
+                @media (max-width: 375px) {
+                    margin-bottom: 3.6rem;
+                }
             }
         }
 
@@ -521,7 +543,7 @@ export default {
             flex:0 0 360px;
             .community_top_wrap {
                 .community_top_left {
-                    margin-right: 132px;
+                    // margin-right: 132px;
                 }
             }
         }
@@ -533,7 +555,7 @@ export default {
                 display: flex;
                 flex-direction: column;
                 justify-content center;
-                width: 1008px;
+                max-width: 1008px;
             }
         }
     }

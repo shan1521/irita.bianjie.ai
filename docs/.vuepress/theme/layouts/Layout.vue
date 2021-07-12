@@ -220,7 +220,7 @@ export default {
         .md_container{
             font-size: 15px;
             font-family: PingFangSC-Medium, PingFang SC;
-            font-weight: 500;
+            font-weight: 400;
             color: rgba(0,0,0,0.75);
             line-height: 36px;
             //display:flex;
@@ -228,15 +228,16 @@ export default {
                 padding-top:60px;
                 padding-bottom:80px;
 				@media (max-width 1200px){
-					padding 0 4.8rem
+                    padding-left: 48px;
+                    padding-right: 48px;
 				}
                 @media (max-width: 768px){
                     padding-left: 24px;
                     padding-right: 24px;
                 }
-                h2, h3{
-                    border-bottom: none;
-                }
+                // h2, h3{
+                //     border-bottom: none;
+                // }
                 img {
                     width: 100%;
                 }
