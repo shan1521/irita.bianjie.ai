@@ -40,6 +40,15 @@
             slot: IRITAHUB,
         },
         {
+            src: https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu5.png,
+            title: IRITA HUB 的跨链实践与应用,
+            owner: 边界智能,
+            time: 2021/04/03,
+            icon: /img/blog/bianjie_icon.png,
+            router: /blog/IRITAHUB1,
+            slot: IRITAHUB1,
+        },
+        {
             src: https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu2.png,
             title: 一文解读 IRITA 系统架构,
             owner: 边界智能,
