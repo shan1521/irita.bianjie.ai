@@ -189,8 +189,12 @@ export default {
         // display: flex;
         // justify-content center;
 		@media (max-width 768px){
+            height: 28rem;
 			background url('../assets/blog_bg_768.png') no-repeat center center
 			background-size cover
+		}
+		@media (max-width 375px){
+            height: 27.2rem;
 		}
 
         .community_top_wrap {
@@ -199,7 +203,7 @@ export default {
             margin: 0 auto;
             max-width: $contentWidth;
 			@media (max-width: 768px){
-				padding 8rem 2.4rem 11.2rem 4.8rem
+				padding 8rem 2.4rem 12rem 4.8rem
 			}
             .community_top_left {
                 display: flex;
@@ -209,7 +213,7 @@ export default {
                 .community_top_left_sub_title {
                     font-size: 48px;
                     font-family: PingFangSC-Medium, PingFang SC;
-                    font-weight: 500;
+                    font-weight: 400;
                     color: #000000;
                     line-height: 48px;
                     letter-spacing: 1px;
