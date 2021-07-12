@@ -45,7 +45,7 @@ IRITA HUB 原生具备了 iService + IBC 框架，因此，既可以跨链连接
 <div  align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub03.png" ></div>
 </br>
 
-## <center> <font color=#00BFFF>超级账本跨链项目 YUI </font>
+## <center> <font color=#00BFFF>超级账本跨链项目 YUI </font> </center>
 #### <center> Hyperledger 中的 IBC 实现 </center>
 
 YUI 是由 Datachain 团队开发打造、边界智能团队参与贡献的一个超级账本实验室（Hyperledger Lab）项目，旨在实现多种异构账本间的互操作性。
