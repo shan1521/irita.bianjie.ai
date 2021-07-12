@@ -40,6 +40,15 @@
             slot: IRITAHUB,
         },
         {
+            src: https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu2.png,
+            title: 一文解读 IRITA 系统架构,
+            owner: 边界智能,
+            time: 2021/03/24,
+            icon: /img/blog/bianjie_icon.png,
+            router: /blog/IRITA系统架构,
+            slot: IRITA系统架构,
+        },
+        {
             src: https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu1.png,
             title: 边界智能开源联盟链产品线 IRITA,
             owner: 边界智能,
