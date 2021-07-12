@@ -96,7 +96,7 @@
 				<p class="title">{{ openCommunity.text }}</p>
 				<ul class="opencommunity_list">
 					<li class="open_item" v-for="(item,index) in openCommunity.list" :key="index"
-						@mouseenter="hoverOpenFn(index)" @mouseleave="leaveOpenFn(index)" @click="bgChange(index)">
+						@mouseenter="hoverOpenFn(index)" @mouseleave="leaveOpenFn(index)" @click="hoverOpenFn(index)">
 						<div class="item_wrapper" ref="openWrapper" :style="differentOpenImg(item.blogImgName)">
 							<div class="line"></div>
 							<p class="title">{{ item.text }}</p>
@@ -190,12 +190,6 @@ export default {
 		},
 		leaveOpenFn(index) {
 			this.$refs.openWrapper[index].style = this.differentOpenImg(this.openCommunity.list[index].blogImgName);
-		},
-		bgChange(index){
-			return [
-				{hoverOpenFn: this.hoverOpenFn(index)},
-				{leaveOpenFn: this.leaveOpenFn(index)}
-			]
 		}
 	},
 	mounted() {
@@ -543,8 +537,6 @@ export default {
 					@media (max-width 375px) {
 						width 25.6rem	
 					}
-					&:hover
-						transform scale(1.05)
 					
 					.advantage_img
 						padding-top 0.8rem
@@ -899,9 +891,6 @@ export default {
 						height 1.6rem
 						line-height 1.6rem
 						text-align end
-						@media (max-width 375px) {
-							display none
-						}
 						
 						.more_content
 							color $highlightDetailColor

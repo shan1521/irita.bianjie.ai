@@ -190,7 +190,7 @@ export default {
         // justify-content center;
 		@media (max-width 768px){
             height: 28rem;
-			background url('../assets/blog_bg_768.png') no-repeat center center
+			background url('../assets/blog_bg_768.png') no-repeat center center;
 			background-size cover
 		}
 		@media (max-width 375px){
@@ -255,10 +255,10 @@ export default {
                 padding: 0 4.8rem;
             }
             @media (max-width: 768px) {
-                padding: 0 3.6rem;
+                padding: 0 2.4rem;
             }
             @media (max-width: 375px) {
-                padding: 0 2.4rem;
+                padding: 0 1.6rem;
             }
             .community_bottom_tab_container {
                 border-bottom: 2px solid #E8EBF5;
@@ -293,11 +293,18 @@ export default {
 				@media (max-width 1050px){
 					grid-template-columns repeat(2, 1fr)
 				}
+                @media (max-width 715px) {
+                    grid-row-gap: 1.2rem
+				    grid-column-gap: 1.2rem
+                }
 				@media (max-width 700px){
 					grid-template-columns repeat(1, 1fr)
 				}
+				@media (max-width 375px){
+					width: 100%;
+				}
                 .community_bottom_content_item {
-                    height: 336px;
+                    height: auto;
                     max-width: 320px;
                     background: #FFFFFF;
                     border-radius: 4px;
@@ -307,6 +314,9 @@ export default {
                     flex-direction column;
                     cursor: pointer;
                     transition: all .2s linear;
+                    @media (max-width: 375px) {
+                        max-width: 27.2rem; 
+                    }
 
                     &:hover {
                         border-color: #7065FF;
@@ -350,6 +360,13 @@ export default {
                             flex-wrap: wrap;
                             justify-content space-between;
                             align-items center;
+                            margin-top: 1rem;
+                            @media (max-width: 768px) {
+                                margin-top: 1.1rem;
+                            }
+                            @media (max-width: 375px) {
+                                margin-top: 1.6rem;
+                            }
 
                             .community_bottom_content_item_owner_container {
                                 display: flex;
@@ -399,18 +416,17 @@ export default {
             }
 
             .community_bottom_content_article_container {
-                box-sizing: border-box;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 .community_bottom_content_article_item{
+                    box-sizing:border-box;
+                    width:100%;
                     min-height:131px;
                     border-bottom:1px solid #E8EBF5;
-                    box-sizing border-box;
                     display:flex;
                     align-items center;
                     cursor:pointer;
-                    width:100%;
                     &:hover{
                         .community_bottom_content_article_item_right_title{
                             color:#7065FF !important;
@@ -418,8 +434,8 @@ export default {
                     }
                     .community_bottom_content_article_item_left{
                         margin-right:24px;
-                        display flex;
-                        flex-direction column;
+                        display:flex;
+                        flex-direction:column;
                         width:36px;
                         flex: 0 0 36px;
                         .community_bottom_content_article_item_left_top{
@@ -450,7 +466,7 @@ export default {
                         }
                         .community_bottom_content_article_item_left_bottom{
                             width: 36px;
-                            height: 20px;
+                            min-height: 20px;
                             background: #4A4A7F;
                             display flex;
                             flex-direction column;
@@ -553,7 +569,6 @@ export default {
         }
 
         .community_bottom {
-            //height: 963px;
 
             .community_bottom_wrap {
                 display: flex;
@@ -565,11 +580,9 @@ export default {
     }
     //pad
     @media screen and (max-width: $maxPadWidth) and (min-width: $minPadWidth) {
-
     }
     //mobile
     @media screen and (max-width: $maxMobileWidth) and (min-width: $minMobileWidth) {
-
     }
 
 }

@@ -1,4 +1,4 @@
-::: slot IRITAHUB
+::: slot IRITAHUB1
 
 
 <font COLOR ="#949494"> *6 月 8 日，超级账本全球论坛 Hyperledger Global Forum 2021（HGF）盛大开幕，边界智能与日本开源伙伴团队 Datachain 围绕「IRITA 与 Fabric-IBC、Besu-IBC 结合 —— 为企业级区块链引入互操作性」话题进行了联合演讲。*</font>
@@ -45,7 +45,7 @@ IRITA HUB 原生具备了 iService + IBC 框架，因此，既可以跨链连接
 <div  align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub03.png" ></div>
 </br>
 
-## <center> <font color=#00BFFF>超级账本跨链项目 YUI </font> </center>
+## <center> <font color=#00BFFF>超级账本跨链项目 YUI </font>
 #### <center> Hyperledger 中的 IBC 实现 </center>
 
 YUI 是由 Datachain 团队开发打造、边界智能团队参与贡献的一个超级账本实验室（Hyperledger Lab）项目，旨在实现多种异构账本间的互操作性。
