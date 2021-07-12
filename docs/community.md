@@ -66,6 +66,16 @@
             router: /blog/IRITA,
             slot: IRITA,
         }
+        ,
+        {
+            src: https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu1.png,
+            title: 边界智能开源联盟链产品线 IRITA,
+            owner: 边界智能,
+            time: 2020/03/06,
+            icon: /img/blog/bianjie_icon.png,
+            router: /blog/IRITA1,
+            slot: IRITA1,
+        }
     ],
     articles:[
         {
