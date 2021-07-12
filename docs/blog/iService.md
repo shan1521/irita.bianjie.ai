@@ -14,14 +14,14 @@ iService是IRITAHUB 的一个功能模块，旨在弥合区块链和传统业务
 
 ### 3、 iService 服务网络架构设计
 
-<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iService01.png" ></div>
+<div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iService01.png" ></div>
 
 
 ## 二、iService有哪些功能
 
 iService 模块作为IRITA 的核心功能服务模块，在IRITA 底层链服务核心层，处在区块链底层和业务应用层之间。利用iService，接入区块链网络的业务方可以很方便的发布面向服务的分布式应用，不用开发很多智能合约，这样可以极大降低系统集成的复杂度，降低用户接入区块链的成本，快速实现链上链下数据传输与信息交互。
 
-<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA.png" ></div>
+<div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA.png" ></div>
 <center> <font size=2>IRITA 核心模块架构图</font></center>
 
 ### 1、iService 的功能列表
@@ -166,7 +166,7 @@ iService 模块作为IRITA 的核心功能服务模块，在IRITA 底层链服�
 * 服务提供者检测和处理这个请求，并且通过响应交易发送处理结果。
 * 服务消费者和服务提供者被建议通过 端点（endpoints） 交互。有两种服务端点 —— 请求表（request table） 和 响应表（response table） （如下图所示）。
 
-<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iService03.png" ></div>
+<div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iService03.png" ></div>
 </br>
 服务请求被添加到请求表(每个服务一个请求表)，感兴趣的服务提供者监控这些请求表并接收和处理发送给他们的请求; 服务结果（或错误）被返回由相应的服务消费者反过来监控的响应表中(每个消费者监听的服务一个响应表)。
 
