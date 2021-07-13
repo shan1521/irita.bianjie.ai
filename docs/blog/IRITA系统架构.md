@@ -41,7 +41,7 @@ IRITA 支持中国国密标准，并有完善的 SDK 及运维工具支持，在
 * 数据仓库和链式数据结合支持链上数据高效全生命周期查询
 ## IRITA 整体架构：
 
- <div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA.png" ></div>
+ <div align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA.png" ></div>
 
 其中，IRITA 可提供包括区块链底层、区块链核心层、区块链接口层在内的强大底层链支持与服务功能。除了区块链底层核心功能之外，IRITA 还集成了分布式存储、身份证书管理、隐私计算等链外能力。以 IRITA 底层平台为基础，开发者可为各行业灵活定制边缘应用服务（EdgeServer）以及业务应用，并可通过 IBC 和 iService 连接各类外部的异构系统。
 
