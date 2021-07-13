@@ -40,7 +40,6 @@
 		</div>
 		<!-- IRITA 核心技术优势 -->
 		<div class="home_advantage_content">
-			<!-- <div class="advantage_content_wrapper"> -->
 			<div class="advantage_content">
 				<p class="advantage_title">{{ advantageContent.text }}</p>
 				<ul class="advantage_list">
@@ -62,7 +61,6 @@
 					</a>
 				</div>
 			</div>
-			<!-- </div> -->
 		</div>
 		<!-- IRITA 产品线 -->
 		<div class="home_productionline_content">
@@ -98,7 +96,7 @@
 				<p class="title">{{ openCommunity.text }}</p>
 				<ul class="opencommunity_list">
 					<li class="open_item" v-for="(item,index) in openCommunity.list" :key="index"
-						@mouseenter="hoverOpenFn(index)" @mouseleave="leaveOpenFn(index)">
+						@mouseenter="hoverOpenFn(index)" @mouseleave="leaveOpenFn(index)" @click="hoverOpenFn(index)">
 						<div class="item_wrapper" ref="openWrapper" :style="differentOpenImg(item.blogImgName)">
 							<div class="line"></div>
 							<p class="title">{{ item.text }}</p>
@@ -192,7 +190,7 @@ export default {
 		},
 		leaveOpenFn(index) {
 			this.$refs.openWrapper[index].style = this.differentOpenImg(this.openCommunity.list[index].blogImgName);
-		},
+		}
 	},
 	mounted() {
 		this.$store.commit('currentIndex', 0);
@@ -227,9 +225,11 @@ export default {
 			background-size cover
 		}
 		@media (max-width 600px){
+			min-height 27.2rem
 			background rgba(231, 240, 255, 1)
 		}
 		.top_content
+			box-sizing border-box
 			padding 10.7rem 0 17.3rem 8.1rem
 			margin 0 auto
 			max-width $contentWidth
@@ -239,6 +239,9 @@ export default {
 			@media (max-width 460px){
 				padding 4.8rem 2.4rem
 			}
+			@media (max-width 375px) {
+				text-align center
+			}
 			.top_content_title
 				height 6.4rem
 				line-height 6.4rem
@@ -247,6 +250,9 @@ export default {
 				font-weight $fontWeight500
 				letter-spacing 0.5rem
 				color $blackColor
+				@media (max-width: 375px) {
+					font-size $fontSize48
+				}
 			
 			.title_desc
 				margin-top 2.4rem
@@ -256,6 +262,9 @@ export default {
 				font-family PingFangSC-Medium, PingFang SC
 				font-weight $fontWeight500
 				color $blackColor
+				@media (max-width: 375px) {
+					font-size $fontSize16
+				}
 			
 			.link_content
 				display flex
@@ -263,7 +272,9 @@ export default {
 				box-sizing border-box
 				height 3.2rem
 				line-height 3.2rem
-				
+				@media (max-width 375px) {
+					justify-content center
+				}
 				.link
 					display flex
 					align-items center
@@ -272,6 +283,11 @@ export default {
 					height 3.2rem
 					border 0.1rem solid $highlightDetailColor
 					border-radius 1.6rem
+					@media (max-width: 375px) {
+						&:nth-of-type(2) {
+							margin-right 0	
+						}	
+					}
 					
 					.iconfont
 						display flex
@@ -298,6 +314,7 @@ export default {
 		min-height 50.7rem
 		
 		.irita_what_content
+			box-sizing border-box
 			display flex
 			justify-content center
 			align-items center
@@ -334,6 +351,12 @@ export default {
 					font-family PingFangSC-Semibold, PingFang SC
 					font-weight $fontWeight600
 					color: $blackColor
+					@media (max-width 768px) {
+						font-size $fontSize24
+					}
+					@media (max-width 320px) {
+						font-size $fontSize20
+					}
 				
 				.characteristic
 					display flex
@@ -342,6 +365,14 @@ export default {
 					margin-bottom 2rem
 					max-width 63.2rem
 					min-height 2.4rem
+					@media (max-width 768px) {
+						margin-top 3.6rem
+						margin-bottom 3.6rem
+					}
+					@media (max-width 320px) {
+						margin-top 2.4rem
+						margin-bottom 2.4rem
+					}
 					
 					.characteristic_item
 						flex 1
@@ -407,6 +438,12 @@ export default {
 				font-family PingFangSC-Semibold, PingFang SC
 				font-weight $fontWeight600
 				color $blackColor
+				@media (max-width 768px) {
+					font-size $fontSize24	
+				}
+				@media (max-width 375px) {
+					font-size $fontSize20	
+				}
 			}
 
 .product_img
@@ -433,16 +470,25 @@ export default {
 		}
 		
 		.advantage_title
-			height 2.8rem
 			line-height 2.8rem
 			font-size $fontSize28
 			font-family PingFangSC-Semibold, PingFang SC
 			font-weight $fontWeight600
 			color $blackColor
+			@media (max-width 768px) {
+				font-size $fontSize24	
+			}
+			@media (max-width 375px) {
+				font-size $fontSize20	
+			}
 		
 		.advantage_list
+			box-sizing border-box
+			display: -ms-grid;
 			display grid
 			grid-template-columns repeat(3, 3fr)
+			// -ms-grid-columns: 3fr auto 1fr;
+			// -ms-grid-column: 3;
 			justify-items center
 			grid-row-gap 2.4rem
 			margin 4.8rem auto
@@ -456,7 +502,7 @@ export default {
 			@media (max-width 1100px) {
 				grid-template-columns repeat(2, 3fr)
 			}
-			@media (max-width 768px) {
+			@media (max-width 767px) {
 				grid-template-columns repeat(1, 3fr)
 			}
 			@media (max-width 460px) {
@@ -479,6 +525,7 @@ export default {
 				border-radius 0.4rem
 				@media (max-width 375px) {
 					padding 0
+					max-width 27.2rem
 				}
 				
 				.advantage_item
@@ -487,9 +534,9 @@ export default {
 					min-height 30rem
 					background url('/core_card_bg.png') no-repeat center / cover
 					transition all .3s linear
-					
-					&:hover
-						transform scale(1.05)
+					@media (max-width 375px) {
+						width 25.6rem	
+					}
 					
 					.advantage_img
 						padding-top 0.8rem
@@ -499,22 +546,26 @@ export default {
 					
 					.advantage_title
 						padding 1.6rem 0 1.6rem 1.6rem
-						height 2.4rem
 						line-height 2.4rem
 						font-size $fontSize16
 						font-family PingFangSC-Semibold, PingFang SC
 						font-weight $fontWeight600
 						color $blackColor
+						@media (max-width 375px) {
+							width 22.4rem	
+						}
 					
 					.description
 						padding 0 2.8rem 0 1.6rem
-						padding-right 2.8rem
 						width 23.6rem
 						line-height 2.8rem
 						font-size $fontSize14
 						font-family PingFangSC-Medium, PingFang SC
 						font-weight $fontWeight500
 						color $blackColorOpacity
+						@media (max-width 375px) {
+							width 22.4rem
+						}
 		
 		.more
 			// max-width 95.2rem
@@ -536,25 +587,28 @@ export default {
 					height 1.6rem
 
 .home_productionline_content
+	box-sizing border-box
 	width 100%
 	min-height 81.4rem
 	background url('/irita_bg.png') no-repeat center / cover
-	
+	@media (max-width 768px){
+		padding 4.8rem
+	}
 	.productionline_content
 		box-sizing border-box
 		margin 0 auto
 		padding 8rem 0.1rem 8rem 6.1rem
 		max-width $contentWidth
 		min-height 81.4rem
-		width 100%
 		@media (max-width 768px){
-			padding 4.1rem 0 4.8rem 4.8rem
+			padding 0
+			max-width 64rem
 		}
-		@media (max-width 460px){
-			padding 4.1rem 0 4.8rem 2.4rem
-		}
+		// @media (max-width 530px){
+		// 	padding 4.1rem 0 4.8rem 2.4rem
+		// }
 		@media (max-width 375px){
-			padding 4.1rem 0 4.8rem 1.6rem
+			max-width 28.8rem
 		}
 		.text
 			height 2.8rem
@@ -563,7 +617,9 @@ export default {
 			font-family PingFangSC-Semibold, PingFang SC
 			font-weight $fontWeight600
 			color $blackColor
-			
+			@media (max-width 768px) {
+				font-size $fontSize24
+			}
 		
 		.subtext
 			width 100%
@@ -589,15 +645,20 @@ export default {
 			display flex
 			justify-content space-between
 			height 56rem
-			overflow hidden
 			.production_line
 				position relative
 				width 48rem
 				min-height 54.8rem
+				@media (max-width 530px) {
+					width 100%
+				}
 				
 				.line_item_wrapper
 					position absolute
 					width 48rem
+					@media (max-width 530px) {
+						width 100%
+					}
 					
 					.line_item
 						position relative
@@ -695,7 +756,7 @@ export default {
 							align-self flex-end
 							position absolute
 							right 0
-							bottom -25%
+							bottom 0
 							font-size $fontSize90
 							color $whiteColorOpacity2
 
@@ -755,6 +816,13 @@ export default {
 			font-family PingFangSC-Semibold, PingFang SC
 			font-weight $fontWeight600
 			color $blackColor
+			@media (max-width 768px) {
+				margin-bottom 3.6rem
+				font-size $fontSize24
+			}
+			@media (max-width 375px) {
+				margin-bottom 2.4rem
+			}
 		
 		.opencommunity_list
 			display flex
@@ -763,13 +831,16 @@ export default {
 			max-width 82.8rem
 			min-height 32rem
 			margin 0 auto
+			@media (max-width 768px){
+				max-width 67.2rem
+			}
 			@media (max-width 600px){
 				flex-direction column
-				max-width 32rem
+				max-width 24rem
 			}
 			@media (max-width 375px){
 				flex-direction column
-				max-width none
+				max-width 24rem
 			}
 			.open_item
 				box-sizing border-box
@@ -785,6 +856,10 @@ export default {
 				}
 				@media (max-width 600px){
 					margin-right 0
+					max-width 21.6rem
+				}
+				@media (max-width 375px){
+					max-width 24rem 
 				}
 				&:hover
 					transform scale(1.05)
@@ -820,8 +895,11 @@ export default {
 						.more_content
 							color $highlightDetailColor
 							
-							.mote-text
+							.more-text
 								margin-right 0.6rem
+								@media (max-width 768px) {
+									font-size $fontSize14
+								}
 				
 @media (max-width: 1200px)
 	.home_productionline_content

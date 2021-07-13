@@ -8,10 +8,6 @@
                         在这里, 了解 IRITA
                     </span>
                 </div>
-                <!-- <div class="community_top_right">
-                    <img src="../assets/home_banner.png" alt=""
-                         class="community_top_right_img">
-                </div> -->
             </div>
         </div>
         <div class="community_bottom">
@@ -154,7 +150,8 @@ export default {
             }
         },
         handleArticleClick(article){
-            this.article = article;
+        	this.$store.commit('articleData',article)
+			sessionStorage.setItem('article',JSON.stringify(article));
             this.$router.push({
                 path: article.router,
                 query: {
@@ -169,9 +166,6 @@ export default {
     mounted(){
         this.setTotal();
     },
-    beforeDestroy(){
-        this.$bus.$emit('showArticle',this.article);
-    }
 }
 </script>
 
@@ -190,16 +184,27 @@ export default {
 
     .community_top {
         width: 100%;
-        background url('../assets/home_banner.png') no-repeat center / cover;
+        height: 36rem;
+        background url('../assets/blog_bg.png') no-repeat center / cover;
         // display: flex;
         // justify-content center;
+		@media (max-width 768px){
+            height: 28rem;
+			background url('../assets/blog_bg_768.png') no-repeat center center;
+			background-size cover
+		}
+		@media (max-width 375px){
+            height: 27.2rem;
+		}
 
         .community_top_wrap {
             box-sizing: border-box;
             padding: 10.7rem 0 17.3rem 8.1rem;
             margin: 0 auto;
             max-width: $contentWidth;
-
+			@media (max-width: 768px){
+				padding 8rem 2.4rem 12rem 4.8rem
+			}
             .community_top_left {
                 display: flex;
                 flex-direction: column;
@@ -208,11 +213,14 @@ export default {
                 .community_top_left_sub_title {
                     font-size: 48px;
                     font-family: PingFangSC-Medium, PingFang SC;
-                    font-weight: 500;
+                    font-weight: 400;
                     color: #000000;
                     line-height: 48px;
                     letter-spacing: 1px;
                     margin-bottom: 22px;
+					@media (max-width 487px){
+						font-size 28px
+					}
                 }
 
                 .community_top_left_border {
@@ -222,18 +230,6 @@ export default {
                     margin-bottom: 32px;
                 }
             }
-
-            .community_top_right {
-                height: 100%;
-                display: flex;
-                align-items flex-end;
-
-                .community_top_right_img {
-                    width: 570px;
-                    height: 328px;
-                }
-            }
-
         }
     }
 
@@ -242,9 +238,28 @@ export default {
         justify-content center;
         align-items flex-start;
         padding-top:48px;
+        @media (max-width:1200px){
+		    margin 0 2.4rem
+		}
+		@media (max-width:768px){
+		    margin 0 2.4rem
+		}
+		@media (max-width:375px){
+			margin 0 1.6rem
+		}
         .community_bottom_wrap {
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
+            @media (max-width: 1200px) {
+                padding: 0 4.8rem;
+            }
+            @media (max-width: 768px) {
+                padding: 0 2.4rem;
+            }
+            @media (max-width: 375px) {
+                padding: 0 1.6rem;
+            }
             .community_bottom_tab_container {
                 border-bottom: 2px solid #E8EBF5;
                 display: flex;
@@ -273,19 +288,35 @@ export default {
                 width: 100%;
                 display: grid;
                 grid-template-columns repeat(3, 1fr)
-
+				grid-row-gap: 2.4rem
+				grid-column-gap: 2.4rem
+				@media (max-width 1050px){
+					grid-template-columns repeat(2, 1fr)
+				}
+                @media (max-width 715px) {
+                    grid-row-gap: 1.2rem
+				    grid-column-gap: 1.2rem
+                }
+				@media (max-width 700px){
+					grid-template-columns repeat(1, 1fr)
+				}
+				@media (max-width 375px){
+					width: 100%;
+				}
                 .community_bottom_content_item {
-                    height: 336px;
-                    width: 320px;
+                    height: auto;
+                    max-width: 320px;
                     background: #FFFFFF;
                     border-radius: 4px;
                     border: 1px solid #E8EBF5;
                     box-sizing border-box;
-                    margin-bottom: 24px;
                     display: flex;
                     flex-direction column;
                     cursor: pointer;
                     transition: all .2s linear;
+                    @media (max-width: 375px) {
+                        max-width: 27.2rem; 
+                    }
 
                     &:hover {
                         border-color: #7065FF;
@@ -311,6 +342,7 @@ export default {
                         justify-content space-between;
 
                         .community_bottom_content_item_title {
+							width: 100%
                             font-size: 18px;
                             font-family: PingFangSC-Semibold, PingFang SC;
                             font-weight: 600;
@@ -318,6 +350,9 @@ export default {
                             overflow: hidden;
                             text-overflow:ellipsis;
                             white-space: nowrap;
+                            @media (max-width: 375px) {
+                                font-size: 16px;    
+                            }
                         }
 
                         .community_bottom_content_item_wrap {
@@ -325,6 +360,13 @@ export default {
                             flex-wrap: wrap;
                             justify-content space-between;
                             align-items center;
+                            margin-top: 1rem;
+                            @media (max-width: 768px) {
+                                margin-top: 1.1rem;
+                            }
+                            @media (max-width: 375px) {
+                                margin-top: 1.6rem;
+                            }
 
                             .community_bottom_content_item_owner_container {
                                 display: flex;
@@ -378,13 +420,13 @@ export default {
                 display: flex;
                 flex-direction: column;
                 .community_bottom_content_article_item{
-                    height:131px;
+                    box-sizing:border-box;
+                    width:100%;
+                    min-height:131px;
                     border-bottom:1px solid #E8EBF5;
-                    box-sizing border-box;
                     display:flex;
                     align-items center;
                     cursor:pointer;
-                    width:100%;
                     &:hover{
                         .community_bottom_content_article_item_right_title{
                             color:#7065FF !important;
@@ -392,8 +434,8 @@ export default {
                     }
                     .community_bottom_content_article_item_left{
                         margin-right:24px;
-                        display flex;
-                        flex-direction column;
+                        display:flex;
+                        flex-direction:column;
                         width:36px;
                         flex: 0 0 36px;
                         .community_bottom_content_article_item_left_top{
@@ -424,7 +466,7 @@ export default {
                         }
                         .community_bottom_content_article_item_left_bottom{
                             width: 36px;
-                            height: 20px;
+                            min-height: 20px;
                             background: #4A4A7F;
                             display flex;
                             flex-direction column;
@@ -451,6 +493,9 @@ export default {
                             word-break break-all;
                             margin-bottom 12px;
                             line-height:1.5;
+                            @media (max-width: 497px) {
+                                font-size: 16px;
+                            }
                             .community_bottom_content_article_item_right_tag{
                                 width: 60px;
                                 height: 24px;
@@ -469,6 +514,10 @@ export default {
                                 padding:0 5px;
                                 position:relative;
                                 top:-3px;
+                                @media (max-width: 497px) {
+                                    width: 50px;
+                                    font-size: 14px;
+                                }
                             }
                         }
                         .community_bottom_content_article_item_right_content{
@@ -477,7 +526,12 @@ export default {
                             font-weight: 500;
                             color: #000000;
                             line-height: 24px;
-                            opacity .4;
+                            opacity: .4;
+                            display: -webkit-box; 
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            text-overflow: ellipsis;
+                            overflow: hidden; 
                         }
 
                     }
@@ -488,6 +542,13 @@ export default {
                 display:flex;
                 justify-content center;
                 margin-top:48px;
+                margin-bottom: 8rem;
+                @media (max-width: 768px) {
+                    margin-bottom: 4.8rem;    
+                }
+                @media (max-width: 375px) {
+                    margin-bottom: 3.6rem;
+                }
             }
         }
 
@@ -502,29 +563,26 @@ export default {
             flex:0 0 360px;
             .community_top_wrap {
                 .community_top_left {
-                    margin-right: 132px;
+                    // margin-right: 132px;
                 }
             }
         }
 
         .community_bottom {
-            //height: 963px;
 
             .community_bottom_wrap {
                 display: flex;
                 flex-direction: column;
                 justify-content center;
-                width: 1008px;
+                max-width: 1008px;
             }
         }
     }
     //pad
     @media screen and (max-width: $maxPadWidth) and (min-width: $minPadWidth) {
-
     }
     //mobile
     @media screen and (max-width: $maxMobileWidth) and (min-width: $minMobileWidth) {
-
     }
 
 }
