@@ -1,6 +1,6 @@
 ::: slot NFT
 
-<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT01.png" ></div>
+<div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT01.png" ></div>
 </br>
 关于区块链，近段时间人们最为关注的，恐怕就是 NFT 了。
 
@@ -33,7 +33,7 @@ NFT 全称为 Non-Fungible Token ，中文名叫非同质化通证。我们常�
 
 **其实，NFT 最核心的特点在于它是可在链上记录和处理多维、复杂属性的数据对象**。分布式账本的功能，是记录了人们需要共识的信息。如果是记录了「账户-余额」类型的简单的一维信息，那么实际上是对应到 FT （同质化通证）；而如果需要综合处理包含了数字、文本、图像等多维信息的数据对象，那么就是 NFT 可发挥的作用了。
 </br>
-<div align=center> <img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT02.png" > </div>
+<div align=center> <img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT02.png" > </div>
 <center> <font size=2> NFT 的数据结构示例（https://opensea.io/blog/guides/non-fungible-tokens） </font> </center>
 </br>
 
@@ -41,7 +41,7 @@ NFT 全称为 Non-Fungible Token ，中文名叫非同质化通证。我们常�
 
 当前让 NFT 非常「出圈」的加密艺术品、数字收藏品交易等，也是利用了这个特性，可以让图像、动画、声音等复杂的数据均可以用 NFT 的形式在分布式存储上保存，在区块链上登记、确权并交易和流转，非常好的解决了加密艺术品、数字收藏品交易的展示、流转等问题，也使得大家现在一提到 NFT 就自动的联想起加密艺术。
 </br>
-<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT03.png" ></div>
+<div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT03.png" ></div>
 <center> <font size=2>近 7000 万美元成交的NFT《日常：第一个5000天》</font> </center> 
 </br>
 
@@ -70,7 +70,7 @@ NFT 全称为 Non-Fungible Token ，中文名叫非同质化通证。我们常�
 2020 年 3 月，边界智能宣布正式上线并开源自研的联盟链产品 IRITA，其中一个很重要的特点就是开发了基于 NFT 的资产数字化与资产建模功能。IRITA 以 NFT 为基础，支持供应链、知识产权、医疗、存证等各领域的资产数字化，支持资产数字化后的确权和流通。
 例如，在供应链金融领域内，应收账款、最终产品等资产均可以作为 NFT 进行建模并上链、在业务场景内进行流转。根据数据保护需要，还可以针对性的对其中部分字段实现隐私保护与隐私计算。
 </br>
-<div align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT04.png" ></div>
+<div align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT04.png" ></div>
  <center> IRITA 对 NFT 数据保护和隐私计算的示例 </center> 
 </br>
 

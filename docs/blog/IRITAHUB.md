@@ -16,7 +16,7 @@
  
 值得注意的是，IBC 不假设区块链网络的拓扑，<font color=#00BFFF>**不仅能够实现同构链间的通信，还能支持异构区块链（公链和联盟链）间的跨链互联互通。**</font>因此，在目前的 Cosmos 生态中，已经产生了不涉及 Cosmos Hub 的网络跨链连接，所形成的并非是射线状的区块链网络，而是任意拓扑网络。
 </br>
-<div  align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub01.png" ></div>
+<div  align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub01.png" ></div>
 </br>
 
 ## <center> <font color=#00BFFF>跨链服务枢纽 IRITA HUB </font></center>
@@ -34,7 +34,7 @@ IRITA HUB 是 IRITA 联盟链产品线中专注于跨链服务的产品，原生
  
 IRITA HUB 原生具备了 iService + IBC 框架，因此，既可以跨链连接已经集成了 IBC 模块的区块链（包括公有链与联盟链），同时，通过基于边界智能的 Relayer 定制改造的「Smart Relayer」，还能实现尚未具备 IBC 功能的区块链之间的互联互通。
 </br>
-<div  align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub02.png" ></div>
+<div  align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub02.png" ></div>
 </br>
 
 在 2020 年 10 月，IRITA HUB 已作为跨链服务枢纽在 BSN 环境中集成部署，目前，许多企业级应用已经在 BSN 网络中上线运行。
@@ -42,7 +42,7 @@ IRITA HUB 原生具备了 iService + IBC 框架，因此，既可以跨链连接
 未来，<font COLOR ="#00BFFF">**边界智能还计划将基于 IRITA HUB 支持 NFT 跨链转移。**</font>
 
 </br>
-<div  align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub03.png" ></div>
+<div  align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub03.png" ></div>
 </br>
 
 ## <center> <font color=#00BFFF>超级账本跨链项目 YUI </font> </center>
@@ -59,7 +59,7 @@ Datachain 团队的 Ryo 介绍了 Fabric-IBC 和 Besu-IBC，即 IBC 协议在 Hy
 同时，YUI 还为跨链通信提供模块与中间件，为跨链应用开发提供模块和工作，包括跨链环境浏览器等。
 
 </br>
-<div  align=center><img src="https://stage.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub04.png" ></div>
+<div  align=center><img src="https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub04.png" ></div>
 
 :::
 
