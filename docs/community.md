@@ -4,7 +4,7 @@
     isCommunity: true,
     blogs: [
         {
-            src: https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu6.png,
+            src: https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu6.png,
             title: NFT 只是公链上的数字收藏品？产业区块链上的实体资产更需要！,
             owner: 边界智能,
             time: 2021/06/11,
@@ -13,7 +13,7 @@
             slot: NFT,
         },
         {
-            src: https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu3.png,
+            src: https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu3.png,
             title: 详解边界智能跨链服务 - iService,
             owner: 边界智能,
             time: 2021/05/18,
