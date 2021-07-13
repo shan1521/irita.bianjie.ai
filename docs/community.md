@@ -22,7 +22,7 @@
             slot: iService,
         },
         {
-            src: https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu4.png,
+            src: https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu4.png,
             title: 边界智能跨链技术浅析,
             owner: 边界智能,
             time: 2021/04/12,
@@ -31,7 +31,7 @@
             slot: 跨链技术浅析,
         },
         {
-            src: https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu5.png,
+            src: https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu5.png,
             title: IRITA HUB 的跨链实践与应用,
             owner: 边界智能,
             time: 2021/04/03,
@@ -40,7 +40,7 @@
             slot: IRITAHUB,
         },
         {
-            src: https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu2.png,
+            src: https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu2.png,
             title: 一文解读 IRITA 系统架构,
             owner: 边界智能,
             time: 2021/03/24,
@@ -49,7 +49,7 @@
             slot: IRITA系统架构,
         },
         {
-            src: https://bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu1.png,
+            src: https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/shoutu1.png,
             title: 边界智能开源联盟链产品线 IRITA,
             owner: 边界智能,
             time: 2020/03/06,
