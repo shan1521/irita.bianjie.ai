@@ -58,7 +58,7 @@
                 img: shuzizichan.png,
                 advantageTitle: 资产数字化建模与可信交换,
                 description: [
-                    {paragraph: 支持对实物资产数据多元结构的灵活数字化建模，实现链上可信交换},
+                    {paragraph: 支持对实体资产数据多元结构的灵活数字化建模，实现链上可信交换},
                     {paragraph: 以 NFT 为基础，支持供应链、知识产权、医疗、存证等各领域的资产数字化}
                 ]
             },
@@ -123,7 +123,7 @@
                 id: 4,
                 lineName: IRITA DA,
                 lineIntro: 资产数字化确权及交换平台,
-                lineDescription: 专注于支持 NFT 登记、确权及可信交换的产品；支持实物资产在链上的数字化建模和全生命周期管理,
+                lineDescription: 专注于支持 NFT 登记、确权及可信交换的产品；支持实体资产在链上的数字化建模和全生命周期管理,
                 iconName: icon-irita_da
             },
         ],
