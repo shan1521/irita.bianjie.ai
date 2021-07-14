@@ -23,7 +23,17 @@ export default async ({
     Vue.use(Element);
 	Vue.mixin({ store: store });
 	if(!isServer){
-		router.beforeEach((from,to,next) => {
+		router.beforeEach((to, from,next) => {
+			if(to.path.includes('/blog') || to.path.includes('/article') || to.path.includes('/community')){
+				store.commit('currentIndex',2)
+				localStorage.setItem('currentIndex',2)
+			}else if (to.path.includes('/developer')){
+				store.commit('currentIndex',3)
+				localStorage.setItem('currentIndex',3)
+			}else {
+				localStorage.setItem('currentIndex',0)
+				store.commit('currentIndex',0)
+			}
 			window.scrollTo(0,0);
 			next()
 		})
