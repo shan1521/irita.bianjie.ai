@@ -61,12 +61,6 @@ export default {
         Community,
     },
     watch: {
-        frontmatter(frontmatter) {
-            if (frontmatter.isCommunity) {
-                this.setBlogAndArticleList(frontmatter);
-            }
-        },
-        "$store.state.articleData"() {},
         $route: {
             handler(val, oldval) {
                 nav.themeConfig.nav.forEach((item, index) => {
@@ -195,7 +189,6 @@ export default {
 
         .md_container {
             font-size: 15px;
-            font-family: PingFangSC-Medium, PingFang SC;
             font-weight: 400;
             color: rgba(0, 0, 0, 0.75);
             line-height: 36px;
@@ -217,7 +210,6 @@ export default {
                 h1 {
                     line-height: 26px;
                     font-size: 24px;
-                    font-family: PingFangSC-Semibold, PingFang SC;
                     font-weight: 600;
                     color: #000000;
                 }
@@ -248,8 +240,7 @@ export default {
                         .article_about_owner {
                             height: 16px;
                             font-size: 14px;
-                            font-family: PingFangSC-Medium, PingFang SC;
-                            font-weight: 500;
+                            font-weight: 400;
                             color: rgba(0, 0, 0, 0.75);
                             line-height: 16px;
                         }
@@ -259,8 +250,7 @@ export default {
                         height: 16px;
                         line-height: 16px;
                         font-size: 14px;
-                        font-family: PingFangSC-Medium, PingFang SC;
-                        font-weight: 500;
+                        font-weight: 400;
                         color: rgba(0, 0, 0, 0.64);
                     }
                 }

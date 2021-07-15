@@ -342,7 +342,6 @@ export default {
 
                 .developer_top_left_sub_title {
                     font-size: 24px;
-                    font-family: PingFangSC-Medium, PingFang SC;
                     font-weight: 400;
                     color: #000000;
                     margin-bottom: 22px;
@@ -354,7 +353,6 @@ export default {
 
                 .developer_top_left_content {
                     font-size: 48px;
-                    font-family: PingFangSC-Medium, PingFang SC;
                     font-weight: 400;
                     color: #000000;
                     margin-bottom: 32px;
@@ -419,7 +417,6 @@ export default {
 
             .developer_middle_top_top {
                 font-size: 28px;
-                font-family: PingFangSC-Semibold, PingFang SC;
                 font-weight: 600;
                 color: #000000;
                 margin-bottom: 47px;
@@ -486,7 +483,6 @@ export default {
 
                             .developer_middle_top_right_top_title {
                                 font-size: 20px;
-                                font-family: PingFangSC-Semibold, PingFang SC;
                                 font-weight: 600;
                                 color: #000000;
                                 line-height: 24px;
@@ -498,8 +494,7 @@ export default {
                             .developer_middle_top_right_top_content {
                                 max-width: 216px;
                                 font-size: 14px;
-                                font-family: PingFangSC-Medium, PingFang SC;
-                                font-weight: 500;
+                                font-weight: 400;
                                 color: rgba(0, 0, 0, 0.65);
                                 line-height: 28px;
                             }
@@ -516,7 +511,6 @@ export default {
 
                         .developer_middle_top_right_know {
                             font-size: 16px;
-                            font-family: PingFangSC-Regular, PingFang SC;
                             font-weight: 400;
                             color: #7065FF;
                             line-height: 16px;
@@ -557,7 +551,6 @@ export default {
 
                 .developer_middle_bottom_title {
                     font-size: 28px;
-                    font-family: PingFangSC-Semibold, PingFang SC;
                     font-weight: 600;
                     color: #000000;
                     line-height: 28px;
@@ -617,7 +610,7 @@ export default {
 
                     .developer_middle_bottom_item_content {
                         font-size: 14px;
-                        font-weight: 500;
+                        font-weight: 400;
                         color: rgba(0, 0, 0, 0.65);
                         padding-bottom: 24px;
                         border-bottom: 1px solid #E8EBF5;
@@ -690,7 +683,6 @@ export default {
             .developer_bottom_top_left {
                 display: inline-bloc;
                 font-size: 28px;
-                font-family: PingFangSC-Semibold, PingFang SC;
                 font-weight: 600;
                 color: #000000;
 
@@ -704,7 +696,6 @@ export default {
                 justify-content: center;
                 align-items: center;
                 font-size: 14px;
-                font-family: PingFangSC-Regular, PingFang SC;
                 font-weight: 400;
                 color: #7065FF;
                 position: relative;
@@ -782,7 +773,6 @@ export default {
                 align-items: center;
                 margin-bottom: 48px;
                 font-size: 16px;
-                font-family: PingFangSC-Regular, PingFang SC;
                 font-weight: 400;
                 color: #000000;
                 overflow: hidden;

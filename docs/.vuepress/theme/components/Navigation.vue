@@ -219,8 +219,7 @@ export default {
                     display: inline-block;
                     padding: 2.05rem 3rem;
                     line-height: 2.2rem;
-                    font-family: PingFangSC-Medium, PingFang SC;
-                    font-weight: $fontWeight500;
+                    font-weight: $fontWeight400;
                     color: $blackColor;
                 }
 

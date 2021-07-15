@@ -138,8 +138,7 @@ export default {
                     margin-top: 2.4rem;
                     line-height: 2.4rem;
                     font-size: $fontSize16;
-                    font-family: PingFangSC-Medium, PingFang SC;
-                    font-weight: $fontWeight500;
+                    font-weight: $fontWeight400;
                     color: $whiteColorOpacity1;
                     box-sizing: border-box;
                     padding-right: 1.6rem;
@@ -189,7 +188,6 @@ export default {
                         height: 2.4rem;
                         line-height: 2.4rem;
                         font-size: $fontSize16;
-                        font-family: PingFangSC-Semibold, PingFang SC;
                         font-weight: $fontWeight600;
                         color: $whiteColor;
                     }
@@ -199,8 +197,7 @@ export default {
                         height: 2.4rem;
                         line-height: 2.4rem;
                         font-size: $fontSize16;
-                        font-family: PingFangSC-Medium, PingFang SC;
-                        font-weight: $fontWeight500;
+                        font-weight: $fontWeight400;
                         color: $whiteColorOpacity;
 
                         &:hover {
@@ -213,8 +210,7 @@ export default {
                         height: 2.4rem;
                         line-height: 2.4rem;
                         font-size: $fontSize16;
-                        font-family: PingFangSC-Medium, PingFang SC;
-                        font-weight: $fontWeight500;
+                        font-weight: $fontWeight400;
                         color: $whiteColorOpacity;
 
                         &:hover {
@@ -235,7 +231,6 @@ export default {
                         height: 2.4rem;
                         line-height: 2.4rem;
                         font-size: $fontSize16;
-                        font-family: PingFangSC-Semibold, PingFang SC;
                         font-weight: $fontWeight600;
                         color: $whiteColor;
                     }
@@ -259,8 +254,7 @@ export default {
                         height: 2.4rem;
                         line-height: 2.4rem;
                         font-size: $fontSize12;
-                        font-family: PingFangSC-Medium, PingFang SC;
-                        font-weight: $fontWeight500;
+                        font-weight: $fontWeight400;
                         color: $whiteColorOpacity;
                     }
                 }
@@ -270,7 +264,7 @@ export default {
 
     .footer_content_bottom {
         width: 100%;
-        min-height: 6rem;
+        height: 6rem;
         background: $footerBottomColor;
         @media (max-width 1200px) {
             box-sizing: border-box;
@@ -280,8 +274,7 @@ export default {
     }
 
     font-size: $fontSize14;
-    font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: $fontWeight500;
+    font-weight: $fontWeight400;
 
     .bottom_content {
         display: flex;
@@ -292,16 +285,13 @@ export default {
         align-items: center;
         margin: 0 auto;
         max-width: $contentWidth;
-        height: 6rem;
-        @media (max-width: 400px) {
-            height: auto;
+        height: 100%;
+        @media (max-width: 420px) {
+            text-align: center;
         }
 
         .copyright_content {
             color: $whiteColorOpacity;
-            @media (max-width: 400px) {
-                text-align: center;
-            }
         }
 
         a {
@@ -314,7 +304,7 @@ export default {
 @media (max-width: 730px) {
     .footer_content_wrapper {
         .footer_content_bottom {
-            min-height: 9rem;
+            height: auto;
             line-height: 3rem;
 
             .bottom_content {

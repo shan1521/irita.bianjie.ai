@@ -53,7 +53,8 @@ NFT 全称为 Non-Fungible Token ，中文名叫非同质化通证。我们常�
 
 当前让 NFT 非常「出圈」的加密艺术品、数字收藏品交易等，也是利用了这个特性，可以让图像、动画、声音等复杂的数据均可以用 NFT 的形式在分布式存储上保存，在区块链上登记、确权并交易和流转，非常好的解决了加密艺术品、数字收藏品交易的展示、流转等问题，也使得大家现在一提到 NFT 就自动的联想起加密艺术。
 </br>
-<div align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT03.png" width='400px' /></div>
+
+<div align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT03.png"/></div>
 <center> <font size=2>近 7000 万美元成交的NFT《日常：第一个5000天》</font> </center> 
 </br>
 

@@ -207,14 +207,14 @@ export default {
 
                 .community_top_left_sub_title {
                     font-size: 48px;
-                    font-family: PingFangSC-Medium, PingFang SC;
                     font-weight: 400;
                     color: #000000;
                     line-height: 48px;
                     letter-spacing: 1px;
                     margin-bottom: 22px;
-					@media (max-width 487px){
-						font-size 28px
+					@media (max-width: 487px){
+						font-size: 28px;
+                        line-height: 36px;
 					}
                 }
 
@@ -262,14 +262,12 @@ export default {
 
                 .community_bottom_tab {
                     font-size: 16px;
-                    font-family: PingFangSC-Regular, PingFang SC;
                     font-weight: 400;
-                    color: #000000;
+                    color: rgba(0,0,0,0.65);
                     margin-right: 32px;
                     cursor: pointer;
                     border-bottom: 4px solid transparent;
                     padding-bottom: 8px;
-                    opacity .4;
                     transition all .2s linear;
                 }
 
@@ -339,7 +337,6 @@ export default {
                         .community_bottom_content_item_title {
 							width: 100%
                             font-size: 18px;
-                            font-family: PingFangSC-Semibold, PingFang SC;
                             font-weight: 600;
                             color: #000000;
                             overflow: hidden;
@@ -375,19 +372,15 @@ export default {
 
                                 .community_bottom_content_item_owner {
                                     font-size: 14px;
-                                    font-family: PingFangSC-Medium, PingFang SC;
-                                    font-weight: 500;
-                                    color: #000000;
-                                    opacity .4;
+                                    font-weight: 400;
+                                    color: rgba(0, 0, 0, 0.65);
                                 }
                             }
 
                             .community_bottom_content_item_time {
                                 font-size: 14px;
-                                font-family: PingFangSC-Medium, PingFang SC;
-                                font-weight: 500;
-                                color: #000000;
-                                opacity .4;
+                                font-weight: 400;
+                                color: rgba(0, 0, 0, 0.65);
                             }
                         }
 
@@ -402,8 +395,7 @@ export default {
                         justify-content center;
                         align-items center;
                         font-size: 14px;
-                        font-family: PingFangSC-Medium, PingFang SC;
-                        font-weight: 500;
+                        font-weight: 400;
                         color: #7065FF;
                         transition: all .2s linear;
                     }
@@ -445,14 +437,12 @@ export default {
                             margin-bottom 2px;
                             .community_bottom_content_article_item_left_top_month{
                                 font-size: 12px;
-                                font-family: PingFangSC-Regular, PingFang SC;
                                 font-weight: 400;
                                 color: #000000;
                                 margin-bottom 2px;
                             }
                             .community_bottom_content_article_item_left_top_date{
                                 font-size: 20px;
-                                font-family: PingFangSC-Semibold, PingFang SC;
                                 font-weight: 600;
                                 color: #7065FF;
                                 letter-spacing: 1px;
@@ -468,7 +458,6 @@ export default {
                             justify-content center;
                             align-items center;
                             font-size: 12px;
-                            font-family: PingFangSC-Regular, PingFang SC;
                             font-weight: 400;
                             color: #FFFFFF;
                         }
@@ -482,7 +471,6 @@ export default {
                             //display flex;
                             //align-items center;
                             font-size: 20px;
-                            font-family: PingFangSC-Semibold, PingFang SC;
                             font-weight: 600;
                             color: #000000;
                             word-break break-all;
@@ -498,7 +486,6 @@ export default {
                                 border: 1px solid #7065FF;
                                 font-style:normal;
                                 font-size: 16px;
-                                font-family: PingFangSC-Semibold, PingFang SC;
                                 font-weight: 600;
                                 color: #7065FF;
                                 text-align center;
@@ -517,12 +504,10 @@ export default {
                         }
                         .community_bottom_content_article_item_right_content{
                             font-size: 14px;
-                            font-family: PingFangSC-Medium, PingFang SC;
-                            font-weight: 500;
-                            color: #000000;
+                            font-weight: 400;
+                            color: rgba(0,0,0,0.65);
                             line-height: 24px;
-                            opacity: .4;
-                            display: -webkit-box; 
+                            display: -webkit-box;
                             -webkit-box-orient: vertical;
                             -webkit-line-clamp: 2;
                             text-overflow: ellipsis;

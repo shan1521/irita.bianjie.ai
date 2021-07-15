@@ -246,8 +246,7 @@ export default {
 				height 6.4rem
 				line-height 6.4rem
 				font-size $fontSize60
-				font-family PingFangSC-Medium, PingFang SC
-				font-weight $fontWeight500
+				font-weight $fontWeight400
 				letter-spacing 0.5rem
 				color $blackColor
 				@media (max-width: 375px) {
@@ -259,8 +258,7 @@ export default {
 				margin-bottom 4rem
 				line-height 4rem
 				font-size $fontSize24
-				font-family PingFangSC-Medium, PingFang SC
-				font-weight $fontWeight500
+				font-weight $fontWeight400
 				color $blackColor
 				@media (max-width: 375px) {
 					font-size $fontSize16
@@ -305,8 +303,7 @@ export default {
 						height 2.2rem
 						line-height 2.4rem
 						font-size $fontSize16
-						font-family PingFangSC-Medium, PingFang SC
-						font-weight $fontWeight500
+						font-weight $fontWeight400
 						color $blackColor
 	
 	.home_irita_what_content
@@ -348,13 +345,12 @@ export default {
 					height 2.8rem
 					line-height 2.8rem
 					font-size $fontSize28
-					font-family PingFangSC-Semibold, PingFang SC
 					font-weight $fontWeight600
 					color: $blackColor
 					@media (max-width 768px) {
 						font-size $fontSize24
 					}
-					@media (max-width 320px) {
+					@media (max-width 375px) {
 						font-size $fontSize20
 					}
 				
@@ -369,7 +365,7 @@ export default {
 						margin-top 3.6rem
 						margin-bottom 3.6rem
 					}
-					@media (max-width 320px) {
+					@media (max-width 375px) {
 						margin-top 2.4rem
 						margin-bottom 2.4rem
 					}
@@ -379,27 +375,27 @@ export default {
 						box-sizing border-box
 						margin-bottom 1.6rem
 						padding-left 0.8rem
-						min-height 2.4rem
 						line-height 2.4rem
 						font-size $fontSize20
-						font-family PingFangSC-Semibold, PingFang SC
 						font-weight $fontWeight600
 						color $blackColor
 						border-left 0.4rem solid $highlightDetailColor
-						@media (max-width 375px) {
-							padding-left 0.4rem
-						}
-						
+
+
 						&:nth-of-type(4n)
 							margin-right 0
-				
+                    @media (max-width 375px) {
+                        .characteristic_item{
+                            padding-left 0.4rem
+                            font-size $fontSize16 !important
+                        }
+                    }
 				.description_article
 					width 100%
 					// min-height 19.6rem
 					line-height 2.8rem
 					font-size $fontSize14
-					font-family PingFangSC-Medium, PingFang SC
-					font-weight $fontWeight500
+					font-weight $fontWeight400
 					color $blackColorOpacity1
 	
 	.home_product_content
@@ -435,7 +431,6 @@ export default {
 				height 2.8rem
 				line-height 2.8rem
 				font-size $fontSize28
-				font-family PingFangSC-Semibold, PingFang SC
 				font-weight $fontWeight600
 				color $blackColor
 				@media (max-width 768px) {
@@ -472,7 +467,6 @@ export default {
 		.advantage_title
 			line-height 2.8rem
 			font-size $fontSize28
-			font-family PingFangSC-Semibold, PingFang SC
 			font-weight $fontWeight600
 			color $blackColor
 			@media (max-width 768px) {
@@ -548,7 +542,6 @@ export default {
 						padding 1.6rem 0 1.6rem 1.6rem
 						line-height 2.4rem
 						font-size $fontSize16
-						font-family PingFangSC-Semibold, PingFang SC
 						font-weight $fontWeight600
 						color $blackColor
 						@media (max-width 375px) {
@@ -560,8 +553,7 @@ export default {
 						width 23.6rem
 						line-height 2.8rem
 						font-size $fontSize14
-						font-family PingFangSC-Medium, PingFang SC
-						font-weight $fontWeight500
+						font-weight $fontWeight400
 						color $blackColorOpacity
 						@media (max-width 375px) {
 							width 22.4rem
@@ -579,7 +571,6 @@ export default {
 				.more_text
 					margin-right 0.8rem
 					font-size $fontSize16
-					font-family PingFangSC-Regular, PingFang SC
 					font-weight $fontWeight400
 				
 				.iconfont
@@ -594,6 +585,9 @@ export default {
 	@media (max-width 768px){
 		padding 4.8rem
 	}
+	@media (max-width 375px){
+		padding 3.6rem 1.6rem
+	}
 	.productionline_content
 		box-sizing border-box
 		margin 0 auto
@@ -604,21 +598,20 @@ export default {
 			padding 0
 			max-width 64rem
 		}
-		// @media (max-width 530px){
-		// 	padding 4.1rem 0 4.8rem 2.4rem
-		// }
 		@media (max-width 375px){
-			max-width 28.8rem
+			max-width 100%
 		}
 		.text
 			height 2.8rem
 			line-height 2.8rem
 			font-size $fontSize28
-			font-family PingFangSC-Semibold, PingFang SC
 			font-weight $fontWeight600
 			color $blackColor
 			@media (max-width 768px) {
 				font-size $fontSize24
+			}
+			@media (max-width 375px) {
+				font-size $fontSize20
 			}
 		
 		.subtext
@@ -626,8 +619,7 @@ export default {
 			margin 2.4rem 0 3.2rem
 			line-height 2.4rem
 			font-size $fontSize14
-			font-family PingFangSC-Medium, PingFang SC
-			font-weight $fontWeight500
+			font-weight $fontWeight400
 			color $blackColorOpacity
 			@media (max-width 1000px){
 				box-sizing border-box
@@ -693,7 +685,6 @@ export default {
 							
 							.item_intro
 								display none
-								font-family PingFangSC-Semibold, PingFang SC
 								font-weight $fontWeight600
 								color $whiteColor
 							
@@ -724,7 +715,6 @@ export default {
 								height 1.6rem
 								line-height 1.6rem
 								font-size $fontSize16
-								font-family PingFangSC-Regular, PingFang SC
 								font-weight $fontWeight400
 								color $blackColorOpacity
 						
@@ -733,7 +723,6 @@ export default {
 							height 2rem
 							line-height 2rem
 							font-size $fontSize20
-							font-family PingFangSC-Regular, PingFang SC
 							font-weight $fontWeight400
 							color $blackColor
 						
@@ -744,7 +733,6 @@ export default {
 							max-width 32rem
 							line-height 2.4rem
 							font-size $fontSize14
-							font-family PingFangSC-Regular, PingFang SC
 							font-weight $fontWeight400
 							color $whiteColor
 							@media (max-width 420px){
@@ -813,7 +801,6 @@ export default {
 			height 2.8rem
 			line-height 2.8rem
 			font-size $fontSize28
-			font-family PingFangSC-Semibold, PingFang SC
 			font-weight $fontWeight600
 			color $blackColor
 			@media (max-width 768px) {
@@ -822,6 +809,7 @@ export default {
 			}
 			@media (max-width 375px) {
 				margin-bottom 2.4rem
+				font-size $fontSize20
 			}
 		
 		.opencommunity_list
@@ -883,7 +871,6 @@ export default {
 						height 1.6rem
 						line-height 1.6rem
 						font-size $fontSize16
-						font-family PingFangSC-Semibold, PingFang SC
 						font-weight $fontWeight600
 						color $blackColor
 					
