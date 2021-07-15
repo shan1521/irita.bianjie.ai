@@ -1,4 +1,16 @@
-::: slot IRITA系统架构
+# 一文解读 IRITA 系统架构
+<div class="article_about">
+    <div class="article_about_owner_container">
+        <div class="article_about_icon_wrap">
+            <img src='https://irita.bianjie.ai/img/blog/bianjie_icon.png' class="article_about_icon">
+        </div>
+        <span class="article_about_owner">边界智能</span>
+    </div>
+    <span class='article_about_time'>2021-03-24</span>
+</div>
+
+---
+<br>
 
 ## **IRITA – 支持下一代分布式商业系统的企业级联盟链产品线**
 
@@ -108,14 +120,4 @@ IBC 可以被任何建立在可靠和安全的模块间通信之上的应用程�
 开源地址：
 
 [https://github.com/bianjieai/irita](https://github.com/bianjieai/irita)
-
-
-
-
-
-
-
-
-:::
-
 

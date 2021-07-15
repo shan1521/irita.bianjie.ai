@@ -26,7 +26,7 @@
                     <div class="community_bottom_content_item"
                          @click="handleArticleClick(item)"
                          v-for="item in blogList">
-                        <img :src="item.src" class="community_bottom_content_item_img">
+                        <img :src="$withBase(item.src)" class="community_bottom_content_item_img">
 
                         <div class="community_bottom_content_item_time_container">
                             <span class="community_bottom_content_item_title">
@@ -150,13 +150,8 @@ export default {
             }
         },
         handleArticleClick(article){
-        	this.$store.commit('articleData',article)
-			sessionStorage.setItem('article',JSON.stringify(article));
             this.$router.push({
-                path: article.router,
-                query: {
-                    article:encodeURIComponent(article)
-                }
+                path: article.router
             })
         },
         handlePageClick(page){

@@ -46,7 +46,7 @@
 					<li class="advantage_item_wrapper" v-for="(item,index) in advantageContent.advantageList"
 						:key="index">
 						<div class="advantage_item" ref="advantageItem">
-							<img :src="differentAdvantageImg(item.img)" alt="" class="advantage_img">
+							<img :src="$withBase(differentAdvantageImg(item.img))" alt="" class="advantage_img">
 							<p class="advantage_title">{{ item.advantageTitle }}</p>
 							<p class="description" v-for="(dItem,dIndex) in item.description" :key="dIndex">
 								{{ dItem.paragraph }}</p>

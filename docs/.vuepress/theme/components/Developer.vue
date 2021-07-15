@@ -324,12 +324,11 @@ export default {
             padding-top: 10.3rem;
             padding-left: 8rem;
 
-            // @media (max-width: 1000px) {
-            //     padding: 0 2rem;
-            // }
-
             @media (max-width: 768px) {
                 padding: 6.2rem 4.8rem 5.2rem 4.8rem;
+            }
+            @media (max-width: 576px) {
+                padding: 6.2rem 3.6rem 5.2rem 3.6rem;
             }
 
             @media (max-width: 375px) {
@@ -348,9 +347,8 @@ export default {
                     color: #000000;
                     margin-bottom: 22px;
 
-                    @media (max-width: 375px) {
+                    @media (max-width: 576px) {
                         font-size: 1.6rem;
-                        line-height: 1.6rem;
                     }
                 }
 
@@ -361,14 +359,11 @@ export default {
                     color: #000000;
                     margin-bottom: 32px;
                     @media (max-width: 576px) {
-                        font-size: 4rem;
-                        line-height: 4rem;
+                        font-size: 36px;
                         margin-bottom: 2.4rem;
                     }
-                    @media (max-width: 375px) {
-                        font-size: 2.8rem;
-                        line-height: 2.8rem;
-                        margin-bottom: 2.4rem;
+                    @media (max-width: 430px) {
+                        font-size: 2.4rem;
                     }
                 }
 
@@ -476,7 +471,7 @@ export default {
                         width: 100%;
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
-                        grid-row-gap: 1.6rem
+                        // grid-row-gap: 1.6rem
 				        grid-column-gap: 2.4rem
 
                         @media (max-width: 560px) {

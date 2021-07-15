@@ -1,4 +1,16 @@
-::: slot NFT
+# NFT 只是公链上的数字收藏品？产业区块链上的实体资产更需要！
+<div class="article_about">
+    <div class="article_about_owner_container">
+        <div class="article_about_icon_wrap">
+            <img src='https://irita.bianjie.ai/img/blog/bianjie_icon.png' class="article_about_icon">
+        </div>
+        <span class="article_about_owner">边界智能</span>
+    </div>
+    <span class='article_about_time'>2021-06-11</span>
+</div>
+
+---
+<br>
 
 <div align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT01.png" ></div>
 </br>
@@ -41,7 +53,7 @@ NFT 全称为 Non-Fungible Token ，中文名叫非同质化通证。我们常�
 
 当前让 NFT 非常「出圈」的加密艺术品、数字收藏品交易等，也是利用了这个特性，可以让图像、动画、声音等复杂的数据均可以用 NFT 的形式在分布式存储上保存，在区块链上登记、确权并交易和流转，非常好的解决了加密艺术品、数字收藏品交易的展示、流转等问题，也使得大家现在一提到 NFT 就自动的联想起加密艺术。
 </br>
-<div align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT03.png" ></div>
+<div align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/NFT03.png" width='400px' /></div>
 <center> <font size=2>近 7000 万美元成交的NFT《日常：第一个5000天》</font> </center> 
 </br>
 
@@ -84,7 +96,5 @@ NFT 全称为 Non-Fungible Token ，中文名叫非同质化通证。我们常�
 分布式商业系统以区块链为技术核心，以高效支持多边商业流程协作及透明价值分配为特点，正在加速人类数字化迁徙实现。
 
 边界智能认为的分布式商业系统成熟度可以分三个阶段：**1.以存证应用为代表，区块链是一个被动的提供信息验证的系统；2.以智能合约驱动的分布式应用为代表，使用区块链来支持多方信任协作；3. 以NFT+智能合约为代表，区块链能支持多方业务流程协作，并能通过资产数字化，实现高效价值转移和分配。**
-
-:::
 
 
