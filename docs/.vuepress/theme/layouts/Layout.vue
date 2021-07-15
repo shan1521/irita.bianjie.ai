@@ -257,6 +257,9 @@ export default {
 
                 img {
                     width: 100%;
+                    @media (max-width: 375px) {
+                        width: 100% !important;
+                    }
                 }
             }
         }
