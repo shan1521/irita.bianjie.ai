@@ -219,8 +219,7 @@ export default {
                     display: inline-block;
                     padding: 2.05rem 3rem;
                     line-height: 2.2rem;
-                    font-family: PingFangSC-Medium, PingFang SC;
-                    font-weight: $fontWeight500;
+                    font-weight: $fontWeight400;
                     color: $blackColor;
                 }
 
@@ -262,7 +261,7 @@ export default {
             @media (max-width: 804px) {
                 padding-left: 4.8rem;
             }
-            @media (max-width: 375px) {
+            @media (max-width: 432px) {
                 padding-left: 1.6rem;
             }
 
@@ -284,7 +283,7 @@ export default {
                 @media (max-width: 804px) {
                     padding-right: 4.8rem;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 432px) {
                     padding-right: 1.6rem;
                 }
                 .iconfont {
