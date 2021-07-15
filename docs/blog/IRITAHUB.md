@@ -1,5 +1,16 @@
-::: slot IRITAHUB
+# IRITA HUB 的跨链实践与应用
+<div class="article_about">
+    <div class="article_about_owner_container">
+        <div class="article_about_icon_wrap">
+            <img src='https://irita.bianjie.ai/img/blog/bianjie_icon.png' class="article_about_icon">
+        </div>
+        <span class="article_about_owner">边界智能</span>
+    </div>
+    <span class='article_about_time'>2021-04-03</span>
+</div>
 
+---
+<br>
 
 <font COLOR ="#949494"> *6 月 8 日，超级账本全球论坛 Hyperledger Global Forum 2021（HGF）盛大开幕，边界智能与日本开源伙伴团队 Datachain 围绕「IRITA 与 Fabric-IBC、Besu-IBC 结合 —— 为企业级区块链引入互操作性」话题进行了联合演讲。*</font>
 
@@ -60,7 +71,4 @@ Datachain 团队的 Ryo 介绍了 Fabric-IBC 和 Besu-IBC，即 IBC 协议在 Hy
 
 </br>
 <div  align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub04.png" ></div>
-
-:::
-
 

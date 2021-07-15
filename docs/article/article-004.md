@@ -1,5 +1,8 @@
-::: slot article-004
+# 边界智能开源联盟链产品线 IRITA
+<br>
 
+---
+<br>
 
 <div align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/IRITA-01.png" ></div>
 
@@ -71,12 +74,5 @@ IRITA 可以灵活使用在多种行业，尤其是金融创新行业，比如�
  
 开源地址：
  [https://github.com/bianjieai/irita](https://github.com/bianjieai/irita/)
-
-
-
-
-
-
-:::
 
 
