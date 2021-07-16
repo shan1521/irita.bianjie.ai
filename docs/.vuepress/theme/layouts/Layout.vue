@@ -197,6 +197,7 @@ export default {
                 padding-top: 60px;
                 padding-bottom: 80px;
 
+
                 @media (max-width: 1200px) {
                     padding-left: 48px;
                     padding-right: 48px;
@@ -212,6 +213,21 @@ export default {
                     font-size: 24px;
                     font-weight: 600;
                     color: #000000;
+                }
+
+                ul {
+                    padding-left: 20px;
+                    li::before {
+                        content: '';
+                        display: inline-block;
+                        margin-right: 8px;
+                        width: 5px;
+                        height: 5px;
+                        line-height: 5px;
+                        vertical-align: middle;
+                        background: #000;
+                        border-radius: 50%;
+                    }
                 }
 
                 .article_about {
