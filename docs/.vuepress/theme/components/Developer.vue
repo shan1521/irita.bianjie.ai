@@ -11,13 +11,19 @@
                     </span>
                     <i class="developer_top_left_border"></i>
                 </div>
-                <!-- <div class="developer_top_right">
-          <img
-            src="../assets/developer_top_img.png"
-            alt=""
-            class="developer_top_right_img"
-          />
-        </div> -->
+            </div>
+        </div>
+        <div class="developer_wenchang_wrap">
+            <div class="developer_wenchang_content">
+                <div class="wenchang_logo">
+                    <img src="/wenchang_logo.png" alt="">
+                    <span class="title">欢迎使用文昌链</span>
+                </div>
+                <div class="content">可从此处了解更多关于文昌链的开发配置文档以及如何在文昌链上发布 NFT</div>
+                <div href="javascript:;" class="go" @click="goWenChangText" target="_blank">
+                    <span class="go_text">立即前往</span>
+                    <i class="iconfont icon-turnto"></i>
+                </div>
             </div>
         </div>
         <div class="developer_middle_top">
@@ -286,6 +292,11 @@ export default {
             return this.$frontmatter.previewContent;
         },
     },
+    methods: {
+        goWenChangText(){
+            this.$router.push(`/wenchangchain`);
+        }
+    }
 };
 </script>
 
@@ -294,6 +305,7 @@ export default {
 @import '../styles/adaptation.styl';
 
 .developer_container {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -384,6 +396,74 @@ export default {
                     @media (max-width: 768px) {
                         display: none;
                     }
+                }
+            }
+        }
+    }
+
+    .developer_wenchang_wrap {
+        width: 100%;
+        height: 72px;
+        background: #FAFBFF;
+        @media (max-width: 888px) {
+            box-sizing: border-box;
+            padding: 16px 0;
+            flex-direction: column;
+            height: auto;
+        }
+        .developer_wenchang_content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 1040px;
+            height: 100%;
+            @media (max-width: 1040px) {
+                box-sizing: border-box;
+                padding: 0 48px;
+            }
+            @media (max-width: 888px) {
+                flex-direction: column;
+                height: auto;
+            }
+            .wenchang_logo {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 38px;
+                    height: 36px;
+                }
+                .title {
+                    margin-left: 8px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: rgba(0, 0, 0, 0.65);
+                    line-height: 16px;
+                }
+            }
+            .content {
+                font-size: 16px;
+                font-weight: 400;
+                color: rgba(0, 0, 0, 0.65);
+                line-height: 24px;
+                text-align: center;
+                @media (max-width: 888px) {
+                    margin-top: 12px;
+                }
+            }
+            .go {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                font-weight: 400;
+                color: #7065FF;
+                line-height: 16px;
+                cursor: pointer;
+                @media (max-width: 888px) {
+                    margin-top: 20px;
+                }
+                .iconfont {
+                    margin-left: 8px;
                 }
             }
         }
