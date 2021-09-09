@@ -27,7 +27,7 @@ export default async ({
 			if(to.path.includes('/blog') || to.path.includes('/article') || to.path.includes('/community')){
 				store.commit('currentIndex',2)
 				localStorage.setItem('currentIndex',2)
-			}else if (to.path.includes('/developer')){
+			}else if (to.path.includes('/developer') || to.path.includes('/wenchangchain')){
 				store.commit('currentIndex',3)
 				localStorage.setItem('currentIndex',3)
 			}else {
