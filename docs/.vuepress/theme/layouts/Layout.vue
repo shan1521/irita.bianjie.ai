@@ -277,6 +277,28 @@ export default {
                         width: 100% !important;
                     }
                 }
+                .content__default {
+                    a {
+                        color: #7065FF;
+                        span {
+                            display: none;
+                        }
+                    }
+                    .language-javascript {
+                        border-radius: 4px;
+                        &::before {
+                            top: 51px;
+                            right: 24px;
+                        }
+                    }
+                    ul {
+                        li {
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
