@@ -51,8 +51,6 @@ NFT 开发步骤：
 
 ### PRNG
 
-伪随机数生成器（PRNG），也称为确定性随机数生成器（DRBG），是用于生成近似于随机数序列特性的数字序列算法。 -- 维基百科
-
 我们通过区块链生成的多个指标作为“因子”来计算随机数，使得此随机数公开透明，方便验证。
 
 随机数“因子”具体包含以下指标：
@@ -74,3 +72,9 @@ seed = sha256(
 
 rand = seed mod 10^20 / 10^20
 ```
+
+访问链接：
+
+[https://irita.bianjie.ai/docs/core_modules/random.html](https://irita.bianjie.ai/docs/core_modules/random.html)
+
+[https://irita.bianjie.ai/docs/console/modules/random.html](https://irita.bianjie.ai/docs/console/modules/random.html)
