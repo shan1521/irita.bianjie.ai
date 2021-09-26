@@ -17,7 +17,7 @@
                     <a
                         v-show="item.target === '_blank'"
                         class="navigation_item"
-                        :class="index === 4 ? 'router_link_item' : ''"
+                        :class="index === 5 ? 'router_link_item' : ''"
                         :href="item.link"
                         :target="item.target"
                         rel="noopener noreferrer"
@@ -62,7 +62,7 @@
                     <a
                         v-show="item.target === '_blank'"
                         class="mobile_navigation_item"
-                        :class="index === 4 ? 'mobile_router_link_item' : ''"
+                        :class="index === 5 ? 'mobile_router_link_item' : ''"
                         :href="item.link"
                         :target="item.target"
                         rel="noopener noreferrer"
@@ -109,7 +109,7 @@ export default {
             this.$store.commit("currentIndex", 0);
         },
         changeIndex(index) {
-            if (this.currentIndex !== index && index !== 1 && index !== 4) {
+            if (this.currentIndex !== index && index !== 1 && index !== 2 && index !== 5) {
                 this.$store.commit("currentIndex", index);
                 localStorage.setItem("currentIndex", JSON.stringify(index));
             }
@@ -188,7 +188,7 @@ export default {
             @media (max-width: 1200px) {
                 padding-right: 1.8rem;
             }
-            @media (max-width: 804px) {
+            @media (max-width: 953px) {
                 display: none;
             }
 
@@ -245,7 +245,7 @@ export default {
         background: $whiteColor;
         border-bottom: 0.1rem solid $borderLineColor;
         z-index: 10;
-        @media (max-width: 804px) {
+        @media (max-width: 953px) {
             display: block;
         }
 
@@ -257,7 +257,7 @@ export default {
             // margin: 0 auto;
             height: $navbarHeight;
 
-            @media (max-width: 804px) {
+            @media (max-width: 953px) {
                 padding-left: 4.8rem;
             }
             @media (max-width: 432px) {
@@ -279,7 +279,7 @@ export default {
                 // padding-right: 0.8rem;
                 width: 2.8rem;
                 height: 2.4rem;
-                @media (max-width: 804px) {
+                @media (max-width: 953px) {
                     padding-right: 4.8rem;
                 }
                 @media (max-width: 432px) {
