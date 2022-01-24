@@ -13,19 +13,6 @@
                 </div>
             </div>
         </div>
-        <div class="developer_wenchang_wrap">
-            <div class="developer_wenchang_content">
-                <div class="wenchang_logo">
-                    <img src="/wenchang_logo.png" alt="">
-                    <span class="title">欢迎使用文昌链</span>
-                </div>
-                <div class="content">可从此处了解更多关于文昌链的开发配置文档以及如何在文昌链上发布 NFT</div>
-                <div href="javascript:;" class="go" @click="goWenChangText" target="_blank">
-                    <span class="go_text">立即前往</span>
-                    <i class="iconfont icon-turnto"></i>
-                </div>
-            </div>
-        </div>
         <div class="developer_middle_top">
             <div class="developer_middle_top_wrap">
                 <span class="developer_middle_top_top">
@@ -192,15 +179,6 @@
         <div class="developer_bottom">
             <div class="developer_bottom_top">
                 <span class="developer_bottom_top_left"> 开发者工具 </span>
-                <!--                <div class="developer_bottom_top_right">
-                    <span class="developer_bottom_top_right_title">
-                        联系小助手
-                    </span>
-                    <i class="developer_bottom_top_right_icon"></i>
-                    <div class="developer_bottom_top_right_img_container">
-                        <img src="" alt="" class="developer_bottom_top_right_img">
-                    </div>
-                </div>-->
             </div>
             <div class="developer_bottom_bottom">
                 <div class="developer_bottom_bottom_left">
@@ -292,11 +270,6 @@ export default {
             return this.$frontmatter.previewContent;
         },
     },
-    methods: {
-        goWenChangText(){
-            this.$router.push(`/wenchangchain`);
-        }
-    }
 };
 </script>
 
