@@ -916,7 +916,7 @@ export default {
                         box-sizing: border-box;
                         margin-bottom: 1.2rem;
                         padding: 2.6rem 0 2.6rem 1.6rem;
-                        max-width: 48rem;
+                        max-width: 55rem;
                         min-height: 10rem;
                         background: $whiteColor;
                         border-radius: 0.4rem;
@@ -930,8 +930,11 @@ export default {
                         }
 
                         &:hover {
+                            // margin-right:2rem;
+
+                            width: 77rem;
                             top: -2.2rem;
-                            left: -0.2rem;
+                            left: -3.3rem;
                             background: $highlightDetailColor;
                             box-shadow: 0 0.2rem 0.7rem 0 #D2D0EF;
                             transform: scale(1.05);
@@ -1003,8 +1006,8 @@ export default {
                         .item_description {
                             display: none;
                             margin-top: 1.6rem;
-                            margin-right: 7.7rem;
-                            max-width: 32rem;
+                            margin-right: 1.6rem;
+                            max-width: 100%;
                             line-height: 2.4rem;
                             font-size: $fontSize14;
                             font-weight: $fontWeight400;
