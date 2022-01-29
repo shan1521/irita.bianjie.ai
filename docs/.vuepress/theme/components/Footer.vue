@@ -75,7 +75,6 @@ export default {
 
 <style lang="stylus">
 .footer_content_wrapper {
-    margin-top: 2rem;
     width: 100%;
     height: 37.4rem;
     flex: 0 0 37.4rem;

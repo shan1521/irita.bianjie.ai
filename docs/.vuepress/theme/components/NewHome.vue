@@ -42,26 +42,24 @@
 
         <div class="blockchain_container">
             <div class="blockchain_container_top_title">
-
                 <div class="blockchain_container_top">{{blockchainPlatform.title}}</div>
                 <div class="blockchain_container_center">
                     <div class="center_one">{{blockchainPlatform.itro1}}</div>
                     <div class="center_two">{{blockchainPlatform.itro2}}</div>
                 </div>
-
             </div>
             <div class="blockchain_container_bottom">
                 <div class="chain_img">
                     <img src="../assets/blockchain.png"
                         alt="">
                 </div>
-                <div class="list">
-                    <div v-for="(item,index) in blockchainPlatform.blockchainList"
+                <ul class="list">
+                    <li class="list_item" v-for="(item,index) in blockchainPlatform.blockchainList"
                         :key="index">
-                        <div class="list_title">{{item.blockchainTitle}}</div>
-                        <div class="list_desc">{{item.description}}</div>
-                    </div>
-                </div>
+                        <div class="item_title">{{item.blockchainTitle}}</div>
+                        <div class="item_desc">{{item.description}}</div>
+                    </li>
+                </ul>
 
             </div>
 
@@ -416,7 +414,6 @@ export default {
         margin: 0 auto;
         padding: 8rem 4.8rem 8rem 6.6rem;
         max-width: $contentWidth;
-        flex: 1;
         flex-direction: column;
 
         @media (max-width: 768px) {
@@ -457,45 +454,53 @@ export default {
         }
 
         .blockchain_container_bottom {
-            width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 108rem;
+            @media (max-width: 1200px) {
+                flex-direction: column;
+            }
 
-            .chain_img img {
-                margin-right: 3.6rem;
-                display: black;
+            .chain_img {
                 width: 69.4rem;
-                height: 55.2rem;
+                @media (max-width: 1200px) {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                    vertical-align: middle;
+                }
             }
 
             .list {
-                height: 55.2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-
-                @media (max-width: 768px) {
-                    // padding: 4.8rem;
-                    align-items: flex-start;
+                margin-left: 3.6rem;
+                max-width: 35rem;
+                @media(max-width: 1200px) {
+                    margin-top: 4rem;
+                    margin-left: 0;
+                    max-width: 100%;
                 }
+                .list_item {
+                    margin-top: 2.4rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    .item_title {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: #000000;
+                        line-height: 2.4rem;
+                    }
 
-                .list_title {
-                    font-size: 2rem;
-                    font-weight: 600;
-                    color: #000000;
-                    line-height: 2.4rem;
-                    margin-bottom: 1.6rem;
-                }
-
-                .list_desc {
-                    width: 35rem;
-                    font-size: 1.4rem;
-                    font-weight: 500;
-                    color: #000000;
-                    line-height: 2.8rem;
+                    .item_desc {
+                        margin-top: 1.6rem;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: rgba(0, 0, 0, 0.64);
+                        line-height: 2.8rem;
+                    }
                 }
             }
         }
@@ -504,6 +509,7 @@ export default {
     .home_irita_what_content {
         width: 100%;
         min-height: 50.7rem;
+        background: #fff;
 
         .irita_what_content {
             box-sizing: border-box;
@@ -614,6 +620,7 @@ export default {
 
 .home_product_content {
     width: 100%;
+    background: #fff;
 
     .product_content {
         box-sizing: border-box;
@@ -638,6 +645,7 @@ export default {
 
             img {
                 width: 100%;
+                vertical-align: middle;
             }
         }
 
@@ -1075,7 +1083,7 @@ export default {
     .opencommunity_content {
         box-sizing: border-box;
         margin: 0 auto;
-        padding: 8rem 6.3rem 8rem 6.1rem;
+        padding: 8rem 6.3rem 10rem 6.1rem;
         max-width: $contentWidth;
         min-height: 55.5rem;
 
