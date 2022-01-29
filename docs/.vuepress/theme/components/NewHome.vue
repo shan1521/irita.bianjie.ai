@@ -39,6 +39,7 @@
             </div>
         </div>
         <!-- 企业级区块链底层平台 -->
+
         <div class="blockchain_container">
             <div class="blockchain_container_top_title">
 
@@ -282,79 +283,6 @@ export default {
     background: $bgColor;
     width: 100%;
 
-    .blockchain_container {
-        width: 100%;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        flex-direction: column;
-        display: flex;
-        // justify-content: center;
-        margin: 0 auto;
-
-        // align-items: center;
-        .blockchain_container_top_title {
-            margin: 0 auto;
-            width: 108rem;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 4.8rem;
-
-            .blockchain_container_top {
-                width: 100%;
-                font-size: 2.8rem;
-                margin-bottom: 2.4rem;
-                font-weight: 600;
-                color: #000000;
-                line-height: 2.8rem;
-            }
-
-            .blockchain_container_center {
-                width: 100%;
-                font-size: 1.4rem;
-                font-weight: 500;
-                color: #000000;
-                line-height: 2.8rem;
-            }
-        }
-
-        .blockchain_container_bottom {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .chain_img img {
-                margin-right: 3.6rem;
-                display: black;
-                width: 69.4rem;
-                height: 55.2rem;
-            }
-
-            .list {
-                height: 55.2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-
-                .list_title {
-                    font-size: 2rem;
-                    font-weight: 600;
-                    color: #000000;
-                    line-height: 2.4rem;
-                    margin-bottom: 1.6rem;
-                }
-
-                .list_desc {
-                    width: 35rem;
-                    font-size: 1.4rem;
-                    font-weight: 500;
-                    color: #000000;
-                    line-height: 2.8rem;
-                }
-            }
-        }
-    }
-
     .home_top_content {
         width: 100%;
         background: url('/home_banner.png') no-repeat center center;
@@ -475,6 +403,99 @@ export default {
                         font-weight: $fontWeight400;
                         color: $blackColor;
                     }
+                }
+            }
+        }
+    }
+
+    .blockchain_container {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 8rem 4.8rem 8rem 6.6rem;
+        max-width: $contentWidth;
+        flex: 1;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            padding: 4.8rem;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 460px) {
+            padding: 3.6rem 2.4rem;
+        }
+
+        @media (max-width: 375px) {
+            padding: 3.6rem 2rem;
+        }
+
+        .blockchain_container_top_title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 4.8rem;
+
+            .blockchain_container_top {
+                width: 100%;
+                font-size: 2.8rem;
+                margin-bottom: 2.4rem;
+                font-weight: 600;
+                color: #000000;
+                line-height: 2.8rem;
+            }
+
+            .blockchain_container_center {
+                width: 100%;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #000000;
+                line-height: 2.8rem;
+            }
+        }
+
+        .blockchain_container_bottom {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .chain_img img {
+                margin-right: 3.6rem;
+                display: black;
+                width: 69.4rem;
+                height: 55.2rem;
+            }
+
+            .list {
+                height: 55.2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                @media (max-width: 768px) {
+                    // padding: 4.8rem;
+                    align-items: flex-start;
+                }
+
+                .list_title {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: #000000;
+                    line-height: 2.4rem;
+                    margin-bottom: 1.6rem;
+                }
+
+                .list_desc {
+                    width: 35rem;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    color: #000000;
+                    line-height: 2.8rem;
                 }
             }
         }
