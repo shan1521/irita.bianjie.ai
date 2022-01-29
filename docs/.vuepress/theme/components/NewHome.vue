@@ -421,7 +421,7 @@ export default {
 
         @media (max-width: 768px) {
             padding: 4.8rem;
-            align-items: flex-start;
+            // align-items: flex-start;
         }
 
         @media (max-width: 460px) {
@@ -433,6 +433,11 @@ export default {
         }
 
         .blockchain_container_top_title {
+          @media (max-width: 768px) {
+            
+            width:69.4rem;
+        }
+
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -457,6 +462,10 @@ export default {
         }
 
         .blockchain_container_bottom {
+           @media (max-width: 768px) {
+            
+            width:69.4rem;
+        }
             width: 100%;
             display: flex;
             justify-content: center;
@@ -496,6 +505,10 @@ export default {
                     font-weight: 500;
                     color: #000000;
                     line-height: 2.8rem;
+                     @media (max-width: 768px) {
+            
+            max-width:69.4rem;
+        }
                 }
             }
         }
@@ -930,8 +943,10 @@ export default {
                         }
 
                         &:hover {
-                            // margin-right:2rem;
-
+                          
+                        @media (max-width: 580px) {
+                            left: -0.2rem;
+                        }
                             width: 77rem;
                             top: -2.2rem;
                             left: -3.3rem;
