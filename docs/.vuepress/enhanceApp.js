@@ -27,14 +27,13 @@ export default async ({
 			if(to.path.includes('/blog') || to.path.includes('/article') || to.path.includes('/community')){
 				store.commit('currentIndex',3)
 				localStorage.setItem('currentIndex',3)
-			}else if (to.path.includes('/developer') || to.path.includes('/wenchangchain')){
+			}else if (to.path.includes('/developer')){
 				store.commit('currentIndex',4)
 				localStorage.setItem('currentIndex',4)
 			}else {
 				localStorage.setItem('currentIndex',0)
 				store.commit('currentIndex',0)
 			}
-			window.scrollTo(0,0);
 			next()
 		})
 		await import("./public/iconfont/iconfont").then(module => {
@@ -44,20 +43,5 @@ export default async ({
 		}).catch(e => {
 			console.log(e,'element-ui error ')
 		})
-		// await import('vue-awesome-swiper').then( module => {
-		// 	Vue.use(module.default)
-		// }).catch(e => {
-		// 	console.log(e,'vue-awesome-swiper error')
-		// })
-		// await import('vue-line-clamp').then(module => {
-		// 	Vue.use(module)
-		// }).catch(e => {
-		// 	console.log(e,'vue-line-clamp error')
-		// })
-		// await import('overlayscrollbars-vue').then(module => {
-		// 	Vue.use(module.OverlayScrollbarsPlugin)
-		// }).catch(e => {
-		// 	console.log(e,'overlayscrollbars-vue error')
-		// })
 	}
 }

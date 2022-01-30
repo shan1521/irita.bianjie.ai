@@ -31,6 +31,29 @@
             {paragraph: IRITA 支持中国国密标准，并有完善的 SDK 及运维工具支持，在性能、安全可靠性、认证及权限、可维护性、可扩展性和运维监控等多方面都满足企业级应用需求。}
         ]
     },
+    blockchainPlatform: {
+      title: 企业级区块链底层技术平台,
+      itro1: 边界智能以区块链跨链、隐私计算及大数据分析技术创新为核心，自主研发的支持下一代分布式商业系统的企业级联盟链产品线-IRITA。,
+      itro2: 以自主可控、高效易用、功能全面的产品优势，可满足多种复杂的分布式商业环境应用场景，为实体经济提供基于区块链信任机器的价值赋能。,
+      blockchainList: [
+        {
+          blockchainTitle: 共识引擎,
+          description: 易于使用、易于理解、高性能且适用于各种分布式应用程序的共识算法，实现高交易吞吐量、可扩展和安全性，提高共识效率
+        },
+
+        { blockchainTitle: 可信账本,
+          description: 采用结构化、模块化的账本结构，保证链上数据信息的易查询、易验证，各节点账本信息的统一性与数据一致性},
+
+        { blockchainTitle: 数据隐私保护,
+          description: 通过多方安全计算、联邦学习等多种隐私计算方式，支持多方协作时原始数据不出门，实现数据可用不可见，真正保护各方联盟链生态伙伴的数据所有权及隐私安全},
+
+        { blockchainTitle: 跨链服务,
+          description: 采用 IBC+iService 的跨链通信协议，不仅实现数据在多个不同区块链网络间可信交换与调用;更可为分布式应用提供面向服务的交互协议,支持链上链下可信交互},
+      ]
+
+
+    },
+    
     productContent: {
         text: IRITA 整体架构
     },
@@ -94,36 +117,36 @@
             {
                 id: 0,
                 lineName: IRITA CE,
-                lineIntro: 开源版本,
-                lineDescription: 供开发者学习、快速上手熟悉 IRITA 的体系架构、并部署行业验证应用系统等,
+                lineIntro: IRITA 的开源版本,
+                lineDescription: IRITA Community Edition 属于开源版本，供开发者学习、快速上手熟悉 IRITA 的体系架构、并部署行业验证应用系统等,
                 iconName: icon-ce
             },
             {
                 id: 1,
                 lineName: IRITA HUB,
                 lineIntro: 异构区块链跨链服务枢纽,
-                lineDescription: 支持各种异构区块链网络间跨链资产交换/转移及信息安全验证；跨链数据安全共享和跨链服务调用,
+                lineDescription: 基于先进的跨链技术、IBC 协议和 Tendermint 共识机制，支持各种异构区块链网络及链外系统间的跨链资产交换/转移及信息安全验证，支持跨链数据安全共享和跨链服务调用,
                 iconName: icon-irita_hub
             },
             {
                 id: 2,
                 lineName: IRITA OPB,
-                lineIntro: 基于智能合约的开放联盟链,
-                lineDescription: 支持智能合约应用开发的开放联盟链，以应用服务平台形式支持分布式商业系统应用快速开发、部署及运营,
+                lineIntro: 支持分布式商业应用的开放许可链,
+                lineDescription: 支持复杂分布式商业应用系统的开放许可链，集成了包括资产数字化 NFT 技术、大数据隐私保护等功能，提供智能合约的编程环境，以应用服务平台形式支持分布式商业系统应用快速开发、部署及运营,
                 iconName: icon-irita_opb
             },
             {
                 id: 3,
                 lineName: IRITA BEAN,
-                lineIntro: 保护数据隐私的数据共享平台,
-                lineDescription: 专注于大数据隐私保护和边缘分析的产品，集成主流开源隐私计算框架，实现了大数据多层次授权共享、多方隐私保护查询、多方联盟学习等能力,
+                lineIntro: 数据隐私保护及共享产品,
+                lineDescription: 专注于大数据隐私保护，集成主流开源隐私计算框架，实现了大数据多层次授权、多方隐私保护查询、联邦学习等能力；支持对数据和业务流程全生命周期进行监管，实现数据隐私保护及可信流转。可用于物联网、政务协作、医疗健康等业务场景,
                 iconName: icon-irita_bean
             },
             {
                 id: 4,
                 lineName: IRITA DA,
-                lineIntro: 资产数字化确权及交换平台,
-                lineDescription: 专注于支持 NFT 登记、确权及可信交换的产品；支持实体资产在链上的数字化建模和全生命周期管理,
+                lineIntro: 资产数字化确权及交换产品,
+                lineDescription: 以 NFT 技术为基础，支持多元化资产在链上的数字化建模、确权、可信交换及全生命周期管理，实现以智能合约驱动实体经济相关流程的自动化运行，降低业务运营成本,
                 iconName: icon-irita_da
             },
         ],
