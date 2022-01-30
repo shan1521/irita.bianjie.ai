@@ -54,12 +54,6 @@ export default {
                         this.$store.commit("currentIndex", index);
                     }
                 });
-                if (window._czc) {
-                    let location = window.location;
-                    let contentUrl = location.pathname + location.hash;
-                    let refererUrl = "/";
-                    window._czc.push(["_trackPageview", contentUrl, refererUrl]);
-                }
             },
             immediate: true,
             deep: true,
