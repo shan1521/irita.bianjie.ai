@@ -34,7 +34,6 @@ export default async ({
 				localStorage.setItem('currentIndex',0)
 				store.commit('currentIndex',0)
 			}
-			window.scrollTo(0,0);
 			next()
 		})
 		await import("./public/iconfont/iconfont").then(module => {
