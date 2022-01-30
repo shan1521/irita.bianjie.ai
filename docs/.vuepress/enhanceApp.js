@@ -43,20 +43,5 @@ export default async ({
 		}).catch(e => {
 			console.log(e,'element-ui error ')
 		})
-		// await import('vue-awesome-swiper').then( module => {
-		// 	Vue.use(module.default)
-		// }).catch(e => {
-		// 	console.log(e,'vue-awesome-swiper error')
-		// })
-		// await import('vue-line-clamp').then(module => {
-		// 	Vue.use(module)
-		// }).catch(e => {
-		// 	console.log(e,'vue-line-clamp error')
-		// })
-		// await import('overlayscrollbars-vue').then(module => {
-		// 	Vue.use(module.OverlayScrollbarsPlugin)
-		// }).catch(e => {
-		// 	console.log(e,'overlayscrollbars-vue error')
-		// })
 	}
 }
