@@ -418,7 +418,7 @@ export default {
 
         @media (max-width: 768px) {
             padding: 4.8rem;
-            align-items: flex-start;
+            // align-items: flex-start;
         }
 
         @media (max-width: 460px) {
@@ -938,8 +938,10 @@ export default {
                         }
 
                         &:hover {
-                            // margin-right:2rem;
-
+                          
+                        @media (max-width: 580px) {
+                            left: -0.2rem;
+                        }
                             width: 77rem;
                             top: -2.2rem;
                             left: -3.3rem;
