@@ -433,7 +433,6 @@ export default {
             width: 100%;
             display: flex;
             flex-direction: column;
-            margin-bottom: 4.8rem;
 
             .blockchain_container_top {
                 width: 100%;
@@ -457,7 +456,7 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0 auto;
+            margin: 3.2rem auto 0;
             max-width: 108rem;
             @media (max-width: 1200px) {
                 flex-direction: column;
@@ -928,6 +927,9 @@ export default {
                         min-height: 10rem;
                         background: $whiteColor;
                         border-radius: 0.4rem;
+                        &:hover {
+                            padding: 1.6rem 0 1.6rem 1.6rem;
+                        }
 
                         @media (max-width: 580px) {
                             max-width: 36rem;
@@ -938,10 +940,6 @@ export default {
                         }
 
                         &:hover {
-                          
-                        @media (max-width: 580px) {
-                            left: -0.2rem;
-                        }
                             width: 77rem;
                             top: -2.2rem;
                             left: -3.3rem;
@@ -951,6 +949,9 @@ export default {
                             transition: transform 0.3s linear;
                             z-index: 2;
 
+                            @media (max-width: 580px) {
+                                left: -0.2rem;
+                            }
                             .item_title {
                                 .line {
                                     background: $whiteColor;
