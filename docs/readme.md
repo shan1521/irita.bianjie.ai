@@ -40,20 +40,18 @@
           blockchainTitle: 共识引擎,
           description: 易于使用、易于理解、高性能且适用于各种分布式应用程序的共识算法，实现高交易吞吐量、可扩展和安全性，提高共识效率
         },
-
-        { blockchainTitle: 可信账本,
-          description: 采用结构化、模块化的账本结构，保证链上数据信息的易查询、易验证，各节点账本信息的统一性与数据一致性},
+        
+        { blockchainTitle: 跨链服务,
+          description: 采用 IBC+iService 的跨链通信协议，不仅实现数据在多个不同区块链网络间可信交换与调用;更可为分布式应用提供面向服务的交互协议,支持链上链下可信交互},
 
         { blockchainTitle: 数据隐私保护,
           description: 通过多方安全计算、联邦学习等多种隐私计算方式，支持多方协作时原始数据不出门，实现数据可用不可见，真正保护各方联盟链生态伙伴的数据所有权及隐私安全},
+          
+        { blockchainTitle: 可信账本,
+          description: 采用结构化、模块化的账本结构，保证链上数据信息的易查询、易验证，各节点账本信息的统一性与数据一致性},
 
-        { blockchainTitle: 跨链服务,
-          description: 采用 IBC+iService 的跨链通信协议，不仅实现数据在多个不同区块链网络间可信交换与调用;更可为分布式应用提供面向服务的交互协议,支持链上链下可信交互},
       ]
-
-
     },
-    
     productContent: {
         text: IRITA 整体架构
     },
