@@ -10,14 +10,16 @@ RUN sed -i "s+http://dl-cdn.alpinelinux.org/alpine+${APKPROXY}+g" /etc/apk/repos
     npm install && npm run build-params $UMENG_ID,$UMENG_WEB_ID && npm run build
 
 FROM nginx:1.19-alpine
-COPY --from=builder /app/docs/.vuepress/dist/ /usr/share/nginx/html/
 RUN echo -e 'server {\n\
-  root /usr/share/nginx/html;\n\
-  index  index.html index.htm;\n\
-  location / {\n\
-    if ($request_filename ~* index.html|.*\.ico$)\n\
-    {\n\
-        add_header Cache-Control "no-cache";\n\
+    listen       80;\n\
+    server_name  localhost;\n\
+    location / {\n\
+        root   /usr/share/nginx/html;\n\
+        index  index.html index.htm;\n\
+        if ($request_filename ~* index.html|.*\.ico$)\n\
+        {\n\
+          add_header Cache-Control no-cache;\n\
+        }\n\
     }\n\
-  }\n\
 }' > /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/docs/.vuepress/dist/ /usr/share/nginx/html/
