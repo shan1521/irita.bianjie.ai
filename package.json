@@ -1,12 +1,12 @@
 {
   "name": "irita.bianjie.ai",
-  "version": "1.0.0",
+  "version": "2.9.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
-    "build": "npx cross-env NODE_ENV=production && vuepress build docs",
+    "build": "vuepress build docs && node ./readWriteSW.js",
     "build-params": "node ./script.js -p",
     "tag:revert": "git checkout HEAD src/config.json"
   },

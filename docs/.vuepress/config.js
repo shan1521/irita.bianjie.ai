@@ -26,7 +26,13 @@ module.exports = {
             {text:'关于边界',link:'https://www.bianjie.ai', target: '_blank'}
         ]
     },
-    plugins: ['@vuepress/pwa', {
-        serviceWorker: true
-    }]
+    plugins:{
+        '@vuepress/pwa': {
+            generateSWConfig : {               
+                globPatterns: [
+                    '**/*.{js,css,png,jpg,jpeg,gif,svg,woff,woff2,eot,ttf,otf}'
+                ]
+            }
+        }
+    }
 }
