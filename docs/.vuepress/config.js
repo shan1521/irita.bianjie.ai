@@ -19,7 +19,7 @@ module.exports = {
         navbar: false,
         nav: [
             {text:'关于 IRITA', link: '/', target: '_self'},
-            {text:'BSN 文昌链', link: 'https://wenchang.bianjie.ai/', target: '_blank'},
+            {text:'文昌链', link: 'https://wenchang.bianjie.ai/', target: '_blank'},
             {text:'技术文档', link: 'https://irita.bianjie.ai/docs/', target: '_blank'},
             {text:'开放社区', link: '/community', target:'_self'},
             {text:'开发者',link:'/developer', target:'_self'},
