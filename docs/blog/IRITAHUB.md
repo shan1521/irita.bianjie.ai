@@ -54,7 +54,7 @@ IRITA HUB 原生具备了 iService + IBC 框架，因此，既可以跨链连接
 <div  align=center><img src="https://www.bianjie.ai/resources/IRITA/IRITA-HOME-Map/blog0/iritahub02.png" ></div>
 <br>
 
-在 2020 年 10 月，IRITA HUB 已作为跨链服务枢纽在 BSN 环境中集成部署，目前，许多企业级应用已经在 BSN 网络中上线运行。
+在 2020 年 10 月，IRITA HUB 已作为跨链服务枢纽上线，并为许多企业级应用提供服务。
 
 未来，<font COLOR ="#00BFFF">**边界智能还计划将基于 IRITA HUB 支持 NFT 跨链转移。**</font>
 
