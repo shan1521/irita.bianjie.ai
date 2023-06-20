@@ -191,7 +191,7 @@
             },
             {
                 text: GitHub, 
-                link:  https://github.com/bianjieai/irita, 
+                link: https://github.com/bianjieai/irita, 
                 target: _blank,
                 blogImgName: github,
                 blogImgHighlightName: github_highlight
