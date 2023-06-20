@@ -48,18 +48,29 @@
                 <span class="copyright_content">{{
                     `版权所有©2016-${new Date().getFullYear()} 上海边界智能科技有限公司`
                 }}</span>
+                <span class="line"></span>
                 <a
                     href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502009028"
                     target="_blank"
                     rel="noreferrer noopener"
                     >沪ICP备17020986号</a
                 >
+                <span class="line"></span>
                 <span class="police_content">
                     <a
                         href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502009028"
                         target="_blank"
                         rel="noreferrer noopener"
                         >沪公网安备31011502009028号</a
+                    >
+                </span>
+                <span class="line"></span>
+                <span class="police_content">
+                    <a
+                        href="https://bcbeian.ifcert.cn"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        >沪网信备31011520343153030034号</a
                     >
                 </span>
             </div>
@@ -297,10 +308,20 @@ export default {
             color: $whiteColorOpacity;
             cursor: pointer;
         }
+        .line {
+            display: inline-block;
+            margin: 0 1.6rem;
+            width: 0.2rem;
+            height: 40%;
+            background: rgba(81, 80, 113, 0.5);
+            @media (max-width: 1100px) {
+                display: none;
+            }
+        }
     }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 1100px) {
     .footer_content_wrapper {
         .footer_content_bottom {
             height: auto;

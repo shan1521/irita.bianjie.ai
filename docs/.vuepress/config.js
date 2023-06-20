@@ -4,7 +4,7 @@ module.exports = {
     base:'/',
     head: [
         [ 'link', {rel:'icon',href:'/favicon.ico'}],
-        [ 'meta', {name:'keywords',content:'IRITA,irita,IRITAOPB,iritaopb,IRITAHUB,iritahub,上海边界,边界智能区块链,边界智能区块链底层技术,分布式商业,企业联盟链,许可链,开放许可链,区块链底层技术框架,iService,IBC,区块链跨链,文昌链,BSN开放联盟链'}],
+        [ 'meta', {name:'keywords',content:'IRITA,irita,IRITAOPB,iritaopb,IRITAHUB,iritahub,上海边界,边界智能区块链,边界智能区块链底层技术,分布式商业,企业联盟链,许可链,开放许可链,区块链底层技术框架,iService,IBC,区块链跨链,文昌链,开放联盟链,文昌链天舟,文昌链天和,文昌链多链'}],
         [ 'meta', {name:'description',content:'IRITA 是边界智能以区块链跨链、隐私计算及大数据分析技术创新为核心，自主研发的支持下一代分布式商业系统的企业级联盟链产品线。IRITA 面向服务，针对开发者提供丰富的链应用开发服务套件，能更好的满足中小企业以更具成本效益的方式快速开发和部署 DApp 及其他链上应用的需求。'}],
         [ 'meta', {name: 'baidu-site-verification', content: 'code-jY9z5Dzz79' }],
         [ 'meta', {name: '360-site-verification', content: '7f2a1617665f5d995f3cf90b824f29a5' }],
@@ -19,14 +19,20 @@ module.exports = {
         navbar: false,
         nav: [
             {text:'关于 IRITA', link: '/', target: '_self'},
-            {text:'BSN 文昌链', link: 'https://wenchang.bianjie.ai/', target: '_blank'},
+            {text:'文昌链', link: 'https://wenchang.bianjie.ai/', target: '_blank'},
             {text:'技术文档', link: 'https://irita.bianjie.ai/docs/', target: '_blank'},
             {text:'开放社区', link: '/community', target:'_self'},
             {text:'开发者',link:'/developer', target:'_self'},
             {text:'关于边界',link:'https://www.bianjie.ai', target: '_blank'}
         ]
     },
-    plugins: ['@vuepress/pwa', {
-        serviceWorker: true
-    }]
+    plugins:{
+        '@vuepress/pwa': {
+            generateSWConfig : {               
+                globPatterns: [
+                    '**/*.{js,css,png,jpg,jpeg,gif,svg,woff,woff2,eot,ttf,otf}'
+                ]
+            }
+        }
+    }
 }
